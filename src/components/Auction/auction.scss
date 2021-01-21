@@ -1,0 +1,149 @@
+
+@media (max-width: 575.98px) { 
+    .Auction {
+        max-width: 98%;
+        margin: auto;
+        padding: 10px;
+    
+        .auction-header {
+            width: 100%;
+            padding: 10px;
+            font-weight: 700;
+            background-color: var(--colorYellow);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        p {
+            font-size: 17px;
+            font-weight: 700;
+        }
+    
+        .Auction-container {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+    
+        .auction-card {
+            width: 50%;
+            height: 340px;
+            overflow: hidden;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            box-shadow: 1px 1px 7px #00000023;
+    
+            .auction-top {
+                display: flex;
+                width: 100%;
+                height: 290px;
+                padding: 5px;
+                margin: auto;    
+                .image-container {
+                    width: 80%;
+                    height: 370px;
+                    overflow: hidden;    
+                    img {
+                        width: 150px;
+                        margin: auto;
+                        margin-left: -19px;
+                    }
+                }
+                .auction-details {
+                    width: 40%;        
+                    .bids {
+                        background-color: #f3f1f1;
+                        height: 150px;
+                        padding: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+        
+                        .highest-bider {
+                            padding: 3px 0;
+                            font-size: 12px;
+                            font-weight: 800;
+                            color: var(--colorRed);
+                            width: 100%;
+                            margin: auto;
+                        }
+        
+                        .previous-bider {
+                            padding: 3px 0;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: #8d8c8c;
+                            width: 100%;
+                            margin: auto;
+                        }
+                    }
+                    .max-amount {
+                        width: 100%;
+                        margin: 10px auto;
+                        text-align: center;
+                        p{
+                            font-size: 15px;
+                            font-weight: 700;
+                            margin-top:2.5rem ;
+                            margin-bottom: -1rem;
+                        }
+                    }
+                    .auction-timer {
+                        width: 100%;
+                        margin: auto;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        .span{
+                            font-size: 10px;
+                            width: 100%;
+                        }
+                        .time {
+                            display: flex;
+                            font-size: 20px;
+                            font-weight: 700;
+                            width: 100%;
+                            margin: auto;
+                        }
+                    
+                    }
+                }
+                
+            }
+    
+            
+            .place-btn {
+                width: 80%;
+                margin: auto 33px;
+                padding: 10px 0px;
+                background-color: var(--colorYellow);
+                color: var(--colorWhite);
+                border: none;
+                font-weight: 700;
+                background-color: none !important;
+            }
+        }
+    
+        
+    }
+ }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }

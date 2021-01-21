@@ -1,0 +1,156 @@
+@media (max-width: 575.98px) {
+  .Auction {
+    max-width: 98%;
+    margin: auto;
+    padding: 10px;
+  }
+  .Auction .auction-header {
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    background-color: var(--colorYellow);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Auction p {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .Auction .Auction-container {
+    width: 100%;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .Auction .auction-card {
+    width: 50%;
+    height: 340px;
+    overflow: hidden;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-shadow: 1px 1px 7px #00000023;
+            box-shadow: 1px 1px 7px #00000023;
+  }
+  .Auction .auction-card .auction-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 290px;
+    padding: 5px;
+    margin: auto;
+  }
+  .Auction .auction-card .auction-top .image-container {
+    width: 80%;
+    height: 370px;
+    overflow: hidden;
+  }
+  .Auction .auction-card .auction-top .image-container img {
+    width: 150px;
+    margin: auto;
+    margin-left: -19px;
+  }
+  .Auction .auction-card .auction-top .auction-details {
+    width: 40%;
+  }
+  .Auction .auction-card .auction-top .auction-details .bids {
+    background-color: #f3f1f1;
+    height: 150px;
+    padding: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .Auction .auction-card .auction-top .auction-details .bids .highest-bider {
+    padding: 3px 0;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--colorRed);
+    width: 100%;
+    margin: auto;
+  }
+  .Auction .auction-card .auction-top .auction-details .bids .previous-bider {
+    padding: 3px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #8d8c8c;
+    width: 100%;
+    margin: auto;
+  }
+  .Auction .auction-card .auction-top .auction-details .max-amount {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .Auction .auction-card .auction-top .auction-details .max-amount p {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: -1rem;
+  }
+  .Auction .auction-card .auction-top .auction-details .auction-timer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .Auction .auction-card .auction-top .auction-details .auction-timer .span {
+    font-size: 10px;
+    width: 100%;
+  }
+  .Auction .auction-card .auction-top .auction-details .auction-timer .time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    margin: auto;
+  }
+  .Auction .auction-card .place-btn {
+    width: 80%;
+    margin: auto 33px;
+    padding: 10px 0px;
+    background-color: var(--colorYellow);
+    color: var(--colorWhite);
+    border: none;
+    font-weight: 700;
+    background-color: none !important;
+  }
+}
+/*# sourceMappingURL=auction.css.map */

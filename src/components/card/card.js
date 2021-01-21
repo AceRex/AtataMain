@@ -8,7 +8,7 @@ function ItemCards(props) {
   return (
     <ItemCard>
       <div className="Card-top">
-        <span>NEW</span>
+        {/* <span>NEW</span> */}
         <p>{props.title}</p>
       </div>
       <div className="image-container">
@@ -56,7 +56,7 @@ const ItemCard = styled.div`
   margin-top: 6rem;
   margin:auto;
   width: 270px;
-  height: 360px;
+  height: 375px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -90,7 +90,7 @@ const ItemCard = styled.div`
     }
   }
   .image-container {
-    width: 250px;
+    width: 200px;
     margin: auto;
     height: 200px;
     overflow: hidden;
@@ -98,7 +98,7 @@ const ItemCard = styled.div`
     justify-content: center;
     align-item: center;
     img {
-      width: 250px;
+      width: 197px;
       margin: auto;
       height: 200px;
     }
@@ -127,7 +127,7 @@ const ItemCard = styled.div`
     .btn {
       background-color: var(--colorYellow);
       color: var(--colorBlack);
-      width: 50%;
+      width: 40%;
       font-size: 15px;
     }
     .show {

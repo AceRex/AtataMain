@@ -1,0 +1,80 @@
+/*Drop Down Class Starts */
+.drop-down {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+.drop-down > .allCate-SubMenu {
+  text-align: center;
+  padding: 10px;
+  background: var(--colorLight);
+  width: 26%;
+  justify-content: space-between;
+  list-style-type: none;
+
+}
+.drop-down > .allCate-SubMenu > a > p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.drop-down > .LoginDrop {
+  position: absolute;
+  right: 4px;
+}
+.drop-down > .LoginDrop > p {
+  /* layout */
+  position: relative;
+  max-width: 30em;
+
+  /* // looks */
+  background-color: #fff;
+  padding: 1.125em 1.5em;
+  box-shadow: 2px 2px 5px #aaaaaa;
+  border-radius: 1rem;
+}
+
+.drop-down > .LoginDrop > p::before {
+  /* // layout */
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 6em; /*// offset should move with padding of parent*/
+  border: 0.75rem solid transparent;
+  border-top: none;
+
+  /* // looks */
+  border-bottom-color: #fff;
+}
+
+/* sub Menu starts */
+.drop-down > .sub-menu {
+  width: 70%;
+  display: flex;
+  padding: 10px;
+  background-color: var(--colorLight);
+}
+
+.drop-down > .sub-menu > .list {
+  width: 90%;
+  text-align: center;
+}
+.drop-down > .sub-menu > .list > p {
+  width: 10%;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px;
+  color: var(--colorGreen);
+  text-transform: uppercase;
+}
+/* .menu {
+  list-style-type: none;
+  font-size: 13px;
+  padding: 10px;
+  width: 10%;
+}
+li {
+  padding: 5px;
+} */

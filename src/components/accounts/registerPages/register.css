@@ -1,0 +1,165 @@
+.LoginContainer,
+.ind-reg {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+}
+.LogoContaniner {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0f5707;
+}
+.LogoContaniner > .logo {
+  width: 150px;
+  height: 130px;
+  margin: auto;
+  border-radius: 17px;
+  background-color: #fff;
+}
+.LogoContaniner > .logo > img {
+  width: 150px;
+  height: 120px;
+}
+
+.formContaniner {
+  height: 100vh;
+  width: 68%;
+  background-color: #eeeded;
+}
+.ind-reg > .logo {
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+}
+.ind-reg > .logo > img {
+  width: 200px;
+  height: 170px;
+}
+.ind-reg > .ind-reg-form {
+  width: 68%;
+  margin: auto;
+  padding: 0px 20px;
+}
+.ind-reg-form > .form{
+  width: 80%;
+  margin-top: -7px;
+
+}
+.ind-reg-form > .form > h3{
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.ind-reg-form > .form > hr{
+  width: 10%;
+  border: solid 4px var(--colorGreen);
+  margin-left: 0;
+  border-radius: 10px;
+}
+.ind-reg-form > .form > form > .group{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+  
+.ind-reg-form > .form > form > .group > .form-group > a >.btn{
+  background-color: var(--colorGreen);
+  color: var(--colorWhite);
+}
+.ind-reg-form > .form > form > .group > .form-group > a >.btn-back{
+  background-color: #E9E7E7;
+  color: var(--colorAsh);
+  border: none;
+}
+.ind-reg-form > .form > form > .group > .form-group {
+  width: 100%;
+}
+.ind-reg-form > .form > form > .group > .form-group >input{
+  width: 90%;
+  height: 40px;
+}
+.ind-reg-form > .form > form > .group > .form-group > select{
+  width: 90%;
+  height: 38px;
+  border: solid 2px #E9E7E7;
+  border-radius: 5px;
+
+}
+.formContaniner > .select-container {
+  width: 70%;
+  margin: auto;
+  margin-top: 7rem;
+}
+
+.formContaniner > .select-container > .highlight-text > p {
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: -6px;
+}
+
+.formContaniner > .select-container > .highlight-text > span {
+  font-size: 20px;
+}
+.formContaniner > .select-container > .acct-select > a {
+  width: 90%;
+  margin: 20px 0px;
+  text-decoration: none;
+}
+.formContaniner > .select-container > .acct-select > a > .select {
+  display: flex;
+  padding: 17px 20px;
+  align-items: center;
+  text-align: center;
+  margin: 15px 0px;
+  justify-content: space-between;
+  font-size: 50px;
+  border: solid 3px #cac9c9;
+  border-radius: 10px;
+}
+.formContaniner > .select-container > .acct-select > a > .select:hover {
+  box-shadow: 5px 15px 10px #dddddd;
+  color: var(--colorGreen);
+  transform: translate(0px, -5px);
+  transition: all linear 0.2s;
+}
+.formContaniner > .select-container > .acct-select > a > .select > .text > p {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: -35px;
+}
+.formContaniner
+  > .select-container
+  > .acct-select
+  > a
+  > .select
+  > .text
+  > small {
+  font-size: 16px;
+}
+.formContaniner > .select-container > .signin {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1080px) {
+  .LogoContaniner {
+    display: none;
+  }
+  .formContaniner {
+    width: 98%;
+  }
+  .ind-reg > .ind-reg-form{
+    width: 90%;
+  }
+  
+.ind-reg-form > .form{
+  width: 100%;
+}
+
+}

@@ -1,0 +1,90 @@
+.LoginContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+}
+.LogoContaniner {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #2f7228;
+}
+.LogoContaniner > .logo {
+  width: 150px;
+  height: 130px;
+  margin: auto;
+  border-radius: 17px;
+  background-color: #fff;
+}
+.LogoContaniner > .logo > img {
+  width: 150px;
+  height: 120px;
+}
+
+.formContaniner {
+  height: 100vh;
+  width: 68%;
+}
+.form {
+  width: 45%;
+  margin: auto;
+  margin-top: 7rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group > input {
+  border: solid 2px #e9e7e7;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+.form-group > input::placeholder {
+  color: #c5c3c3;
+}
+.form-group > label {
+  font-weight: 800;
+  font-size: 16px;
+  color: #5a5a5a;
+}
+.form-group > .btn {
+  background-color: var(--colorGreen);
+  color: var(--colorWhite);
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.form-group > p {
+  font-size: 12px;
+  margin: 5px 0px;
+}
+.error {
+  color: red;
+}
+.forgetPwd {
+  text-align: center;
+  color: #5a5a5a;
+}
+.reg {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1080px) {
+.LogoContaniner {
+  display: none;
+}
+.formContaniner {
+  width: 98%;
+}
+.form{
+  width: 80%;
+}
+.reg{
+  font-size: 14px;
+  width: 100%;
+}
+
+}

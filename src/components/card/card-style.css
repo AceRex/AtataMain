@@ -1,0 +1,16 @@
+.alice-carousel__dots{
+    display: none;
+}
+
+
+.alice-carousel__play-btn{
+    display: none;
+  }
+
+.alice-carousel__prev-btn{
+    display: none;
+}
+
+.alice-carousel__next-btn{
+    display: none;
+}

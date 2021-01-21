@@ -19,7 +19,10 @@ export default class bottomItem extends Component {
         {(value) => {
           const { id, title, info, price, price2 } = value.detailProduct;
           return (
-            <ButtomItems>
+            <MyCateCard>
+              <div className='CategoryName'>
+                Most Viewed Items
+              </div>
               <div
                 className="bottomItems"
                 onClick={() => value.handleDetail(id)}
@@ -337,7 +340,7 @@ export default class bottomItem extends Component {
                   </div>
                 </div>
               </div>
-            </ButtomItems>
+            </MyCateCard>
           );
         }}
       </ProductConsumer>
@@ -345,15 +348,30 @@ export default class bottomItem extends Component {
   }
 }
 
-const ButtomItems = styled.div`
-  width: 100%;
-  background-color: var(--colorLight);
-  padding: 10px;
 
+const MyCateCard = styled.div`
+  width: 90%;
+  background-color: var(--colorLight);
+  margin: 5px auto;
+  padding: 10px;
+  .CategoryName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .FeaturedItems{
+    display: flex;
+  }
+  .row{
+    width:100%;
+    margin: auto;
+  }
   .bottomItem {
     background-color: var(--colorWhite);
-    margin: 10px;
+    margin: 10px auto;
     height: 150px;
+    width: 360px;
     padding: 15px;
   }
   .imageContainer {
@@ -373,24 +391,26 @@ const ButtomItems = styled.div`
   .details {
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    width: 60%;
+    text-align:center;
   }
   .title {
     color: var(--colorBlack);
-    font-family: "Muli", sans-serif;
     font-size: 16px;
+    text-align:center;
     font-weight: bold;
-    margin: 0 3px;
   }
 
   .price {
-    font-family: "Muli", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    text-align:center;
     font-weight: bolder;
     color: var(--colorYellow);
   }
   .button {
     padding: 10px;
+    width: 70%;
+    margin: auto;
     text-align: center;
     color: var(--colorAsh);
     &:hover {
@@ -399,3 +419,4 @@ const ButtomItems = styled.div`
     }
   }
 `;
+

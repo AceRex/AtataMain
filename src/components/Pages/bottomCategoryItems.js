@@ -1,198 +1,98 @@
 import React from "react";
 import styled from "styled-components";
-import Img1 from "../Image/machineTransparent.png";
-import Img2 from "../Image/Computer.png";
+import { Link } from "react-router-dom";
+
+import Img1 from '../Image/officeChair.jpg'
+import Img2 from '../Image/doublesitter.jpg'
 import Img3 from "../Image/Furniture.png";
-import Img4 from "../Image/gadgets.png";
-import Img5 from "../Image/phones.png";
+import Img4 from '../Image/bed.jpg'
+import Img5 from "../Image/officefurni.jpg";
+import Img6 from "../Image/accesory.jpg";
+
+
+function Card(props) {
+  return (
+    <Link to="/">
+    <ItemCard>
+      <div className="Imagecontainer">
+        <img src={props.img} />
+      </div>
+      <div className="Details">
+        <p className="title">{props.title}</p>
+        <p>MOQ from: {props.MOQRange}</p>
+      </div>
+    </ItemCard>
+  </Link>
+  );
+}
+
+const ItemCard = styled.div`
+  display: flex;
+  background-color: var(--colorWhite);
+  border-radius: 5px;
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+  margin: 5px;
+  .Imagecontainer {
+    width: 40%;
+    height: 90%;
+    overflow: hidden;
+    img {
+      margin-top: 25px;
+      width: 98%;
+    }
+  }
+
+  .Details {
+    width: 60%;
+    margin: 50px 10px;
+    color:black;
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 15px;
+      color: var(--colorDark);
+    }
+  }
+`;
 
 function CategoryCard(props) {
   return (
     <MyCateCard>
-      <div className="d-flex mt-2 mb-2 px-2 CategoryTitle">
-        <div className="CategoryName">
-          <p>Consumer Electronics</p>
-        </div>
-        <hr />
+      <div className="CategoryName">
+        <p>Recommended Furniture for you</p>
       </div>
-      <div className="d-flex px-2 CategoryTitle">
-        <div className="r-big">
-          <p className="r-big-title">Selected Novelty Products</p>
-          <div className="r-big-image">
-            <img src={Img1} />
-          </div>
-          <span className="r-big-btn">Source Now</span>
-        </div>
-        <div className="m-sm d-flex">
-          <div className="row m-auto">
-            <div className="d-flex">
-              <div className="m-sm-item d-flex">
-                <div className="m-sm-item-l">
-                  <p>Top-ranking Products</p>
-                  <span>Laptops</span>
-                </div>
-                <div className="m-sm-item-r">
-                  <img src={Img2} />
-                </div>
-              </div>
-
-              <div className="m-sm-item d-flex">
-                <div className="m-sm-item-l">
-                  <p>Portable Audio, Video & Accessories</p>
-                </div>
-                <div className="m-sm-item-r">
-                  <img src={Img4} />
-                </div>
-              </div>
-            </div>
-
-            <div className="d-flex">
-              <div className="m-sm-item d-flex">
-                <div className="m-sm-item-l">
-                  <p>Top-ranking Products</p>
-                  <span>Mobile Phones</span>
-                </div>
-                <div className="m-sm-item-r">
-                  <img src={Img3} />
-                </div>
-              </div>
-
-              <div className="m-sm-item d-flex">
-                <div className="m-sm-item-l">
-                  <p>Camera, Photo & Accessories</p>
-                </div>
-                <div className="m-sm-item-r">
-                  <img src={Img2} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="l-big">
-          <p>Top Factories</p>
-          <div className="imageContainer">
-            <img src={Img5} />
-          </div>
-          <span>Customer rated Factories</span>
-        </div>
-        
-
-
-
+      <div className="FeaturedItems">
+        <Card img={Img3} title='Single Chair for Home' MOQRange="20pcs - 100pcs"/>
+        <Card img={Img2} title='Double Chair for Home' MOQRange="20pcs - 100pcs"/>
+        <Card img={Img4} title='Other home furnitures' MOQRange="20pcs - 100pcs"/>
       </div>
-      
-      
-      
+      <div className="FeaturedItems">
+        <Card img={Img1} title='Single Chair for Office' MOQRange="20pcs - 100pcs"/>
+        <Card img={Img5} title='Office furnitures' MOQRange="20pcs - 100pcs"/>
+        <Card img={Img6} title='furniture Accessories' MOQRange="20pcs - 100pcs"/>
+      </div>
     </MyCateCard>
-    
   );
 }
 
 const MyCateCard = styled.div`
-  width: 97%;
-  margin: auto;
-  height: 390px;
+  width: 90%;
   background-color: var(--colorLight);
-  .CategoryTitle{
-    .CategoryName{
-      font-family: "Muli", sans-serif;
-      font-weight: bold;
-      font-size: 30px;
-      padding: 5px;
-    }
-    hr{
-      width: 70%;
-      border: solid 5px var(--colorAsh);
-    }
-    .r-big{
-      width: 350px;
-      height:310px;
-      background-color:#85A464;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      .r-big-image{
-      img{
-        margin-top: -10px;
-        width 300px;
-      }
-      }
-      .r-big-title{
-        color: var(--colorWhite);
-        margin-top: 15px;
-        margin-left: 30px;
-        font-family: "Muli", sans-serif;
-        font-size: 22px;
-        width: 50%;
-      }
-      .r-big-btn{
-margin-top: -30px;
-margin-left: 20px;
-background-color: var(--colorWhite);
-width: 30%;
-padding: 5px;
-text-align: center;
-font-weight: bold;
-color: var(--colorGreen);
-border-radius: 10px;
-      }
-    }
+  margin: 5px auto;
+  padding: 5px;
+  .CategoryName {
+    font-size: 20px;
+    font-weight: bold;
   }
-  .m-sm{
-    width: 650px;
-    background-color: var(--colorWhite);
-    overflow: hidden;
-    padding: 5px;
-   
-    .m-sm-item{
-      width: 320px;
-      margin: auto;
-      height: 150px;
-      background-color: var(--colorWhite);
-      border: solid 1px transparent;
-       padding: 5px;
-      :hover{
-          border: solid 1px var(--colorAsh);
-        }
-      .m-sm-item-l{
-        width: 150px;
-        padding: 5px;
-        
-        p{
-font-weight: bold;
-font-size: 17px;
-        }
-      }
-      .m-sm-item-r{
-        overflow: hidden;
-        img{
-          width:170px;
-        }
-      }
-    }
-  }
-  .l-big{
-    width: 210px;
-    margin-left: 2px;
-    padding: 5px;
-    background-color: var(--colorWhite);
-    overflow: hidden;
-    text-align: center;
-    border: solid 1px transparent;
-    :hover{
-          border: solid 1px var(--colorAsh);
-        }
-    .imageContainer{
-      height: 220px;
-    }
-    p{
-      font-size: 17px;
-      font-weight:bold;
-    }
-    img{
-      width: 200px;
-    }
+  .FeaturedItems {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
   }
 `;
 

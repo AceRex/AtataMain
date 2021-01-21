@@ -1,68 +1,111 @@
-import React, { Component } from "react";
-import "../account.css";
+import React, { Component, useState } from "react";
+import {
+  CountryDropdown,
+  RegionDropdown,
+  CountryRegionData,
+} from "react-country-region-selector";
+import "./register.css";
 import { Link } from "react-router-dom";
-import Header from "../../header/header";
-import Footer from "../../footer/footer";
+import Logo from "../../logoComponents/logo2.png";
 import styled from "styled-components";
 
-class Register extends Component {
+export default class UserReg extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { country: "", region: "" };
+  }
+
+  selectCountry(val) {
+    this.setState({ country: val });
+  }
+
+  selectRegion(val) {
+    this.setState({ region: val });
+  }
   render() {
+    const { country, region } = this.state;
+
     return (
-      <>
-        <div className="registerMain">
-          <p class="regH">Choose an Account Type</p>
-          <Contains>
-            <Link to="/IndividualRegistration" className="accountCard user">
-              <i class="fas fa-user"></i>
-              <p>Buyer</p>
-            </Link>
-            <Link to="/CompanyReg" class="accountCard company">
-              <i class="fas fa-building"></i>
-              <p>Service Provider</p>
-            </Link>
-            <Link to="/ProductSellerRegistration" class="accountCard seller">
-              <i class="fas fa-briefcase"></i>
-              <p>Products Suppliers</p>
-            </Link>
-            <Link to="/WarehouseRegistration" class="accountCard warehouse">
-              <i class="fas fa-warehouse"></i>
-              <p>Warehouse</p>
-            </Link>
-          </Contains>
-          <div
-            className="register"
-            style={{ margin: "5% auto", padding: "2%" }}
-          >
-            <p>
-              Already have an account?
-              <Link to="/Signin">
-                <span>Signin</span>
-              </Link>
-            </p>
+      <div className="ind-reg">
+        <div className="LogoContaniner">
+          <div className="logo">
+            <img src={Logo} />
           </div>
         </div>
-        <Header />
-        <Footer />
-      </>
+        <div className="ind-reg-form">
+          <div className="form">
+            <h3>Registration</h3>
+            <hr />
+            <form>
+              <div className="group">
+                <div className="form-group">
+                  <label>First Name</label>
+                  <input input="text" placeholder="Enter first name..." />
+                </div>
+                <div className="form-group">
+                  <label>Last Name</label>
+                  <input type="text" placeholder="Enter Last name..." />
+                </div>
+              </div>
+              <div className="group">
+                <div className="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" placeholder="Enter phone number..." />
+                </div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input type="email" placeholder="Enter Email name..." />
+                </div>
+              </div>
+              <div className="group">
+                <div className="form-group">
+                  <label>Password</label>
+                  <input type="password" />
+                </div>
+                <div className="form-group">
+                  <label>Retype Password</label>
+                  <input type="password" />
+                </div>
+              </div>
+              <div className="group">
+                <div className="form-group">
+                  <label>Country</label>
+                  <CountryDropdown
+                    value={country}
+                    onChange={(val) => this.selectCountry(val)}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>State/Region</label>
+                  <RegionDropdown
+                    country={country}
+                    value={region}
+                    onChange={(val) => this.selectRegion(val)}
+                  />
+                </div>
+              </div>
+              <div className="group">
+                <div className="form-group">
+                  <label>Address</label>
+                  <input input="text" placeholder="Enter address here..." />
+                </div>
+              </div>
+              <div className="group">
+                <div className="form-group">
+                  <Link to="/register">
+                    <button className="btn-back">{'<< '}Back</button>
+                  </Link>
+                </div>
+                <div className="form-group">
+                  <Link to="/">
+                    <button className="btn">Register</button>
+                  </Link>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     );
   }
 }
-
-const Contains = styled.div`
-  display: flex;
-  margin-top: 20px;
-  i{
-    font-size: 40px;
-  }
-  a{
-    text-align: center;
-    padding: 30px;
-    margin: 20px;
-    width: 20%;
-    p{
-      font-size: 17px;
-    }
-  }
-`;
-
-export default Register;

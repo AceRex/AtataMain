@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Image from "react-bootstrap/Image";
 import img from "../logoComponents/logo2.png";
 
 function Footer() {
@@ -10,37 +9,31 @@ function Footer() {
       <Navigation>
         <span className="header"> Navigation</span>
         <ul>
-          <Link to="/">Top Seller</Link>
-          <Link to="/">Top Products</Link>
+          <Link to="/topcategories">Top Seller</Link>
+          <Link to="/topcategories">Top Products</Link>
           <Link to="/"> About Us</Link>
           <Link to="/">Career</Link>
           <Link to="/">Blog</Link>
-          <Link to="/">Services</Link>
-          <Link to="/">Contact Us</Link>
         </ul>
       </Navigation>
       <Services>
         <span className="header"> Services</span>
         <ul>
-          <Link to="/">Atata Pay</Link>
-          <Link to="/">Atata Insurance</Link>
-          <Link to="/">Atata Warehouse</Link>
-          <Link to="/">Atata Logistics</Link>
-          <Link to="/">Atata Wallet</Link>
+          <a href='http://###'>Atata Auction</a>
         </ul>
       </Services>
       <SocialLinks>
         <span className="header"> Our Page</span>
         <ul>
-          <Link to="/">
+          <a href="https://www.facebook.com/atata57" target="_blank">
             <i class="fab fa-facebook-square"></i>/ atat57
-          </Link>
-          <Link to="/">
+          </a>
+          <a href="https://www.twitter.com/atata57" target="_blank">
             <i class="fab fa-twitter-square"></i>/ atat57
-          </Link>
-          <Link to="/">
+          </a>
+          <a href="https://instagram.com/atata57" target='_blank'>
             <i class="fab fa-instagram"></i>/ atat57
-          </Link>
+          </a>
         </ul>
       </SocialLinks>
       <NewsLetter>
@@ -61,6 +54,9 @@ const Main = styled.div`
   display: flex;
   color: var(--colorYellow);
   padding: 50px 50px;
+@media screen and (max-width: 1080px) {
+  display: none;
+}
 `;
 
 const Navigation = styled.div`
