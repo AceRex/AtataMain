@@ -1,0 +1,553 @@
+@media (max-width: 575.98px) {
+    .mobile-user-page-container {
+        .user-page-head {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background-color: var(--colorGreen);
+
+            .logout {
+                width: 10%;
+                color: var(--colorWhite);
+                padding: 5px;
+                font-size: 30px;
+            }
+
+            .user {
+                width: 90%;
+
+                .user-name {
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: var(--colorWhite);
+                    margin: 3px auto;
+
+                    span {
+                        text-transform: uppercase;
+                    }
+                }
+
+                .user-email {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: var(--colorYellow);
+                }
+            }
+
+        }
+
+        .user-page-menu {
+            max-width: 100%;
+
+            p {
+                padding: 7px;
+                color: #aaa;
+                font-weight: 500;
+                font-size: 13px;
+                text-transform: uppercase;
+                background-color: var(--colorLight);
+            }
+
+            a {
+                color: var(--colorBlack);
+
+                li {
+                    max-width: 100%;
+                    padding: 34px 10px;
+                    display: flex;
+                    list-style-type: none;
+                    text-transform: capitalize;
+
+                    .icon {
+                        margin-right: 20px;
+                        font-size: 20px;
+                    }
+
+                    .icon-label {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+
+                li:hover {
+                    background-color: var(--colorLight);
+                }
+
+            }
+
+        }
+    }
+    .order-container{
+        max-width: 100%;
+        padding: 20px;
+        form{
+            width: 90%;
+            margin: auto;
+            .form-group{
+                width: 90%;
+                margin: 20px 0;
+                label{
+                    margin: 15px 0;
+                }
+                input{
+                    max-width: 97%;
+                }
+            }
+            .order-btn{
+                display: flex;
+                width: 97%;
+                .bck-btn{
+                    width: 20%;
+                    padding: 5px;
+                    border: none;
+                    font-size: 30px;
+                    border-radius: 10px;
+                    outline: none;
+                    color: var(--colorYellow);
+                    background-color: var(--colorGreen);
+                }
+                .save{
+                    width: 70%;
+                    padding: 10px;
+                    outline: none;
+                    border: none;
+                    margin: 0 5px ;
+                    font-size: 15px;
+                    border-radius: 10px;
+                    background-color: var(--colorGreen);
+                    color: var(--colorWhite);
+
+                }
+            }
+            
+        }
+    }
+    .react-tabs {
+        display: none;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .mobile-user-page-container {
+        .user-page-head {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background-color: var(--colorGreen);
+
+            .logout {
+                width: 10%;
+                color: var(--colorWhite);
+                padding: 5px;
+                font-size: 30px;
+            }
+
+            .user {
+                width: 90%;
+
+                .user-name {
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: var(--colorWhite);
+                    margin: 3px auto;
+
+                    span {
+                        text-transform: uppercase;
+                    }
+                }
+
+                .user-email {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: var(--colorYellow);
+                }
+            }
+
+        }
+
+        .user-page-menu {
+            max-width: 100%;
+
+            p {
+                padding: 7px;
+                color: #aaa;
+                font-weight: 500;
+                font-size: 13px;
+                text-transform: uppercase;
+                background-color: var(--colorLight);
+            }
+
+            a {
+                color: var(--colorBlack);
+
+                li {
+                    max-width: 100%;
+                    padding: 34px 10px;
+                    display: flex;
+                    list-style-type: none;
+                    text-transform: capitalize;
+
+                    .icon {
+                        margin-right: 20px;
+                        font-size: 20px;
+                    }
+
+                    .icon-label {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+
+                li:hover {
+                    background-color: var(--colorLight);
+                }
+
+            }
+
+        }
+        
+    }
+    .react-tabs {
+        display: none;
+    }
+    .order-container{
+        max-width: 100%;
+        padding: 20px;
+        form{
+            width: 90%;
+            margin: auto;
+            .form-group{
+                width: 90%;
+                margin: 30px 0;
+                label{
+                    margin: 15px 0;
+                }
+                input{
+                    max-width: 97%;
+                }
+            }
+            .order-btn{
+                display: flex;
+                width: 97%;
+                .bck-btn{
+                    width: 20%;
+                    padding: 5px;
+                    border: none;
+                    font-size: 30px;
+                    border-radius: 10px;
+                    outline: none;
+                    color: var(--colorYellow);
+                    background-color: var(--colorGreen);
+                }
+                .save{
+                    width: 70%;
+                    padding: 10px;
+                    outline: none;
+                    border: none;
+                    margin: 0 5px ;
+                    font-size: 15px;
+                    border-radius: 10px;
+                    background-color: var(--colorGreen);
+                    color: var(--colorWhite);
+
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mobile-user-page-container {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        background-color: var(--colorLight);
+    }
+
+    .react-tabs {
+        max-width: 100%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        padding: 20px 10px;
+        background-color: var(--colorLight);
+
+        .react-tabs__tab-list {
+            width: 30%;
+            margin-right: 10px;
+            background-color: var(--colorWhite);
+            border-radius: 5px;
+
+            .react-tabs__tab {
+                padding: 30px 20px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    margin-right: 10%;
+                    font-size: 28px;
+                }
+
+                .icon-label {
+                    text-transform: capitalize;
+                }
+
+            }
+
+            li:hover {
+                background-color: var(--colorLight);
+            }
+        }
+
+
+        .react-tabs__tab-panel--selected {
+            width: 70%;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: var(--colorWhite);
+            .order-container{
+                max-width: 100%;
+                padding: 20px;
+                form{
+                    width: 90%;
+                    margin: auto;
+                    .form-group{
+                        width: 90%;
+                        margin: 30px 0;
+                        label{
+                            margin: 15px 0;
+                        }
+                        input{
+                            max-width: 97%;
+                        }
+                    }
+                    .order-btn{
+                        display: flex;
+                        width: 97%;
+                        .bck-btn{
+                           display: none;
+                        }
+                        .save{
+                            width: 95%;
+                            padding: 10px;
+                            outline: none;
+                            border: none;
+                            margin: 0 5px ;
+                            font-size: 15px;
+                            border-radius: 10px;
+                            background-color: var(--colorGreen);
+                            color: var(--colorWhite);
+        
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .mobile-user-page-container {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        background-color: var(--colorLight);
+    }
+
+    .react-tabs {
+        max-width: 90%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        padding: 20px 10px;
+        background-color: var(--colorLight);
+
+        .react-tabs__tab-list {
+            width: 25%;
+            margin-right: 10px;
+            background-color: var(--colorWhite);
+            border-radius: 5px;
+
+            .react-tabs__tab {
+                padding: 30px 20px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    margin-right: 10%;
+                    font-size: 28px;
+                }
+
+                .icon-label {
+                    text-transform: capitalize;
+                }
+
+            }
+
+            li:hover {
+                background-color: var(--colorLight);
+            }
+        }
+
+
+        .react-tabs__tab-panel--selected {
+            width: 75%;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: var(--colorWhite);
+            .order-container{
+                max-width: 100%;
+                padding: 20px;
+                form{
+                    width: 90%;
+                    margin: auto;
+                    .form-group{
+                        width: 90%;
+                        margin: 30px 0;
+                        label{
+                            margin: 15px 0;
+                        }
+                        input{
+                            max-width: 97%;
+                        }
+                    }
+                    .order-btn{
+                        display: flex;
+                        width: 50%;
+                        margin: auto;
+                        .bck-btn{
+                           display: none;
+                        }
+                        .save{
+                            width: 70%;
+                            padding: 10px;
+                            outline: none;
+                            border: none;
+                            margin: 0 5px ;
+                            font-size: 15px;
+                            border-radius: 10px;
+                            background-color: var(--colorGreen);
+                            color: var(--colorWhite);
+        
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .mobile-user-page-container {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        background-color: var(--colorLight);
+    }
+
+    .react-tabs {
+        max-width: 80%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        padding: 20px 10px;
+        background-color: var(--colorLight);
+
+        .react-tabs__tab-list {
+            width: 25%;
+            margin-right: 10px;
+            background-color: var(--colorWhite);
+            border-radius: 5px;
+
+            .react-tabs__tab {
+                padding: 30px 20px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    margin-right: 10%;
+                    font-size: 28px;
+                }
+
+                .icon-label {
+                    text-transform: capitalize;
+                }
+
+            }
+
+            li:hover {
+                background-color: var(--colorLight);
+            }
+        }
+
+
+        .react-tabs__tab-panel--selected {
+            width: 75%;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: var(--colorWhite);
+            .order-container{
+                max-width: 100%;
+                padding: 20px;
+                form{
+                    width: 90%;
+                    margin: auto;
+                    .form-group{
+                        width: 90%;
+                        margin: 20px 0;
+                        label{
+                            margin: 15px 0;
+                        }
+                        input{
+                            max-width: 97%;
+                        }
+                    }
+                    .order-btn{
+                        display: flex;
+                        width: 50%;
+                        margin: auto;
+                        .bck-btn{
+                           display: none;
+                        }
+                        .save{
+                            width: 70%;
+                            margin: auto;
+                            padding: 15px;
+                            outline: none;
+                            border: none;
+                            margin: 0 5px ;
+                            font-size: 15px;
+                            border-radius: 10px;
+                            background-color: var(--colorGreen);
+                            color: var(--colorWhite);
+        
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}
