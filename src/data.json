@@ -1,0 +1,88 @@
+{
+    "products": [
+        {
+            "_id": 0,
+            "title": "Ghana Batique",
+            "category": "Textiles",
+            "img": "/Image/ghana.jpg",
+            "amount": 5000
+        },
+        {
+            "_id": 1,
+            "category": "Textiles",
+            "title": "Ankara Sneakers",
+            "img": "/Image/Ankarasneaker.jpg",
+            "amount": 1500
+        },
+        {
+            "_id": 2,
+            "title": "Ankara Shoes Female",
+            "category": "Textiles",
+            "img": "/Image/femaleShoes.jpg",
+            "amount": 1000
+        },
+        {
+            "_id": 3,
+            "title": "Zebra Skin",
+            "category": "Animal Skin",
+            "img": "/Image/zebra.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 4,
+            "title": "Leaopard Skin",
+            "category": "Animal Skin",
+            "img": "/Image/cheetah.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 5,
+            "title": "Figurine",
+            "category": "Africa Figures",
+            "img": "/Image/sculpture.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 6,
+            "title": "Sculpture from Nigeria",
+            "category": "Africa Figures",
+            "img": "/Image/figure.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 7,
+            "title": "Ankara Sneakers Unisex",
+            "category": "Textiles",
+            "img": "/Image/sneaker.webp",
+            "amount": 20000
+        },
+        {
+            "_id": 8,
+            "title": "Sculpture From Ghana",
+            "category": "Africa Figures",
+            "img": "/Image/figurine.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 9,
+            "title": "Ankara Shoe, Bag and purse",
+            "category": "Textiles",
+            "img": "/Image/ankaraShoesAndBag.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 10,
+            "title": "Beads",
+            "category": "Beads and wireworks",
+            "img": "/Image/bead.jpg",
+            "amount": 20000
+        },
+        {
+            "_id": 11,
+            "title": "Ankara Shoe, Bag and purse",
+            "category": "Textiles",
+            "img": "/Image/screen-1.jpg",
+            "amount": 20000
+        }
+    ]
+}
