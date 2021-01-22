@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 
 function ItemCards(props) {
   return (
-    <Link to="/product-page">
-      {" "}
+    <Link to={"/product-page" + props._id}>
       <div className="item-card">
         <div className="image-container">
           <img src={props.img} alt={props.title}/>
@@ -25,6 +24,9 @@ function ItemCards(props) {
             thousandSeparator={true}
             prefix={"₦"}
           />
+        </div>
+        <div className="addToCartBtn">
+          <button>Add To Cart</button>
         </div>
       </div>
     </Link>

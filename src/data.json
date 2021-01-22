@@ -5,6 +5,7 @@
             "title": "Ghana Batique",
             "category": "Textiles",
             "img": "/Image/ghana.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 5000
         },
         {
@@ -12,6 +13,7 @@
             "category": "Textiles",
             "title": "Ankara Sneakers",
             "img": "/Image/Ankarasneaker.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 1500
         },
         {
@@ -19,6 +21,7 @@
             "title": "Ankara Shoes Female",
             "category": "Textiles",
             "img": "/Image/femaleShoes.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 1000
         },
         {
@@ -26,6 +29,7 @@
             "title": "Zebra Skin",
             "category": "Animal Skin",
             "img": "/Image/zebra.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -33,6 +37,7 @@
             "title": "Leaopard Skin",
             "category": "Animal Skin",
             "img": "/Image/cheetah.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -40,6 +45,7 @@
             "title": "Figurine",
             "category": "Africa Figures",
             "img": "/Image/sculpture.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -47,6 +53,7 @@
             "title": "Sculpture from Nigeria",
             "category": "Africa Figures",
             "img": "/Image/figure.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -54,6 +61,7 @@
             "title": "Ankara Sneakers Unisex",
             "category": "Textiles",
             "img": "/Image/sneaker.webp",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -61,6 +69,7 @@
             "title": "Sculpture From Ghana",
             "category": "Africa Figures",
             "img": "/Image/figurine.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -68,6 +77,7 @@
             "title": "Ankara Shoe, Bag and purse",
             "category": "Textiles",
             "img": "/Image/ankaraShoesAndBag.jpg",
+            "NumberOfAvailableItems": 5,
             "amount": 20000
         },
         {
@@ -75,6 +85,7 @@
             "title": "Beads",
             "category": "Beads and wireworks",
             "img": "/Image/bead.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         },
         {
@@ -82,7 +93,98 @@
             "title": "Ankara Shoe, Bag and purse",
             "category": "Textiles",
             "img": "/Image/screen-1.jpg",
+            "NumberOfAvailableItems": 20,
             "amount": 20000
         }
+    ],
+    "allcategory":[
+        {
+            "_id": 0,
+            "link": "/categories",
+            "category": "Abstract Art"
+          },
+          {
+            "_id": 1,
+            "link": "/categories",
+            "category": "African Figures"
+          },
+          {
+            "_id": 2,
+            "link": "/categories",
+            "category": "African Heads"
+          },
+          {
+            "_id": 3,
+            "link": "/categories",
+            "category": "Animal Skin"
+          },
+          {
+            "_id": 4,
+            "link": "/categories",
+            "category": "Antiques"
+          },
+          {
+            "_id": 5,
+            "link": "/categories",
+            "category": "Bead And wire Works"
+          },
+          {
+            "_id": 6,
+            "link": "/categories",
+            "category": "Craft"
+          },
+          {
+            "_id": 7,
+            "link": "/categories",
+            "category": "Gemstones"
+          },
+          {
+            "_id": 8,
+            "link": "/categories",
+            "category": "Horns & Skulls"
+          },
+          {
+            "_id": 9,
+            "link": "/categories",
+            "category": "Masks"
+          },
+          {
+            "_id": 10,
+            "link": "/categories",
+            "category": "Paintings"
+          },
+          {
+            "_id": 11,
+            "link": "/categories",
+            "category": "Pottery And Ceramic"
+          },
+          {
+            "_id": 12,
+            "link": "/categories",
+            "category": "Stones Ware"
+          },
+          {
+            "_id": 13,
+            "link": "/categories",
+            "category": "Textiles"
+          },
+          {
+            "_id": 14,
+            "link": "/categories",
+            "category": "Metal Works"
+          },
+          {
+            "_id": 15,
+            "link": "/categories",
+            "category": "Woven Items"
+          },
+          {
+            "_id": 16,
+            "link": "/categories",
+            "category": "Zulu Shields & Spears"
+          }
+    ],
+    "Cart":[
+       
     ]
 }

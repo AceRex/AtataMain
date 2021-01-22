@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import ItemsCarousel from "react-items-carousel";
 import SmallCard from "./smallCard";
-import Categories from "../Pages/Categories/CategoriesData";
 import "./categoryCard.css";
+import Data from "../../data.json";
 
 function CategoryCard() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   const Steps = ["", ""];
+  const products = Data.products;
 
   return (
     <div
@@ -25,11 +26,12 @@ function CategoryCard() {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-         {Steps.map(() => {
+        {Steps.map(() => {
           return (
             <div className="items-card-display">
-              {Categories.Items.map((items) => (
+              {products.map((items) => (
                 <SmallCard
+                  _id={items._id}
                   img={items.img}
                   category={items.category}
                   title={items.title}

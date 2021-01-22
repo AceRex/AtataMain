@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import Logo from "../logoComponents/headerLogo.png";
-import { AllCatMenuItems } from "./AllCateData";
+import Data from "../../data.json";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
@@ -14,6 +14,7 @@ class Header extends Component {
     this.state = {
       clicked: false,
       loginClicked: false,
+      AllCatMenuItems: Data.allcategory
     };
   }
 
@@ -30,15 +31,15 @@ class Header extends Component {
           {this.state.clicked ? <MdClose /> : <BiMenuAltLeft />}
         </div>
         <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          {AllCatMenuItems.map((items, index) => (
-            <Link key={index} to={items.link} style={{ color: "#fff" }}>
-              <li>{items.cate}</li>
+          {this.state.AllCatMenuItems.map((items) => (
+            <Link to={items.link + items._id} style={{ color: "#fff" }}>
+              <li key={items._id}>{items.category}</li>
             </Link>
           ))}
         </div>
         <div className="mobile-logo">
           <div className="logo">
-            <img src={Logo} />
+            <img src={Logo} alt='Logo'/>
           </div>
         </div>
         <div className="mobile-cart">

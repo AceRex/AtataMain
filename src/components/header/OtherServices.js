@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { useSelector } from "react-redux";
+import Data from '../../data.json'
 
 function Account() {
   const [hover, setHover] = useState("hidden active");
@@ -46,7 +47,9 @@ function Account() {
 }
 
 function OtherServices() {
-  const shoppingCart = useSelector((state) => state);
+  // const shoppingCart = useSelector((state) => state);
+  const CartLenght = Data.Cart;
+
   return (
     <div className="other-services">
       <div className="others">
@@ -60,7 +63,7 @@ function OtherServices() {
           <Link to="/cart">
             <p className="icon">
               <FiShoppingCart />
-              <span> {shoppingCart} items in cart</span>
+              <span> {CartLenght.length} items in cart</span>
             </p>
           </Link>
         </li>

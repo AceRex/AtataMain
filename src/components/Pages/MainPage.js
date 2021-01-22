@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import  '../../App.css'
 import MainHeader from "../header/mainHeader";
 import Simpleslider from "../carousel/carousel";
@@ -11,15 +11,35 @@ import Featured from "../card/FeaturedProducts";
 import Latest from "../card/LatestItem";
 
 
-function Page() {
+class Page extends Component {
+  constructor(){
+    super();
+    this.state = {
+     cartItems: []
+    }
+  }
+  addToCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id){
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart){
+      cartItems.push({...product, count: 1});
+    }
+  }
+  render(){
   return (
-    <div className="index-page-container">      
+    <main className="index-page-container">      
 
-      <MainHeader />
+      <MainHeader/>
       
-      <Simpleslider />
+      <Simpleslider  />
 
-      <CategoryCard />
+      <CategoryCard/>
 
       {/* <Auction /> */}
 
@@ -30,8 +50,9 @@ function Page() {
       <IndexBlog />
 
       <Footer />
-    </div>
+    </main>
   );
+}
 }
 
 export default Page;

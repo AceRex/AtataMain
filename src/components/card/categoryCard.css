@@ -33,6 +33,7 @@
     -ms-flex-line-pack: center;
         align-content: center;
     width: 100%;
+    list-style-type: none;
   }
   .item-card {
     background-color: var(--colorWhite);
@@ -97,6 +98,16 @@
     font-size: 22px;
     font-weight: bold;
   }
+  .addToCartBtn button {
+    width: 100%;
+    background-color: var(--colorYellow);
+    color: var(--colorBlack);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -120,6 +131,7 @@
     outline: none;
   }
   .items-card-display {
+    list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,6 +203,17 @@
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+    margin: 3px 0;
+  }
+  .addToCartBtn button {
+    width: 100%;
+    background-color: var(--colorYellow);
+    color: var(--colorBlack);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
   }
   .item-card:hover {
     -webkit-transition: 0.3s;
@@ -221,6 +244,7 @@
     outline: none;
   }
   .items-card-display {
+    list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -292,6 +316,17 @@
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+    margin: 2px 0;
+  }
+  .addToCartBtn button {
+    width: 100%;
+    background-color: var(--colorYellow);
+    color: var(--colorBlack);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
   }
   .item-card:hover {
     -webkit-transition: 0.3s;
@@ -322,6 +357,7 @@
     outline: none;
   }
   .items-card-display {
+    list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,6 +430,16 @@
     font-size: 22px;
     font-weight: bold;
   }
+  .addToCartBtn button {
+    width: 100%;
+    background-color: var(--colorYellow);
+    color: var(--colorBlack);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+  }
   .item-card:hover {
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -436,6 +482,7 @@
             align-items: center;
     -ms-flex-line-pack: center;
         align-content: center;
+    list-style-type: none;
     width: 100%;
   }
   .item-card {
@@ -494,12 +541,23 @@
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+    margin: 2px 0;
   }
   .item-card:hover {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border: solid 0.5px var(--colorAsh);
     text-decoration: none;
+  }
+  .addToCartBtn button {
+    width: 100%;
+    background-color: var(--colorYellow);
+    color: var(--colorBlack);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
   }
 }
 /*# sourceMappingURL=categoryCard.css.map */

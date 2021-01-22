@@ -7,6 +7,8 @@ import process from "../../Redux/addToCart";
 import { Provider } from "react-redux";
 import { FiShoppingCart } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import Data from '../../data.json'
+
 
 function Account() {
   const [hover, setHover] = useState("hidden");
@@ -26,7 +28,8 @@ function Account() {
   //     setClicked(true);
   //   }, 500);
   // };
-  const shoppingCart = useSelector((state) => state);
+  // const shoppingCart = useSelector((state) => state);
+  const CartLenght = Data.Cart;
 
   return (
     <>
@@ -40,7 +43,7 @@ function Account() {
           <p className="icon">
             <FiShoppingCart />
           </p>
-          <span> {shoppingCart} items in cart</span>
+          <span> {CartLenght.length} items in cart</span>
         </li>
       </div>
       
