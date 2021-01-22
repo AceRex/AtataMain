@@ -7,7 +7,7 @@ export default function AuctionCard(props) {
     <div className="auction-card">
       <div className="auction-top">
         <div className="image-container">
-          <img src={img} />
+          <img src={img} alt='AuctionImage'/>
         </div>
         <div className="auction-details">
           <div className="bids">

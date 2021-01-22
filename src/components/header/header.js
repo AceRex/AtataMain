@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 function Account() {
   const [hover, setHover] = useState("hidden");
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
 
   const handleHover = (hover) => {
     setTimeout(() => {
@@ -21,11 +21,11 @@ function Account() {
   const handleHoverOut = (hover) => {
     setHover("hidden");
   };
-  const handleClicked = (clicked) => {
-    setTimeout(() => {
-      setClicked(true);
-    }, 500);
-  };
+  // const handleClicked = (clicked) => {
+  //   setTimeout(() => {
+  //     setClicked(true);
+  //   }, 500);
+  // };
   const shoppingCart = useSelector((state) => state);
 
   return (
@@ -72,7 +72,7 @@ export default class Header extends Component {
           <div className="PagesHeader">
             <div className="logo-container">
               <Link to="/" className="logo">
-                <img src={HeaderLogo} />
+                <img src={HeaderLogo} alt='Logo'/>
                
               </Link>
             </div>

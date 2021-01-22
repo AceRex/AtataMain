@@ -9,7 +9,7 @@ export default function HeaderCenter() {
     <div className="top-header">
       <Link to="/" className="topHeader">
         <div className="logo">
-          <img src={Logo} />
+          <img src={Logo} alt='Logo' />
         </div>
       </Link>
     </div>

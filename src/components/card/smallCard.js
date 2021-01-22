@@ -9,7 +9,7 @@ function ItemCards(props) {
       {" "}
       <div className="item-card">
         <div className="image-container">
-          <img src={props.img} />
+          <img src={props.img} alt={props.title}/>
         </div>
         <div className="Card-top">
           <p>{props.title}</p>

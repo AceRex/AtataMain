@@ -13,7 +13,7 @@ export default function Cart() {
             <div className="cart-container">
                 <div className="cart-item">
                     <div className="cart-img-container">
-                        <img src={Img} />
+                        <img src={Img} alt='Cartimage' />
                     </div>
                     <div className="cart-item-details">
                         <p>Ankara Sneaker</p>

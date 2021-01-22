@@ -12,7 +12,7 @@ function OrderInput() {
     <>
       <ItemName />
       <div className="count-btn">
-        {count == 0 ? (
+        {count === 0 ? (
           <button className="btn-disabled"><FaMinus/></button>
         ) : (
           <button className="btn-decr" onClick={() => dispatch(decrement())}><FaMinus/></button>

@@ -32,12 +32,12 @@ function Account() {
       >
         <Link to="/signin">
           <li>
-            Login <i class="fas fa-sign-in-alt"></i>
+            Login <i className="fas fa-sign-in-alt"></i>
           </li>
         </Link>
         <Link to="/register">
           <li>
-            Register <i class="far fa-user"></i>
+            Register <i className="far fa-user"></i>
           </li>
         </Link>
       </div>

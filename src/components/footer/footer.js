@@ -25,14 +25,14 @@ function Footer() {
       <SocialLinks>
         <span className="header"> Our Page</span>
         <ul>
-          <a href="https://www.facebook.com/atata57" target="_blank">
-            <i class="fab fa-facebook-square"></i>/ atat57
+          <a rel='noopener noreferrer' href="https://www.facebook.com/atata57" target="_blank" >
+            <i className="fab fa-facebook-square"></i>/ atat57
           </a>
-          <a href="https://www.twitter.com/atata57" target="_blank">
-            <i class="fab fa-twitter-square"></i>/ atat57
+          <a rel='noopener noreferrer' href="https://www.twitter.com/atata57" target="_blank">
+            <i className="fab fa-twitter-square"></i>/ atat57
           </a>
-          <a href="https://instagram.com/atata57" target='_blank'>
-            <i class="fab fa-instagram"></i>/ atat57
+          <a rel='noopener noreferrer' href="https://instagram.com/atata57" target='_blank' >
+            <i className="fab fa-instagram"></i>/ atat57
           </a>
         </ul>
       </SocialLinks>

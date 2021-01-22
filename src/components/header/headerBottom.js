@@ -57,7 +57,7 @@ class HeaderBottom extends React.Component {
             >
               {/* Datas are been read from ./AllCateData.js */}
               {AllCatMenuItems.map((items) => (
-                <Link to={items.link} style={{color: '#fff'}}>
+                <Link to={items.link} style={{color: '#fff'}} key={items.id}>
                   <li>{items.cate}</li>
                 </Link>
               ))}

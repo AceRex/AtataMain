@@ -1,5 +1,5 @@
 import React from 'react'
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { Provider, useDispatch} from "react-redux";
 import process from "../../../../Redux/addToCart";
 import { addCartItem } from "../../../../Redux/addToCart"
 import '../productMain.css'
