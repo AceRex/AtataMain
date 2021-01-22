@@ -7,6 +7,7 @@ import "./categoryCard.css";
 function CategoryCard() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
+  const Steps = ["", "",""];
   return (
     <div
       style={{ padding: `0 ${chevronWidth}px` }}
@@ -23,36 +24,20 @@ function CategoryCard() {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-        <div className="items-card-display">
-          {Categories.Items.map((items) => (
-            <SmallCard
-              img={items.img}
-              category={items.category}
-              title={items.title}
-              amount={items.amount}
-            />
-          ))}
-        </div>
-        <div className="items-card-display">
-          {Categories.Items.map((items) => (
-            <SmallCard
-              img={items.img}
-              category={items.category}
-              title={items.title}
-              amount={items.amount}
-            />
-          ))}
-        </div>
-        <div className="items-card-display">
-          {Categories.Items.map((items) => (
-            <SmallCard
-              img={items.img}
-              category={items.category}
-              title={items.title}
-              amount={items.amount}
-            />
-          ))}
-        </div>
+        {Steps.map(() => {
+          return (
+            <div className="items-card-display">
+              {Categories.Items.map((items) => (
+                <SmallCard
+                  img={items.img}
+                  category={items.category}
+                  title={items.title}
+                  amount={items.amount}
+                />
+              ))}
+            </div>
+          );
+        })}
       </ItemsCarousel>
     </div>
   );
