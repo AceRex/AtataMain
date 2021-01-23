@@ -1,19 +1,25 @@
-import React, { Component, useState } from "react";
-import {
-  CountryDropdown,
-  RegionDropdown,
-  CountryRegionData,
-} from "react-country-region-selector";
+import React, { Component } from "react";
+import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import "./register.css";
 import { Link } from "react-router-dom";
 import Logo from "../../logoComponents/logo2.png";
-import styled from "styled-components";
 
 export default class UserReg extends Component {
   constructor(props) {
     super(props);
-    this.state = { country: "", region: "" };
+    this.state = {
+      firstName: " ",
+      lastName: " ",
+      phoneNumber: ' ',
+      email: " ",
+      password: " ",
+      country: " ",
+      region: " ",
+      address: " "
+    };
   }
+
+  componentWillMount() {}
 
   selectCountry(val) {
     this.setState({ country: val });
@@ -29,7 +35,7 @@ export default class UserReg extends Component {
       <div className="ind-reg">
         <div className="LogoContaniner">
           <div className="logo">
-            <img src={Logo} />
+            <img src={Logo} alt="Logo" />
           </div>
         </div>
         <div className="ind-reg-form">
@@ -93,7 +99,7 @@ export default class UserReg extends Component {
               <div className="group">
                 <div className="form-group">
                   <Link to="/register">
-                    <button className="btn-back">{'<< '}Back</button>
+                    <button className="btn-back">{"<< "}Back</button>
                   </Link>
                 </div>
                 <div className="form-group">

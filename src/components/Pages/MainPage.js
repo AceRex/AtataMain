@@ -1,58 +1,48 @@
-import React, {Component} from "react";
-import  '../../App.css'
+import React, { Component } from "react";
+import "../../App.css";
 import MainHeader from "../header/mainHeader";
 import Simpleslider from "../carousel/carousel";
-import CategoryLinks from "./bottomCategoryItems";
 import Footer from "../footer/footer";
 import IndexBlog from "../Pages/IndexBlog";
 import Auction from "../Auction/auction";
 import CategoryCard from "../card/categoryCard";
 import Featured from "../card/FeaturedProducts";
 import Latest from "../card/LatestItem";
-
+import Data from "../../data.json";
 
 class Page extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-     cartItems: []
-    }
+      products: Data.products,
+      cartItems: Data.Cart,
+    };
   }
-  addToCart = (product) => {
-    const cartItems = this.state.cartItems.slice();
-    let alreadyInCart = false;
-    cartItems.forEach((item) => {
-      if (item._id === product._id){
-        item.count++;
-        alreadyInCart = true;
-      }
-    });
-    if (!alreadyInCart){
-      cartItems.push({...product, count: 1});
-    }
+  
+  componentWillMount() {
+  
   }
-  render(){
-  return (
-    <main className="index-page-container">      
+  render() {
+    return (
+      <main className="index-page-container">
+        <MainHeader />
 
-      <MainHeader/>
-      
-      <Simpleslider  />
+        <Simpleslider />
 
-      <CategoryCard/>
+        <CategoryCard products={this.state.products} />
 
-      {/* <Auction /> */}
+        {/* <Auction /> */}
 
-      <Featured />
+        <Featured products={this.state.products}/>
 
-      <Latest />
+        <Latest products={this.state.products}/>
 
-      <IndexBlog />
+        <IndexBlog />
 
-      <Footer />
-    </main>
-  );
-}
+        <Footer />
+      </main>
+    );
+  }
 }
 
 export default Page;

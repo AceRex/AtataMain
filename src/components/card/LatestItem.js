@@ -3,12 +3,13 @@ import ItemsCarousel from "react-items-carousel";
 import SmallCard from "./smallCard";
 import "./categoryCard.css";
 import Data from "../../data.json";
+import { Component } from "react";
 
-function CategoryCard() {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
+class CategoryCard extends Component {
+
+  render(){
+   
   const chevronWidth = 40;
-  const Steps = ["", "",""];
-  const product = Data.products
 
   return (
     <div
@@ -16,20 +17,9 @@ function CategoryCard() {
       className="items-card-container"
     >
       <p className="header">Latest Items</p>
-      <ItemsCarousel
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
-        numberOfCards={1}
-        gutter={20}
-        leftChevron={<button className="left-btn">{"<"}</button>}
-        rightChevron={<button className="right-btn">{">"}</button>}
-        outsideChevron
-        chevronWidth={chevronWidth}
-      >
-         {Steps.map(() => {
-          return (
+     
             <div className="items-card-display">
-              {product.map((items) => (
+              {this.props.products.map((items) => (
                 <SmallCard
                   img={items.img}
                   category={items.category}
@@ -38,11 +28,10 @@ function CategoryCard() {
                 />
               ))}
             </div>
-          );
-        })}
-      </ItemsCarousel>
     </div>
   );
+   
+}
 }
 
 export default CategoryCard;

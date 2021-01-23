@@ -1,12 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './cart.css'
 import { RiDeleteBin6Fill } from 'react-icons/ri'
+import Data from '../../data.json'
 
 
 export default function CartCard(props) {
+   const [deleteItem, setDeleteItem] = useState(true);
+   var cartItems = Data.Cart
+
+  function handleDelete () {
+      setDeleteItem(false)
+      cartItems = cartItems - 1
+  }
     return (
         <>
-            <div className="cart-item">
+            <div className={`${!deleteItem ? 'hidden' : 'cart-item'}`}>
                 <div className="cart-img-container">
                     <img src={props.Img} alt='Cartimage' />
                 </div>
@@ -20,7 +28,7 @@ export default function CartCard(props) {
                     <p>#15,000</p>
                     <span> x3</span>
                 </div>
-                <button className="btn-dlt"><RiDeleteBin6Fill /></button>
+                <button onClick={handleDelete} className="btn-dlt"><RiDeleteBin6Fill /></button>
 
             </div>
         </>

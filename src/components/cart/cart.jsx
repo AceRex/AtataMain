@@ -10,6 +10,8 @@ import {TiShoppingCart} from 'react-icons/ti'
 
 export default function Cart() {
     const CartItem = Data.Cart;
+   const product = Data.products;
+
     return (
         <>
             <Header />

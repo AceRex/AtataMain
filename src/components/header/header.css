@@ -235,6 +235,24 @@
   .MainHeader .PagesHeader .login li .icon {
     font-size: 25px;
   }
+  .MainHeader .PagesHeader .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .login a .icon {
+    font-size: 25px;
+  }
   .login-dropdown {
     position: absolute;
     font-size: 13px;
@@ -477,6 +495,24 @@
         align-content: center;
   }
   .MainHeader .PagesHeader .login li .icon {
+    font-size: 25px;
+  }
+  .MainHeader .PagesHeader .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .login a .icon {
     font-size: 25px;
   }
   .login-dropdown {
@@ -735,6 +771,24 @@
   .MainHeader .PagesHeader .login li .icon {
     font-size: 25px;
   }
+  .MainHeader .PagesHeader .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .login a .icon {
+    font-size: 25px;
+  }
   .login-dropdown {
     position: absolute;
     font-size: 13px;
@@ -882,6 +936,24 @@
   }
   .MainHeader .PagesHeader .mobile-contain .login li .icon {
     font-size: 20px;
+  }
+  .MainHeader .PagesHeader .mobile-contain .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .mobile-contain .login a .icon {
+    font-size: 25px;
   }
   .MainHeader .PagesHeader .search-container {
     display: none;
@@ -1141,6 +1213,24 @@
   }
   .MainHeader .PagesHeader .mobile-contain .login li .icon {
     font-size: 20px;
+  }
+  .MainHeader .PagesHeader .mobile-contain .login a {
+    margin: 0px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .mobile-contain .login a .icon {
+    font-size: 25px;
   }
   .MainHeader .PagesHeader .search-container {
     display: none;

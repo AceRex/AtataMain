@@ -39,12 +39,12 @@ function Account() {
             <VscAccount />
           </p>
         </li>
-        <li>
+        <Link to='/cart'>
           <p className="icon">
             <FiShoppingCart />
           </p>
           <span> {CartLenght.length} items in cart</span>
-        </li>
+        </Link>
       </div>
       
 
