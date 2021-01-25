@@ -26,7 +26,7 @@ handleClick = (e) => {
     <div className="LoginContainer">
       <div className="LogoContaniner">
         <div className="logo">
-          <img src={Logo} />
+          <img src={Logo} alt="Logo"/>
         </div>
       </div>
       <div className="formContaniner">

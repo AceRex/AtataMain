@@ -4,7 +4,7 @@ import addToCartReducer from "./addToCart";
 
 const rootReducer =  combineReducers({
   countReducer,
-  addToCartReducer
+  cart: addToCartReducer
 });
 
 const store = createStore(rootReducer);

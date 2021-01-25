@@ -3,10 +3,7 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../logoComponents/headerLogo.png";
 import { VscAccount } from "react-icons/vsc";
-import process from "../../Redux/addToCart";
-import { Provider } from "react-redux";
 import { FiShoppingCart } from "react-icons/fi";
-import { useSelector } from "react-redux";
 import Data from '../../data.json'
 
 
@@ -53,12 +50,12 @@ function Account() {
       <div className={`login-dropdown ${hover}`} onMouseLeave={handleHoverOut}>
         <Link to="/signin">
           <li>
-            Login <i class="fas fa-sign-in-alt"></i>
+            Login <i className="fas fa-sign-in-alt"></i>
           </li>
         </Link>
         <Link to="/register">
           <li>
-            Register <i class="far fa-user"></i>
+            Register <i className="far fa-user"></i>
           </li>
         </Link>
       </div>
@@ -69,7 +66,6 @@ function Account() {
 export default class Header extends Component {
   render() {
     return (
-      <Provider store={process}>
 
         <div className="MainHeader">
           <div className="PagesHeader">
@@ -101,7 +97,6 @@ export default class Header extends Component {
             
           </div>
         </div>
-      </Provider>
     );
   }
 }

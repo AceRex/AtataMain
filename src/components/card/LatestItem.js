@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import ItemsCarousel from "react-items-carousel";
+import React from "react";
 import SmallCard from "./smallCard";
 import "./categoryCard.css";
-import Data from "../../data.json";
 import { Component } from "react";
 
 class CategoryCard extends Component {

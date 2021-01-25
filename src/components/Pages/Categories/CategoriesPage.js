@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SmallCard from "../../card/smallCard";
-import Header from "../../header/header";
+import Header from "../../header/mainHeader";
 import Footer from "../../footer/footer";
 import "./categoriespage.css";
 import CategoriesData from "./CategoriesData";

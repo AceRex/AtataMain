@@ -1,4 +1,4 @@
-import redux, {createStore} from 'redux'
+import {createStore} from 'redux'
 
 
 export function increment() {

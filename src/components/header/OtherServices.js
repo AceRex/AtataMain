@@ -3,8 +3,7 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
-import { useSelector } from "react-redux";
-import Data from '../../data.json'
+import { connect, useSelector } from "react-redux";
 
 function Account() {
   const [hover, setHover] = useState("hidden active");
@@ -46,10 +45,11 @@ function Account() {
   );
 }
 
-function OtherServices() {
-  // const shoppingCart = useSelector((state) => state);
-  const CartLenght = Data.Cart;
-
+function OtherServices(props) {
+  
+  const shoppingCart = useSelector((state) => state.cart);
+  console.log(shoppingCart)
+console.log(props.cart)
   return (
     <div className="other-services">
       <div className="others">
@@ -63,7 +63,7 @@ function OtherServices() {
           <Link to="/cart">
             <p className="icon">
               <FiShoppingCart />
-              <span> {CartLenght.length} items in cart</span>
+              <span> 1 items in cart</span>
             </p>
           </Link>
         </li>
@@ -72,4 +72,7 @@ function OtherServices() {
   );
 }
 
-export default OtherServices;
+function mapStateToProps(state) {
+  return { cart: state.cart }
+}
+export default connect(mapStateToProps)(OtherServices)
