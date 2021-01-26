@@ -4,22 +4,23 @@ import NumberFormat from "react-number-format";
 import { Link } from "react-router-dom";
 // import { Component } from "react";
 import { useDispatch } from "react-redux";
+import { addCartItem } from "../../Redux/addToCart";
 
 function ItemCards(props) {
   // handleClick = (e) => {
   //   e.preventDefault();
   //   this.addToCart(this.state.products);
   // };
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
-    <Link to="/product-page" key={props._id}>
+    <Link to="/product-page" key={props.key}>
       <div className="item-card">
         <div className="image-container">
-          <img src={props.img} alt='Image'/>
+          <img src={props.img} alt="display" />
         </div>
         <div className="Card-top">
-          <p></p>
+          <p>{props.title}</p>
           <span className="category">
             {/* Category: <Link to="/"></Link> */}
           </span>
@@ -34,7 +35,14 @@ function ItemCards(props) {
           />
         </div>
         <div className="addToCartBtn">
-          <button >Add To Cart</button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(addCartItem("Hello"));
+            }}
+          >
+            Add To Cart
+          </button>
         </div>
       </div>
     </Link>

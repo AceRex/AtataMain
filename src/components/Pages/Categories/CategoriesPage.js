@@ -21,7 +21,7 @@ function Categories() {
           <Link to="/" className="bd-text">
             Home
           </Link>
-          <Link>Category</Link>
+          <Link to="/">Category</Link>
         </Breadcrumbs>
         {/* Mobile Category Header */}
         <div
@@ -37,7 +37,7 @@ function Categories() {
             chevronWidth={chevronWidth}
           >
             {CategoriesData.SideNav.map((menu) => (
-              <li>{menu.category}</li>
+              <li key={menu.id}>{menu.category}</li>
             ))}
           </ItemsCarousel>
         </div>
@@ -46,17 +46,17 @@ function Categories() {
         <section className="top-display">
           <CarouselSlider />
         </section>
-        
 
         <div className="category-shop">
           <section className="side-nav">
             {CategoriesData.SideNav.map((menu) => (
-              <li>{menu.category}</li>
+              <li key={menu.id}>{menu.category}</li>
             ))}
           </section>
           <section className="shop">
             {CategoriesData.Items.map((item) => (
               <SmallCard
+                key={item.id}
                 img={item.img}
                 title={item.title}
                 amount={item.amount}

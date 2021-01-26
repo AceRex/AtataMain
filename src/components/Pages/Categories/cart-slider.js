@@ -10,7 +10,7 @@ import Banner4 from "../categoryImages/cart-banner3.png";
 export default function CarouselSlider() {
     return (
       <div className="Cart-slider">
-        <AliceCarousel autoPlay autoPlayInterval="4000">
+        <AliceCarousel autoPlay autoPlayInterval={4000}>
           <img src={Banner2} alt='Banner' className='cart-slider-image' />
           <img src={Banner3} alt='Banner2'/>
           <img src={Banner4} alt='Banner3'/>

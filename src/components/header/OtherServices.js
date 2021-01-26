@@ -46,10 +46,9 @@ function Account() {
 }
 
 function OtherServices(props) {
-  
   const shoppingCart = useSelector((state) => state.cart);
-  console.log(shoppingCart)
-console.log(props.cart)
+  const number = shoppingCart.cartItem.length
+ 
   return (
     <div className="other-services">
       <div className="others">
@@ -63,7 +62,7 @@ console.log(props.cart)
           <Link to="/cart">
             <p className="icon">
               <FiShoppingCart />
-              <span> 1 items in cart</span>
+              <span> {number} items in cart</span>
             </p>
           </Link>
         </li>
@@ -73,6 +72,6 @@ console.log(props.cart)
 }
 
 function mapStateToProps(state) {
-  return { cart: state.cart }
+  return { cart: state.cart };
 }
-export default connect(mapStateToProps)(OtherServices)
+export default connect(mapStateToProps)(OtherServices);
