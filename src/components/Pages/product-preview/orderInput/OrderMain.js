@@ -6,7 +6,7 @@ import "../productMain.css";
 import {FaPlus,FaMinus} from 'react-icons/fa'
 
 function OrderInput() {
-  const count = useSelector((state) => state);
+  const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
   return (
     <>
@@ -17,7 +17,7 @@ function OrderInput() {
         ) : (
           <button className="btn-decr" onClick={() => dispatch(decrement())}><FaMinus/></button>
         )}
-        <input type="text" placeholder="0" value={count} />
+        <input type="text" value={count} defaultChecked/>
         <button className="btn-incr" onClick={() => dispatch(increment())}><FaPlus/></button>
       </div>
     </>

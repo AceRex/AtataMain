@@ -3,7 +3,7 @@ import countReducer from "./count";
 import addToCartReducer from "./addToCart";
 
 const rootReducer =  combineReducers({
-  countReducer,
+  count: countReducer,
   cart: addToCartReducer
 });
 

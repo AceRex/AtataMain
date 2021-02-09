@@ -51,10 +51,7 @@ function OtherServices(props) {
  
   return (
     <div className="other-services">
-      <div className="others">
-        <li>Blog</li>
-        <li>Lang</li>
-      </div>
+     
       <div className="rght-itm">
         <Account />
 

@@ -3,19 +3,19 @@ import ImagePreview from "./imageView/imagePreview";
 import Order from "./orderInput/OrderMain";
 import "./productMain.css";
 import { Data } from "../../../dummyUserData";
-import Categories from '../Categories/CategoriesData'
+import Categories from "../Categories/CategoriesData";
 //Header
 import Header from "../../header/mainHeader";
 //Header
 import Footer from "../../footer/footer";
 import SmallCard from "../../card/smallCard";
-import AddToCartBtn from "./orderInput/addToCartBtn"
+import AddToCartBtn from "./orderInput/addToCartBtn";
 
 class App extends Component {
   render() {
     return (
-      <>      
-      <Header />
+      <>
+        <Header />
         <div className="prd-contaniner">
           <section className="prd-display">
             <div className="imagePreview">
@@ -23,7 +23,7 @@ class App extends Component {
             </div>
             <div className="order">
               <Order />
-              <AddToCartBtn/>
+              <AddToCartBtn />
             </div>
           </section>
           <section className="prd-details-display">
@@ -62,23 +62,41 @@ class App extends Component {
           </section>
           <section className="prd-details-display">
             <p className="header">Customer Feedback</p>
-            
           </section>
           <section className="prd-details-display">
             <p className="header">Related Items</p>
-            <div className=' prd-items'>
-            {Categories.RelatedItems.map((item) => (
-            <SmallCard _id={item._id} img={item.img} title={item.title} category={item.category} amount={item.amount} />
-          ))}
+            <div className=" prd-items">
+              {Categories.RelatedItems.map((items) => (
+                <li key={items.id}>
+                  <SmallCard
+                    _id={items._id}
+                    img={items.img}
+                    category={items.category}
+                    title={items.title}
+                    amount={items.amount}
+                    addToCart={this.props.addToCart}
+                  />
+                </li>
+              ))}
             </div>
           </section>
           <section className="prd-details-display">
             <p className="header">Recently viewed Items</p>
-            <div className=' prd-items'>
-            {Categories.RecentlyViewed.map((item) => (
-            <SmallCard _id={item._id} img={item.img} title={item.title} category={item.category} amount={item.amount} />
-          ))}
-            </div>v
+            <div className=" prd-items">
+              {Categories.RecentlyViewed.map((items) => (
+                <li key={items.id}>
+                  <SmallCard
+                    _id={items._id}
+                    img={items.img}
+                    category={items.category}
+                    title={items.title}
+                    amount={items.amount}
+                    addToCart={this.props.addToCart}
+                  />
+                </li>
+              ))}
+            </div>
+            
           </section>
         </div>
         <Footer />
@@ -86,6 +104,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;

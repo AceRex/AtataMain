@@ -14,7 +14,7 @@ function ItemCards(props) {
   const dispatch = useDispatch();
 
   return (
-    <Link to="/product-page" key={props.key}>
+    <Link to="/product-page" key={props._id}>
       <div className="item-card">
         <div className="image-container">
           <img src={props.img} alt="display" />

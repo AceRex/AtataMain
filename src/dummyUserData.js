@@ -1,7 +1,7 @@
 export const Data = {
   product: {
       img: "",
-      name: `Men's Designer Long Sleeve Dress Shirt White`,
+      name: `Men's Designer Long Sleeve Dress Shirt`,
       category: 'Abstract Arts',
       amount: "7000",
       rating: 3,

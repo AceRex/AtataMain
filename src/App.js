@@ -9,7 +9,7 @@ import Latest from "./components/card/LatestItem";
 import Data from "./data.json";
 import CategoryCard from "./components/card/categoryCard";
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -17,14 +17,7 @@ class App extends Component {
       cartItems: Data.Cart,
     };
   }
-  // componentDidMount() {
-  //   this.alert = setInterval(
-  //     () => this.state.alert, 2000
-  //   )
-  // }
-  // componentWillMount() {
-  //   clearInterval(this.alert)
-  // }
+
   render() {
     return (
       <main className="index-page-container">
@@ -41,5 +34,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

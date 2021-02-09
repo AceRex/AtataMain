@@ -7,7 +7,7 @@ class ItemName extends Component {
     return (
         <div>
         <Item>
-            <p>Men's Designer Long Sleeve Dress Shirt White</p>
+            <p>{Data.product.name}</p>
             <span>Category: <p>{Data.product.category}</p></span>
             <p className='amount'>₦{Data.product.amount}</p>
         </Item>     
