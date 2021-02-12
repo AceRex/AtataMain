@@ -82,7 +82,7 @@ class App extends Component {
           </section>
           <section className="prd-details-display">
             <p className="header">Recently viewed Items</p>
-            <div className=" prd-items">
+            <div className="prd-items">
               {Categories.RecentlyViewed.map((items) => (
                 <li key={items.id}>
                   <SmallCard

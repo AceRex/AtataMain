@@ -19,7 +19,7 @@ import AddressBook from "./components/Pages/userPage/addressBook";
 import Details from "./components/Pages/userPage/details";
 import Password from "./components/Pages/userPage/password";
 import { Provider } from "react-redux";
-import store from "./Redux/";
+import store from "./Redux/main";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -63,11 +63,10 @@ ReactDOM.render(
         </Route>
         <Route path="/user-details">
           <Details />
-          </Route>
+        </Route>
         <Route path="/change-password">
-          <Password/>
-          </Route>
-          <Route path="/:id" children={<Child />} />
+          <Password />
+        </Route>
         <Route component={NotFound} />
       </Switch>
     </Router>

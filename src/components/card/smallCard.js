@@ -14,37 +14,36 @@ function ItemCards(props) {
   const dispatch = useDispatch();
 
   return (
-    <Link to="/product-page" key={props._id}>
+    <Link to="/product-page" key={props._id} className="my-card">
       <div className="item-card">
         <div className="image-container">
           <img src={props.img} alt="display" />
         </div>
         <div className="Card-top">
-          <p>{props.title}</p>
-          <span className="category">
-            {/* Category: <Link to="/"></Link> */}
-          </span>
-        </div>
-        <div className="amount">
-          <NumberFormat
-            className={"px-1"}
-            value={2000}
-            displayType={"text"}
-            thousandSeparator={true}
-            prefix={"₦"}
-          />
-        </div>
-        <div className="addToCartBtn">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              dispatch(addCartItem("Hello"));
-            }}
-          >
-            Add To Cart
-          </button>
-        </div>
+        <p>{props.title}</p>
+        <span className="category">{/* Category: <Link to="/"></Link> */}</span>
       </div>
+      <div className="amount">
+        <NumberFormat
+          className={"px-1"}
+          value={2000}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"₦"}
+        />
+      </div>
+      <div className="addToCartBtn">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            dispatch(addCartItem("Hello"));
+          }}
+        >
+          Add To Cart
+        </button>
+      </div>
+      </div>
+      
     </Link>
   );
 }

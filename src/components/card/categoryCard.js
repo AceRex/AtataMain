@@ -4,15 +4,14 @@ import "./categoryCard.css";
 
 class CategoryCard extends Component {
   render() {
-  const chevronWidth = 40;
-    
+    const chevronWidth = 10;
+
     return (
       <div
-        style={{ padding: `0 ${chevronWidth}px` }}
         className="items-card-container"
       >
         <p className="header">Top From All Categories</p>
-        
+
         <div className="items-card-display">
           {this.props.products.map((items) => (
             <li key={items._id}>
@@ -27,7 +26,6 @@ class CategoryCard extends Component {
             </li>
           ))}
         </div>
-        
       </div>
     );
   }

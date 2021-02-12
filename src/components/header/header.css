@@ -981,7 +981,7 @@
     display: none;
   }
   .MainHeader .mobile-header {
-    max-width: 100%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1006,7 +1006,7 @@
     height: 500px;
     position: absolute;
     overflow-y: scroll;
-    top: 80px;
+    top: 60px;
     left: -100%;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
@@ -1036,7 +1036,7 @@
     width: 100%;
     height: 180px;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
@@ -1057,10 +1057,11 @@
     z-index: 1;
   }
   .MainHeader .mobile-header .mobile-logo {
-    width: 70%;
+    width: 10%;
+    margin: auto;
   }
   .MainHeader .mobile-header .mobile-logo .logo {
-    width: 20%;
+    width: 10%;
     margin: auto;
   }
   .MainHeader .mobile-header .mobile-logo .logo img {
@@ -1114,7 +1115,7 @@
     display: none;
   }
   .MainHeader {
-    max-width: 100%;
+    width: 100%;
     background-color: var(--colorWhite);
     border-bottom: solid 0.5px #e2e2e2;
   }
@@ -1258,7 +1259,7 @@
     display: none;
   }
   .MainHeader .mobile-header {
-    max-width: 96%;
+    max-width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1283,7 +1284,7 @@
     height: 500px;
     position: absolute;
     overflow-y: scroll;
-    top: 80px;
+    top: 60px;
     left: -100%;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
@@ -1311,10 +1312,11 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    height: 180px;
+    height: 160px;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
+    border: solid 0.5px #e4e3e3;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -1334,7 +1336,8 @@
     z-index: 1;
   }
   .MainHeader .mobile-header .mobile-logo {
-    width: 65%;
+    width: 10%;
+    margin: auto;
   }
   .MainHeader .mobile-header .mobile-logo .logo {
     width: 20%;

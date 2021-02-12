@@ -13,6 +13,7 @@ import CarouselSlider from "./cart-slider";
 function Categories() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
+
   return (
     <>
       <Header />
@@ -31,7 +32,7 @@ function Categories() {
           <ItemsCarousel
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
-            numberOfCards={5}
+            numberOfCards={4}
             gutter={5}
             outsideChevron
             chevronWidth={chevronWidth}
@@ -50,7 +51,9 @@ function Categories() {
         <div className="category-shop">
           <section className="side-nav">
             {CategoriesData.SideNav.map((menu) => (
-              <li key={menu.id}>{menu.category}</li>
+              <li key={menu.id}>
+                <Link to="/">{menu.category}</Link>
+              </li>
             ))}
           </section>
           <section className="shop">

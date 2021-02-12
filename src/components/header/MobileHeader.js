@@ -32,15 +32,15 @@ class Header extends Component {
         </div>
         <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {this.state.AllCatMenuItems.map((items) => (
-            <Link to={items.link + items._id}  key={items._id} style={{ color: "#fff" }}>
+            <Link to={items.link}  key={items._id} style={{ color: "#fff" }}>
               <li>{items.category}</li>
             </Link>
           ))}
         </div>
         <div className="mobile-logo">
-          <div className="logo">
+          <Link to ='/' className="logo">
             <img src={Logo} alt='Logo'/>
-          </div>
+          </Link>
         </div>
         <div className="mobile-cart">
           <li onClick={this.handleLoginClick}>

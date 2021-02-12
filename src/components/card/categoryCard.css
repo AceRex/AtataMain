@@ -8,73 +8,55 @@
     color: var(--colorWhite);
     padding: 10px;
   }
-  button.right-btn, button.left-btn {
-    -webkit-box-shadow: 1px 1px 10px #0000002f;
-            box-shadow: 1px 1px 10px #0000002f;
-    background-color: var(--colorWhite);
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    outline: none;
-  }
-  .items-card-display {
+  .items-card-container .items-card-display {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    list-style-type: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    width: 100%;
-    list-style-type: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .item-card {
+  .items-card-container .items-card-display .item-card {
+    margin: 5px;
+    width: 40vw;
+    color: var(--colorBlack);
     background-color: var(--colorWhite);
-    margin: 4px;
-    width: 180px;
-    color: black;
     height: 290px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     -webkit-box-shadow: 0px 0px 7px #00000020;
             box-shadow: 0px 0px 7px #00000020;
-    padding: 10px;
     border: solid 0.5px transparent;
   }
-  .item-card:hover {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    border: solid 0.5px var(--colorAsh);
-    text-decoration: none;
-  }
-  .item-card > .Card-top {
+  .items-card-container .items-card-display .item-card .Card-top {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
   }
-  .item-card > .Card-top > .category {
+  .items-card-container .items-card-display .item-card .Card-top .category {
     font-size: 12px;
   }
-  .item-card > .Card-top > p {
+  .items-card-container .items-card-display .item-card .Card-top p {
     margin-top: 0.5rem;
-    margin-bottom: -0.1rem;
     text-align: center;
     font-size: 15px;
-    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .item-card > .image-container {
+  .items-card-container .items-card-display .item-card .image-container {
     width: 100%;
     margin: auto;
     height: 180px;
@@ -88,25 +70,32 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .item-card > .image-container > img {
+  .items-card-container .items-card-display .item-card .image-container img {
     width: 100%;
     margin: auto;
     height: 180px;
   }
-  .item-card > .amount {
+  .items-card-container .items-card-display .item-card .amount {
     text-align: center;
     font-size: 22px;
+    margin-bottom: 4px;
     font-weight: bold;
   }
-  .addToCartBtn button {
+  .items-card-container .items-card-display .item-card .addToCartBtn button {
     width: 100%;
     background-color: var(--colorYellow);
-    color: var(--colorBlack);
+    color: var(--colorWhite);
     font-size: 13px;
     font-weight: 800;
     padding: 10px;
     border-radius: 10px;
     border: none;
+  }
+  .items-card-container .items-card-display .item-card:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: solid 0.5px var(--colorAsh);
+    text-decoration: none;
   }
 }
 
@@ -120,7 +109,8 @@
     color: var(--colorWhite);
     padding: 10px;
   }
-  button.right-btn, button.left-btn {
+  button.right-btn,
+  button.left-btn {
     -webkit-box-shadow: 1px 1px 10px #0000002f;
             box-shadow: 1px 1px 10px #0000002f;
     background-color: var(--colorWhite);
@@ -233,7 +223,8 @@
     color: var(--colorWhite);
     padding: 10px;
   }
-  button.right-btn, button.left-btn {
+  button.right-btn,
+  button.left-btn {
     -webkit-box-shadow: 1px 1px 10px #0000002f;
             box-shadow: 1px 1px 10px #0000002f;
     background-color: var(--colorWhite);
@@ -346,7 +337,8 @@
     color: var(--colorWhite);
     padding: 10px;
   }
-  button.right-btn, button.left-btn {
+  button.right-btn,
+  button.left-btn {
     -webkit-box-shadow: 1px 1px 10px #0000002f;
             box-shadow: 1px 1px 10px #0000002f;
     background-color: var(--colorWhite);
@@ -458,67 +450,54 @@
     color: var(--colorWhite);
     padding: 10px;
   }
-  button.right-btn, button.left-btn {
-    -webkit-box-shadow: 1px 1px 10px #0000002f;
-            box-shadow: 1px 1px 10px #0000002f;
-    background-color: var(--colorWhite);
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    outline: none;
-  }
-  .items-card-display {
+  .items-card-container .items-card-display {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    list-style-type: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    list-style-type: none;
-    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .item-card {
-    background-color: var(--colorWhite);
-    margin: 4px;
+  .items-card-container .items-card-display .item-card {
+    margin: 5px;
     width: 180px;
-    color: black;
+    color: var(--colorBlack);
     height: 290px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     -webkit-box-shadow: 0px 0px 7px #00000020;
             box-shadow: 0px 0px 7px #00000020;
-    padding: 10px;
     border: solid 0.5px transparent;
   }
-  .item-card .Card-top {
+  .items-card-container .items-card-display .item-card .Card-top {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
   }
-  .item-card .Card-top p {
+  .items-card-container .items-card-display .item-card .Card-top .category {
+    font-size: 12px;
+  }
+  .items-card-container .items-card-display .item-card .Card-top p {
     margin-top: 0.5rem;
-    margin-bottom: -0.1rem;
     text-align: center;
     font-size: 15px;
-    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .item-card .Card-top .category {
-    font-size: 12px;
-  }
-  .item-card .image-container {
+  .items-card-container .items-card-display .item-card .image-container {
     width: 100%;
     margin: auto;
     height: 180px;
@@ -532,32 +511,32 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .item-card .image-container img {
+  .items-card-container .items-card-display .item-card .image-container img {
     width: 100%;
     margin: auto;
     height: 180px;
   }
-  .item-card .amount {
+  .items-card-container .items-card-display .item-card .amount {
     text-align: center;
     font-size: 22px;
+    margin-bottom: 4px;
     font-weight: bold;
-    margin: 2px 0;
   }
-  .item-card:hover {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    border: solid 0.5px var(--colorAsh);
-    text-decoration: none;
-  }
-  .addToCartBtn button {
+  .items-card-container .items-card-display .item-card .addToCartBtn button {
     width: 100%;
     background-color: var(--colorYellow);
-    color: var(--colorBlack);
+    color: var(--colorWhite);
     font-size: 13px;
     font-weight: 800;
     padding: 10px;
     border-radius: 10px;
     border: none;
+  }
+  .items-card-container .items-card-display .item-card:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: solid 0.5px var(--colorAsh);
+    text-decoration: none;
   }
 }
 /*# sourceMappingURL=categoryCard.css.map */

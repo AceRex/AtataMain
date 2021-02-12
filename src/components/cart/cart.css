@@ -40,17 +40,17 @@
     text-align: center;
   }
   .cart-container .cart-item .cart-item-details p {
-    font-size: 19px;
-    font-weight: 800;
+    font-size: 15px;
+    font-weight: 700;
     margin-bottom: 10px;
   }
   .cart-container .cart-item .cart-item-details span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #cccccc;
   }
   .cart-container .cart-item .cart-item-details h6 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #cccccc;
   }
@@ -58,15 +58,10 @@
     text-align: center;
     width: 20%;
     padding: 10px;
-  }
-  .cart-container .cart-item .cart-item-qty p {
-    font-size: 19px;
+    font-size: 15px;
+    color: var(--colorBlack) !important;
     font-weight: 800;
     margin-bottom: -2px;
-  }
-  .cart-container .cart-item .cart-item-qty span {
-    font-size: 30px;
-    color: #cccccc;
   }
   .total-amount {
     width: 40%;
@@ -199,15 +194,10 @@
     text-align: center;
     width: 20%;
     padding: 10px;
-  }
-  .cart-container .cart-item .cart-item-qty p {
-    font-size: 19px;
+    font-size: 15px;
+    color: var(--colorBlack) !important;
     font-weight: 800;
     margin-bottom: -2px;
-  }
-  .cart-container .cart-item .cart-item-qty span {
-    font-size: 30px;
-    color: #cccccc;
   }
   .total-amount {
     width: 30%;
@@ -340,15 +330,10 @@
     text-align: center;
     width: 20%;
     padding: 10px;
-  }
-  .cart-container .cart-item .cart-item-qty p {
-    font-size: 19px;
+    font-size: 15px;
+    color: var(--colorBlack) !important;
     font-weight: 800;
     margin-bottom: -2px;
-  }
-  .cart-container .cart-item .cart-item-qty span {
-    font-size: 30px;
-    color: #cccccc;
   }
   .total-amount {
     width: 20%;
@@ -481,15 +466,10 @@
     text-align: center;
     width: 20%;
     padding: 10px;
-  }
-  .cart-container .cart-item .cart-item-qty p {
-    font-size: 19px;
+    font-size: 15px;
+    color: var(--colorBlack) !important;
     font-weight: 800;
     margin-bottom: -2px;
-  }
-  .cart-container .cart-item .cart-item-qty span {
-    font-size: 30px;
-    color: #cccccc;
   }
   .total-amount {
     width: 20%;
@@ -622,15 +602,10 @@
     text-align: center;
     width: 20%;
     padding: 10px;
-  }
-  .cart-container .cart-item .cart-item-qty p {
-    font-size: 19px;
+    font-size: 15px;
+    color: var(--colorBlack) !important;
     font-weight: 800;
     margin-bottom: -2px;
-  }
-  .cart-container .cart-item .cart-item-qty span {
-    font-size: 30px;
-    color: #cccccc;
   }
   .total-amount {
     width: 15%;

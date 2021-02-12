@@ -27,7 +27,7 @@ export default class App extends Component {
         {/* <Auction /> */}
         <Featured products={this.state.products} />
         <Latest products={this.state.products} />
-        <IndexBlog />
+        {/* <IndexBlog /> */}
         <div className="notification">This website is still been tested</div>
         <Footer />
       </main>

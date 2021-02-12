@@ -13,14 +13,22 @@ export default class SimpleSlider extends Component {
     return (
       <div className="carousel-container">
         <div className="mobile-loop">
-          <TextLoop className="loops">
-            <div className="span1">Home of African Artworks and Handicrafts</div>
-            <div className="span2">Sculpture at your Click</div>
-            <div className="span3">Buy and Bid for African Painting</div>
-            <div className="span4">Animal Skin at ease</div>
-            <div className="span5">one big african market</div>
+          <TextLoop className="loops1">
+          <div className="text1">Home of African Artworks and Handicrafts</div>
+          <img src={IMG2} className="image2" alt='img'/>
+          <div className='text3'>Animal Skin at ease</div>
+          <img src={IMG4} className="image4" alt='img'/>
+          <div className='text5'>Buy and Bid for African Painting</div>
 
-          </TextLoop>{" "}
+        </TextLoop>{" "}
+        <TextLoop className="loops2">
+          <img src={IMG1} className="image1" alt='img'/>
+          <div className="text2">Sculpture at your Click</div>
+          <img src={IMG3} className="image3" alt='img'/>
+          <div className='text4'>one big african market</div>
+          <img src={IMG5} className="image5" alt='img'/>
+
+        </TextLoop>{" "}
         </div>
         <div className="non-mobile-loop">          
         <TextLoop className="loops1">
