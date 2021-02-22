@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ImagePreview from "./imageView/imagePreview";
 import Order from "./orderInput/OrderMain";
 import "./productMain.css";
-import { Data } from "../../../dummyUserData";
+import {products} from '../../../data.json'
 import Categories from "../Categories/CategoriesData";
 //Header
 import Header from "../../header/mainHeader";
@@ -12,17 +12,24 @@ import SmallCard from "../../card/smallCard";
 import AddToCartBtn from "./orderInput/addToCartBtn";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: products[1],
+    };
+  }
   render() {
+
     return (
       <>
         <Header />
         <div className="prd-contaniner">
           <section className="prd-display">
             <div className="imagePreview">
-              <ImagePreview />
+              <ImagePreview img={this.state.product.img}/>
             </div>
             <div className="order">
-              <Order />
+              <Order products={this.state.product}/>
               <AddToCartBtn />
             </div>
           </section>
@@ -31,30 +38,30 @@ class App extends Component {
             <div className="item-description">
               <div className="item-group">
                 <p>Description: </p>
-                <span className="description">{Data.product.Description}</span>
+                <span className="description">{this.state.product.Description}</span>
               </div>
               <div className="item-group">
                 <p>General Specification: </p>
                 <span className="description">
                   <li>
-                    Item ID: <p>{Data.product.GeneralSpecs.ID}</p>
+                    Item ID: <p>{this.state.product.GeneralSpecs.ID}</p>
                   </li>
                   <li>
-                    Color: <p>{Data.product.GeneralSpecs.Color}</p>
+                    Color: <p>{this.state.product.GeneralSpecs.Color}</p>
                   </li>
                   <li>
-                    Material: <p>{Data.product.GeneralSpecs.Material}</p>
+                    Material: <p>{this.state.product.GeneralSpecs.Material}</p>
                   </li>
                   <li>
                     Product Country:{" "}
-                    <p>{Data.product.GeneralSpecs.ProductCountry}</p>
+                    <p>{this.state.product.GeneralSpecs.ProductCountry}</p>
                   </li>
                   <li>
                     Product Label:{" "}
-                    <p>{Data.product.GeneralSpecs.ProductLabel}</p>
+                    <p>{this.state.product.GeneralSpecs.ProductLabel}</p>
                   </li>
                   <li>
-                    Weight(kg): <p>{Data.product.GeneralSpecs.Weight}</p>
+                    Weight(kg): <p>{this.state.product.GeneralSpecs.Weight}</p>
                   </li>
                 </span>
               </div>

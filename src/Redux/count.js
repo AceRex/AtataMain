@@ -1,4 +1,3 @@
-// import {createStore} from 'redux'
 
 export function increment() {
     return {

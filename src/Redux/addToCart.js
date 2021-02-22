@@ -16,6 +16,7 @@ const initialState = {
 };
 
 function addToCartReducer(shoppingCart = initialState, action) {
+  console.log(shoppingCart)
   switch (action.type) {
     case "ADD_CART_ITEM":
       const newstate = [...shoppingCart.cartItem]

@@ -5,12 +5,12 @@ import { increment, decrement } from "../../../../Redux/count";
 import "../productMain.css";
 import {FaPlus,FaMinus} from 'react-icons/fa'
 
-function OrderInput() {
+function OrderInput(props) {
   const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
   return (
     <>
-      <ItemName />
+      <ItemName products={props.products} />
       <div className="count-btn">
         {count === 0 ? (
           <button className="btn-disabled"><FaMinus/></button>

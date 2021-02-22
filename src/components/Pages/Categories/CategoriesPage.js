@@ -63,6 +63,7 @@ function Categories() {
                 img={item.img}
                 title={item.title}
                 amount={item.amount}
+                category={item.category}
               />
             ))}
           </section>

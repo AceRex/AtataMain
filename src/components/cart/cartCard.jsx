@@ -44,7 +44,7 @@ export default class CartCard extends Component {
                                 value={this.state.unitPrice}
                                 displayType={"text"}
                                 thousandSeparator={true}
-                                prefix={"₦"}
+                                prefix={"$"}
                             />
                             {` x${this.state.unitQty} `}
                         </span>

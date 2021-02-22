@@ -4,12 +4,12 @@ import Footer from '../footer/footer'
 import './cart.css'
 import Img from './Ankarasneaker.jpg'
 import { Link } from 'react-router-dom'
-import {carts} from '../../data.json'
+import { carts } from '../../data.json'
 import CartCard from './cartCard'
 import { TiShoppingCart } from 'react-icons/ti'
 import { Component } from 'react'
 import NumberFormat from "react-number-format";
-
+import axios from 'axios';
 
 export default class Cart extends Component {
     constructor(props) {
@@ -17,20 +17,14 @@ export default class Cart extends Component {
         this.state = {
             cartItem: carts,
             img: Img,
-            // // unitPrice: carts.amount,
-            // unitQty: 3,
-            // totalPrice: null,
+            rate: 0,
             deleteItem: true,
 
         }
 
     }
 
-    componentDidMount() {
-        this.setState({
-            totalPrice: this.state.unitPrice * this.state.unitQty
-        })
-    }
+  
     // componentDidUpdate() {
     //         this.setState({
     //             totalPrice: 0
@@ -49,15 +43,16 @@ export default class Cart extends Component {
                     </div> :
                     <>
                         <div className="cart-container">
+                           <h1>{this.state.rate.USD}</h1>
                             {/* {this.state.cartItem.map((items) => ( */}
-                                <CartCard
-                                    Img={this.state.Img}
-                                    unitPrice={carts.amount}
-                                    unitQty={carts.qty}
-                                    totalPrice={this.state.totalPrice}
-                                    deleteItem={this.state.deleteItem}
-                                />
-                             {/* ))
+                            <CartCard
+                                Img={this.state.Img}
+                                unitPrice={carts.amount}
+                                unitQty={carts.qty}
+                                totalPrice={this.state.totalPrice}
+                                deleteItem={this.state.deleteItem}
+                            />
+                            {/* ))
                             } */}
 
                         </div>

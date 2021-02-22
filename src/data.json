@@ -4,97 +4,229 @@
       "_id": 0,
       "title": "Ghana Batique",
       "category": "Textiles",
+      "colorClass": "orange",
       "img": "/Image/ghana.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 5000
+      "amount": 500,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 1,
       "category": "Textiles",
       "title": "Ankara Sneakers",
+      "colorClass": "green",
       "img": "/Image/Ankarasneaker.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 1500
+      "amount": 100,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 2,
       "title": "Ankara Shoes Female",
       "category": "Textiles",
+      "colorClass": "black",
       "img": "/Image/femaleShoes.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 1000
+      "amount": 10,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 3,
       "title": "Zebra Skin",
       "category": "Animal Skin",
+      "colorClass": "red",
       "img": "/Image/zebra.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 200,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 4,
       "title": "Leaopard Skin",
       "category": "Animal Skin",
+      "colorClass": "yellow",
       "img": "/Image/cheetah.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 20,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 5,
       "title": "Figurine",
       "category": "Africa Figures",
+      "colorClass": "black",
       "img": "/Image/sculpture.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 20000,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 6,
       "title": "Sculpture from Nigeria",
       "category": "Africa Figures",
+      "colorClass": "red",
       "img": "/Image/figure.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 5450,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 7,
       "title": "Ankara Sneakers Unisex",
       "category": "Textiles",
+      "colorClass": "yellow",
       "img": "/Image/sneaker.webp",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 2100,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 8,
       "title": "Sculpture From Ghana",
       "category": "Africa Figures",
+      "colorClass": "orange",
       "img": "/Image/figurine.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 20000,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 9,
       "title": "Ankara Shoe, Bag and purse",
       "category": "Textiles",
+      "colorClass": "green",
       "img": "/Image/ankaraShoesAndBag.jpg",
       "NumberOfAvailableItems": 5,
-      "amount": 20000
+      "amount": 767,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 10,
       "title": "Beads",
       "category": "Beads and wireworks",
+      "colorClass": "orange",
       "img": "/Image/bead.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 298,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     },
     {
       "_id": 11,
       "title": "Ankara Shoe, Bag and purse",
+      "colorClass": "black",
       "category": "Textiles",
       "img": "/Image/screen-1.jpg",
       "NumberOfAvailableItems": 20,
-      "amount": 20000
+      "amount": 2123,
+      "Description": "Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate. Sollicitudin neque ut turpis inceptos scelerisque tristique, at litora eu blandit est, proin fusce fames porttitor hendrerit. Rhoncus venenatis suspendisse felis tempus mauris vestibulum congue accumsan varius hac elementum, vel ad vehicula aenean aptent bibendum rutrum aliquam platea. Tellus phasellus sed enim pharetra mus nullam posuere sagittis ornare, taciti ullamcorper nunc velit curae in urna eget ultrices nam, eleifend luctus parturient convallis iaculis diam potenti sociis. Condimentum sapien dui purus sodales senectus mi, nisi nascetur etiam erat suscipit facilisis magna, pellentesque sociosqu donec placerat mollis. Malesuada molestie habitant quis primis dapibus aliquet ligula sem, curabitur odio risus augue et nec non arcu, interdum mattis facilisi a egestas consequat nulla. Cursus ac fringilla cubilia dignissim porta lectus lacus cum, duis eros tincidunt nostra id nisl justo vivamus massa penatibus praesent nibh",
+      "Features": "100% Cotton",
+      "GeneralSpecs": {
+          "ID": "0099090e9e09e0e9",
+          "Color": "White",
+          "Material": "Cotton",
+          "ProductCountry": "Nigeria",
+          "ProductLabel": "Ace Clothing",
+          "Weight": "0.3"
+      }
     }
   ],
     "allcategory": [
