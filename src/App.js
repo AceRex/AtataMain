@@ -31,7 +31,7 @@ class App extends Component {
         <Latest products={this.state.products} />
         {/* <IndexBlog /> */}
        
-        {/* <div className="notification">This website is still been tested</div> */}
+        <div className="notification">This website is still been tested</div>
         <Footer />
       </main>
     );
