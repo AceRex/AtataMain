@@ -1,18 +1,46 @@
-import React, { Component, useState } from "react";
-import {
-  CountryDropdown,
-  RegionDropdown,
-  CountryRegionData,
-} from "react-country-region-selector";
+import React, { Component } from "react";
+import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import "./register.css";
 import { Link } from "react-router-dom";
 import Logo from "../../logoComponents/logo2.png";
-import styled from "styled-components";
+import {GoHome} from 'react-icons/go'
 
 export default class UserReg extends Component {
   constructor(props) {
     super(props);
-    this.state = { country: "", region: "" };
+    this.state = {
+      firstName: " ",
+      lastName: " ",
+      phoneNumber: " ",
+      email: " ",
+      password: " ",
+      country: " ",
+      region: " ",
+      address: " ",
+    };
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({[e.target.name] : e.target.value});
+  }
+  onSubmit(e) {
+    e.preventDefault();
+
+    const post = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+    };
+    fetch("https://jsonplaceholder.typicode.com/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(post),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
 
   selectCountry(val) {
@@ -29,22 +57,34 @@ export default class UserReg extends Component {
       <div className="ind-reg">
         <div className="LogoContaniner">
           <div className="logo">
-            <img src={Logo} />
+            <img src={Logo} alt="Logo" />
           </div>
         </div>
         <div className="ind-reg-form">
           <div className="form">
             <h3>Registration</h3>
             <hr />
-            <form>
+            <form onSubmit={this.onSubmit}>
               <div className="group">
                 <div className="form-group">
                   <label>First Name</label>
-                  <input input="text" placeholder="Enter first name..." />
+                  <input
+                    type="text"
+                    name="firstName"
+                    onChange={this.onChange}
+                    value={this.state.firstName}
+                    placeholder="Enter first name..."
+                  />
                 </div>
                 <div className="form-group">
                   <label>Last Name</label>
-                  <input type="text" placeholder="Enter Last name..." />
+                  <input
+                    type="text"
+                    name="lastName"
+                    onChange={this.onChange}
+                    value={this.state.lastName}
+                    placeholder="Enter Last name..."
+                  />
                 </div>
               </div>
               <div className="group">
@@ -90,17 +130,11 @@ export default class UserReg extends Component {
                   <input input="text" placeholder="Enter address here..." />
                 </div>
               </div>
-              <div className="group">
-                <div className="form-group">
-                  <Link to="/register">
-                    <button className="btn-back">{'<< '}Back</button>
+              <div className="btn-group">
+                  <Link to="/" className="btn-back">
+                    <GoHome/>
                   </Link>
-                </div>
-                <div className="form-group">
-                  <Link to="/">
-                    <button className="btn">Register</button>
-                  </Link>
-                </div>
+                  <button className="btn-reg">Register</button>
               </div>
             </form>
           </div>

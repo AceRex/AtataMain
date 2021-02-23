@@ -25,10 +25,6 @@ const Categories = {
       category: "arts",
     },
     {
-      id: 2,
-      category: "assesories",
-    },
-    {
       id: 3,
       category: "men",
     },

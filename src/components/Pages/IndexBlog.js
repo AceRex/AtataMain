@@ -11,7 +11,7 @@ export default class IndexBlog extends Component {
         <div className="blog">
           <div className="row">
             <div className="Imagecontainer">
-              <img src={Blog1} />
+              <img src={Blog1} alt='BlogImage' />
             </div>
             <div className="blogtext">
               <p className="title mt-3">Cycling Wonder</p>
@@ -34,10 +34,10 @@ export default class IndexBlog extends Component {
               </div>
               <div className="Blogdetails ">
                 <span className="post-by">
-                  <i class="fas fa-pen-square"></i>Mc Don
+                  <i className="fas fa-pen-square"></i>Mc Don
                 </span>
                 <span className="comments">
-                  <i class="far fa-comment-dots"></i>20 comments
+                  <i className="far fa-comment-dots"></i>20 comments
                 </span>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default class IndexBlog extends Component {
         <div className="blog">
           <div className="row">
             <div className="Imagecontainer">
-              <img src={Blog2} />
+              <img src={Blog2} alt='BlogImage' />
             </div>
             <div className="blogtext">
               <p className="title mt-3">What should You Eat?</p>
@@ -69,10 +69,10 @@ export default class IndexBlog extends Component {
               </div>
               <div className="Blogdetails d-flex">
                 <span className="post-by">
-                  <i class="fas fa-pen-square"></i>OshoBee
+                  <i className="fas fa-pen-square"></i>OshoBee
                 </span>
                 <span className="comments">
-                  <i class="far fa-comment-dots"></i>0 comments
+                  <i className="far fa-comment-dots"></i>0 comments
                 </span>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default class IndexBlog extends Component {
         <div className="blog">
           <div className="row">
             <div className="Imagecontainer">
-              <img src={Blog3} />
+              <img src={Blog3} alt='BlogImage' />
             </div>
             <div className="blogtext">
               <p className="title mt-3">Tech Space</p>
@@ -104,10 +104,10 @@ export default class IndexBlog extends Component {
               </div>
               <div className="Blogdetails d-flex">
                 <span className="post-by">
-                  <i class="fas fa-pen-square"></i>Hennie
+                  <i className="fas fa-pen-square"></i>Hennie
                 </span>
                 <span className="comments">
-                  <i class="far fa-comment-dots"></i>10 comments
+                  <i className="far fa-comment-dots"></i>10 comments
                 </span>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default class IndexBlog extends Component {
         <div className="blog">
           <div className="row">
             <div className="Imagecontainer">
-              <img src={Blog3} />
+              <img src={Blog3} alt='BlogImage' />
             </div>
             <div className="blogtext">
               <p className="title mt-3">Tech Space</p>
@@ -139,10 +139,10 @@ export default class IndexBlog extends Component {
               </div>
               <div className="Blogdetails d-flex">
                 <span className="post-by">
-                  <i class="fas fa-pen-square"></i>Hennie
+                  <i className="fas fa-pen-square"></i>Hennie
                 </span>
                 <span className="comments">
-                  <i class="far fa-comment-dots"></i>10 comments
+                  <i className="far fa-comment-dots"></i>10 comments
                 </span>
               </div>
             </div>

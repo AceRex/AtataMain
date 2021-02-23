@@ -3,14 +3,13 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../logoComponents/headerLogo.png";
 import { VscAccount } from "react-icons/vsc";
-import process from "../../Redux/addToCart";
-import { Provider } from "react-redux";
 import { FiShoppingCart } from "react-icons/fi";
-import { useSelector } from "react-redux";
+import Data from '../../data.json'
+
 
 function Account() {
   const [hover, setHover] = useState("hidden");
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
 
   const handleHover = (hover) => {
     setTimeout(() => {
@@ -21,12 +20,13 @@ function Account() {
   const handleHoverOut = (hover) => {
     setHover("hidden");
   };
-  const handleClicked = (clicked) => {
-    setTimeout(() => {
-      setClicked(true);
-    }, 500);
-  };
-  const shoppingCart = useSelector((state) => state);
+  // const handleClicked = (clicked) => {
+  //   setTimeout(() => {
+  //     setClicked(true);
+  //   }, 500);
+  // };
+  // const shoppingCart = useSelector((state) => state);
+  const CartLenght = Data.Cart;
 
   return (
     <>
@@ -36,12 +36,12 @@ function Account() {
             <VscAccount />
           </p>
         </li>
-        <li>
+        <Link to='/cart'>
           <p className="icon">
             <FiShoppingCart />
           </p>
-          <span> {shoppingCart} items in cart</span>
-        </li>
+          <span> {CartLenght.length} items in cart</span>
+        </Link>
       </div>
       
 
@@ -50,12 +50,12 @@ function Account() {
       <div className={`login-dropdown ${hover}`} onMouseLeave={handleHoverOut}>
         <Link to="/signin">
           <li>
-            Login <i class="fas fa-sign-in-alt"></i>
+            Login <i className="fas fa-sign-in-alt"></i>
           </li>
         </Link>
         <Link to="/register">
           <li>
-            Register <i class="far fa-user"></i>
+            Register <i className="far fa-user"></i>
           </li>
         </Link>
       </div>
@@ -66,13 +66,12 @@ function Account() {
 export default class Header extends Component {
   render() {
     return (
-      <Provider store={process}>
 
         <div className="MainHeader">
           <div className="PagesHeader">
             <div className="logo-container">
               <Link to="/" className="logo">
-                <img src={HeaderLogo} />
+                <img src={HeaderLogo} alt='Logo'/>
                
               </Link>
             </div>
@@ -98,7 +97,6 @@ export default class Header extends Component {
             
           </div>
         </div>
-      </Provider>
     );
   }
 }

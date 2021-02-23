@@ -1,61 +1,34 @@
-import React, { useState } from "react";
-import ItemsCarousel from "react-items-carousel";
+import React, { Component } from "react";
 import SmallCard from "./smallCard";
-import Categories from "../Pages/Categories/CategoriesData";
 import "./categoryCard.css";
 
-function CategoryCard() {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 40;
-  return (
-    <div
-      style={{ padding: `0 ${chevronWidth}px` }}
-      className="items-card-container"
-    >
-      <p className="header">Top From All Categories</p>
-      <ItemsCarousel
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
-        numberOfCards={1}
-        gutter={20}
-        leftChevron={<button className="left-btn">{"<"}</button>}
-        rightChevron={<button className="right-btn">{">"}</button>}
-        outsideChevron
-        chevronWidth={chevronWidth}
+class CategoryCard extends Component {
+  render() {
+    const chevronWidth = 10;
+
+    return (
+      <div
+        className="items-card-container"
       >
+        <p className="header">Top From All Categories</p>
+
         <div className="items-card-display">
-          {Categories.Items.map((items) => (
-            <SmallCard
-              img={items.img}
-              category={items.category}
-              title={items.title}
-              amount={items.amount}
-            />
+          {this.props.products.map((items) => (
+            <li key={items._id}>
+              <SmallCard
+                _id={items._id}
+                img={items.img}
+                category={items.category}
+                title={items.title}
+                amount={items.amount}
+                addToCart={this.props.addToCart}
+              />
+            </li>
           ))}
         </div>
-        <div className="items-card-display">
-          {Categories.Items.map((items) => (
-            <SmallCard
-              img={items.img}
-              category={items.category}
-              title={items.title}
-              amount={items.amount}
-            />
-          ))}
-        </div>
-        <div className="items-card-display">
-          {Categories.Items.map((items) => (
-            <SmallCard
-              img={items.img}
-              category={items.category}
-              title={items.title}
-              amount={items.amount}
-            />
-          ))}
-        </div>
-      </ItemsCarousel>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default CategoryCard;

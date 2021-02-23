@@ -1,0 +1,401 @@
+@media (max-width: 575.98px) {
+  footer {
+    background-color: #2F3942;
+    color: var(--colorWhite);
+    padding: 20px;
+    max-width: 100%;
+  }
+  footer section {
+    width: 97%;
+    margin: 10px auto;
+  }
+  footer section .header {
+    font-size: 17px;
+  }
+  footer section ul {
+    list-style-type: none;
+  }
+  footer section ul li {
+    padding: 8px 0px;
+  }
+  footer section ul li a {
+    color: var(--colorAsh);
+    font-size: 13px;
+    font-weight: 300;
+  }
+  footer section .subscribe .inputs {
+    width: 100%;
+    border: solid 2px #f1f1f1;
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section .subscribe .inputs input {
+    background-color: transparent;
+    color: var(--colorWhite);
+    width: 70%;
+    outline: none;
+    padding: 12px;
+    border: transparent;
+  }
+  footer section .subscribe .inputs button {
+    width: 30%;
+    background-color: var(--colorGreen);
+    border: transparent;
+    color: var(--colorWhite);
+  }
+  footer section .subscribe .inputs small {
+    font-size: 10px;
+  }
+  footer section .subscribe img {
+    width: 50%;
+  }
+  .footer-bottom {
+    background-color: #4a4f53;
+    max-width: 100%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-bottom select {
+    padding: 10px;
+    width: 100%;
+    background-color: #4a4f53;
+    color: var(--colorWhite);
+    outline: none;
+  }
+  .footer-bottom .copryt {
+    width: 100%;
+    color: var(--colorWhite);
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  footer {
+    background-color: #2F3942;
+    color: var(--colorWhite);
+    padding: 20px;
+    max-width: 100%;
+  }
+  footer section {
+    width: 97%;
+    margin: 10px auto;
+  }
+  footer section .header {
+    font-size: 17px;
+  }
+  footer section ul {
+    list-style-type: none;
+  }
+  footer section ul li {
+    padding: 8px 0px;
+  }
+  footer section ul li a {
+    color: var(--colorAsh);
+    font-size: 13px;
+    font-weight: 300;
+  }
+  footer section .subscribe .inputs {
+    width: 100%;
+    border: solid 2px #f1f1f1;
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section .subscribe .inputs input {
+    background-color: transparent;
+    color: var(--colorWhite);
+    width: 70%;
+    outline: none;
+    padding: 12px;
+    border: transparent;
+  }
+  footer section .subscribe .inputs button {
+    width: 30%;
+    background-color: var(--colorGreen);
+    border: transparent;
+    color: var(--colorWhite);
+  }
+  footer section .subscribe .inputs small {
+    font-size: 10px;
+  }
+  footer section .subscribe img {
+    width: 50%;
+  }
+  .footer-bottom {
+    background-color: #4a4f53;
+    max-width: 100%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-bottom select {
+    padding: 10px;
+    width: 100%;
+    background-color: #4a4f53;
+    color: var(--colorWhite);
+    outline: none;
+  }
+  .footer-bottom .copryt {
+    width: 100%;
+    color: var(--colorWhite);
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer {
+    background-color: #2F3942;
+    color: var(--colorWhite);
+    padding: 20px;
+    max-width: 100%;
+  }
+  footer section {
+    width: 97%;
+    margin: 10px auto;
+  }
+  footer section .header {
+    font-size: 17px;
+  }
+  footer section ul {
+    list-style-type: none;
+  }
+  footer section ul li {
+    padding: 8px 0px;
+  }
+  footer section ul li a {
+    color: var(--colorAsh);
+    font-size: 13px;
+    font-weight: 300;
+  }
+  footer section .subscribe .inputs {
+    width: 100%;
+    border: solid 2px #f1f1f1;
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section .subscribe .inputs input {
+    background-color: transparent;
+    color: var(--colorWhite);
+    width: 70%;
+    outline: none;
+    padding: 12px;
+    border: transparent;
+  }
+  footer section .subscribe .inputs button {
+    width: 30%;
+    background-color: var(--colorGreen);
+    border: transparent;
+    color: var(--colorWhite);
+  }
+  footer section .subscribe .inputs small {
+    font-size: 10px;
+  }
+  footer section .subscribe img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  footer {
+    background-color: #2F3942;
+    color: var(--colorWhite);
+    max-width: 100%;
+    padding: 30px 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section {
+    width: 25%;
+    margin: 10px auto;
+  }
+  footer section .header {
+    font-size: 17px;
+  }
+  footer section ul {
+    list-style-type: none;
+  }
+  footer section ul li {
+    padding: 8px 0px;
+  }
+  footer section ul li a {
+    color: var(--colorAsh);
+    font-size: 13px;
+    font-weight: 300;
+  }
+  footer section .subscribe {
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer section .subscribe .inputs {
+    width: 100%;
+    border: solid 2px #f1f1f1;
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section .subscribe .inputs input {
+    background-color: transparent;
+    color: var(--colorWhite);
+    width: 60%;
+    outline: none;
+    padding: 12px;
+    border: transparent;
+  }
+  footer section .subscribe .inputs button {
+    width: 40%;
+    background-color: var(--colorGreen);
+    border: transparent;
+    color: var(--colorWhite);
+  }
+  footer section .subscribe .inputs small {
+    font-size: 5px;
+  }
+  footer section .subscribe img {
+    width: 50%;
+  }
+  .footer-bottom {
+    background-color: #4a4f53;
+    max-width: 100%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-bottom select {
+    padding: 5px;
+    width: 20%;
+    background-color: #4a4f53;
+    color: var(--colorWhite);
+    outline: none;
+  }
+  .footer-bottom .copryt {
+    width: 70%;
+    text-align: left;
+    font-size: 13px;
+    color: var(--colorWhite);
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    background-color: #2F3942;
+    color: var(--colorWhite);
+    max-width: 100%;
+    padding: 30px 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section {
+    width: 25%;
+    margin: 10px auto;
+  }
+  footer section .header {
+    font-size: 17px;
+  }
+  footer section ul {
+    list-style-type: none;
+  }
+  footer section ul li {
+    padding: 8px 0px;
+  }
+  footer section ul li a {
+    color: var(--colorAsh);
+    font-size: 13px;
+    font-weight: 300;
+  }
+  footer section .subscribe {
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer section .subscribe .inputs {
+    width: 100%;
+    border: solid 2px #f1f1f1;
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer section .subscribe .inputs input {
+    background-color: transparent;
+    color: var(--colorWhite);
+    width: 60%;
+    outline: none;
+    padding: 12px;
+    border: transparent;
+  }
+  footer section .subscribe .inputs button {
+    width: 40%;
+    background-color: var(--colorGreen);
+    border: transparent;
+    color: var(--colorWhite);
+  }
+  footer section .subscribe .inputs small {
+    font-size: 5px;
+  }
+  footer section .subscribe img {
+    width: 50%;
+  }
+  .footer-bottom {
+    background-color: #4a4f53;
+    max-width: 100%;
+    padding: 20px 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-bottom select {
+    padding: 5px;
+    width: 20%;
+    background-color: #4a4f53;
+    color: var(--colorWhite);
+    outline: none;
+  }
+  .footer-bottom .copryt {
+    width: 70%;
+    text-align: left;
+    font-size: 13px;
+    color: var(--colorWhite);
+    padding: 10px 0;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

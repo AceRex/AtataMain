@@ -32,16 +32,18 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: fixed;
+    right: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    overflow: hidden;
     background-color: var(--colorLight);
     list-style-type: none;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 11px;
+    font-weight: 700;
     color: var(--colorGreen);
     padding: 10px;
+    z-index: 1;
   }
   .other-services li {
     cursor: pointer;
@@ -56,7 +58,7 @@
     margin: 5px 20px;
   }
   .other-services .rght-itm {
-    width: 30%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -120,15 +122,20 @@
   }
   .other-services .account-dropdown {
     position: absolute;
+    width: 85%;
     background-color: white;
-    right: 250px;
-    top: 40px;
+    right: 0px;
+    top: 52px;
     -webkit-box-shadow: 2px 2px 5px #00000020;
             box-shadow: 2px 2px 5px #00000020;
     padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 0;
   }
   .other-services .account-dropdown a {
-    margin: 10px 0px;
+    color: var(--colorGreen);
+    margin: 30px 0px;
   }
   .MainHeader {
     max-width: 100%;
@@ -235,6 +242,24 @@
   .MainHeader .PagesHeader .login li .icon {
     font-size: 25px;
   }
+  .MainHeader .PagesHeader .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .login a .icon {
+    font-size: 25px;
+  }
   .login-dropdown {
     position: absolute;
     font-size: 13px;
@@ -284,16 +309,18 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: fixed;
+    right: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    overflow: hidden;
     background-color: var(--colorLight);
     list-style-type: none;
     font-size: 12px;
     font-weight: 500;
     color: var(--colorGreen);
     padding: 10px;
+    z-index: 1;
   }
   .other-services li {
     cursor: pointer;
@@ -308,7 +335,8 @@
     margin: 5px 20px;
   }
   .other-services .rght-itm {
-    width: 30%;
+    width: 100%;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -339,11 +367,11 @@
   }
   .other-services .sign-in {
     margin: 0.5px 20px;
-    font-size: 23px;
+    font-size: 19px;
   }
   .other-services .cart {
-    margin: 0px 20px;
-    font-size: 15px;
+    margin: 0px 10px;
+    font-weight: 700;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -357,7 +385,7 @@
             align-items: center;
   }
   .other-services .cart .icon {
-    font-size: 20px;
+    font-size: 15px;
     color: var(--colorGreen);
   }
   .other-services .cart span {
@@ -366,14 +394,18 @@
   .other-services .account-dropdown {
     position: absolute;
     background-color: white;
-    right: 200px;
+    right: 0px;
     top: 50px;
+    width: 0%;
     -webkit-box-shadow: 2px 2px 5px #00000020;
             box-shadow: 2px 2px 5px #00000020;
-    padding: 10px 20px;
+    padding: 10px;
+    width: 90%;
+    text-align: center;
   }
   .other-services .account-dropdown a {
-    margin: 10px 0px;
+    color: var(--colorGreen);
+    margin: 20px 0px;
   }
   .MainHeader {
     max-width: 100%;
@@ -479,6 +511,24 @@
   .MainHeader .PagesHeader .login li .icon {
     font-size: 25px;
   }
+  .MainHeader .PagesHeader .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .login a .icon {
+    font-size: 25px;
+  }
   .login-dropdown {
     position: absolute;
     font-size: 13px;
@@ -530,13 +580,15 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    overflow: hidden;
+    position: fixed;
+    right: 0;
     background-color: var(--colorLight);
     list-style-type: none;
     font-size: 12px;
     font-weight: 500;
     color: var(--colorGreen);
     padding: 10px;
+    z-index: 1;
   }
   .other-services li {
     cursor: pointer;
@@ -550,7 +602,7 @@
     margin: 5px 15px;
   }
   .other-services .rght-itm {
-    width: 40%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -622,14 +674,17 @@
   .other-services .account-dropdown {
     position: absolute;
     background-color: white;
-    right: 190px;
-    top: 30px;
+    right: 0;
+    top: 50px;
     -webkit-box-shadow: 2px 2px 5px #00000020;
             box-shadow: 2px 2px 5px #00000020;
     padding: 10px 20px;
+    width: 85%;
+    text-align: center;
   }
   .other-services .account-dropdown a {
-    margin: 10px 0px;
+    margin: 20px 0px;
+    color: var(--colorGreen);
   }
   .MainHeader {
     max-width: 100%;
@@ -733,6 +788,24 @@
         align-content: center;
   }
   .MainHeader .PagesHeader .login li .icon {
+    font-size: 25px;
+  }
+  .MainHeader .PagesHeader .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .login a .icon {
     font-size: 25px;
   }
   .login-dropdown {
@@ -883,6 +956,24 @@
   .MainHeader .PagesHeader .mobile-contain .login li .icon {
     font-size: 20px;
   }
+  .MainHeader .PagesHeader .mobile-contain .login a {
+    margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .mobile-contain .login a .icon {
+    font-size: 25px;
+  }
   .MainHeader .PagesHeader .search-container {
     display: none;
   }
@@ -890,7 +981,7 @@
     display: none;
   }
   .MainHeader .mobile-header {
-    max-width: 100%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -915,7 +1006,7 @@
     height: 500px;
     position: absolute;
     overflow-y: scroll;
-    top: 80px;
+    top: 60px;
     left: -100%;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
@@ -945,7 +1036,7 @@
     width: 100%;
     height: 180px;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
@@ -966,10 +1057,11 @@
     z-index: 1;
   }
   .MainHeader .mobile-header .mobile-logo {
-    width: 70%;
+    width: 10%;
+    margin: auto;
   }
   .MainHeader .mobile-header .mobile-logo .logo {
-    width: 20%;
+    width: 10%;
     margin: auto;
   }
   .MainHeader .mobile-header .mobile-logo .logo img {
@@ -1023,7 +1115,7 @@
     display: none;
   }
   .MainHeader {
-    max-width: 100%;
+    width: 100%;
     background-color: var(--colorWhite);
     border-bottom: solid 0.5px #e2e2e2;
   }
@@ -1142,6 +1234,24 @@
   .MainHeader .PagesHeader .mobile-contain .login li .icon {
     font-size: 20px;
   }
+  .MainHeader .PagesHeader .mobile-contain .login a {
+    margin: 0px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: var(--colorGreen);
+  }
+  .MainHeader .PagesHeader .mobile-contain .login a .icon {
+    font-size: 25px;
+  }
   .MainHeader .PagesHeader .search-container {
     display: none;
   }
@@ -1149,7 +1259,7 @@
     display: none;
   }
   .MainHeader .mobile-header {
-    max-width: 96%;
+    max-width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1174,7 +1284,7 @@
     height: 500px;
     position: absolute;
     overflow-y: scroll;
-    top: 80px;
+    top: 60px;
     left: -100%;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
@@ -1202,10 +1312,11 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    height: 180px;
+    height: 160px;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
+    border: solid 0.5px #e4e3e3;
     list-style-type: none;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -1225,7 +1336,8 @@
     z-index: 1;
   }
   .MainHeader .mobile-header .mobile-logo {
-    width: 65%;
+    width: 10%;
+    margin: auto;
   }
   .MainHeader .mobile-header .mobile-logo .logo {
     width: 20%;

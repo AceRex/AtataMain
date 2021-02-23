@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SmallCard from "../../card/smallCard";
-import Header from "../../header/header";
+import Header from "../../header/mainHeader";
 import Footer from "../../footer/footer";
 import "./categoriespage.css";
 import CategoriesData from "./CategoriesData";
@@ -13,6 +13,7 @@ import CarouselSlider from "./cart-slider";
 function Categories() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
+
   return (
     <>
       <Header />
@@ -21,7 +22,7 @@ function Categories() {
           <Link to="/" className="bd-text">
             Home
           </Link>
-          <Link>Category</Link>
+          <Link to="/">Category</Link>
         </Breadcrumbs>
         {/* Mobile Category Header */}
         <div
@@ -31,13 +32,13 @@ function Categories() {
           <ItemsCarousel
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
-            numberOfCards={5}
+            numberOfCards={4}
             gutter={5}
             outsideChevron
             chevronWidth={chevronWidth}
           >
             {CategoriesData.SideNav.map((menu) => (
-              <li>{menu.category}</li>
+              <li key={menu.id}>{menu.category}</li>
             ))}
           </ItemsCarousel>
         </div>
@@ -46,20 +47,23 @@ function Categories() {
         <section className="top-display">
           <CarouselSlider />
         </section>
-        
 
         <div className="category-shop">
           <section className="side-nav">
             {CategoriesData.SideNav.map((menu) => (
-              <li>{menu.category}</li>
+              <li key={menu.id}>
+                <Link to="/">{menu.category}</Link>
+              </li>
             ))}
           </section>
           <section className="shop">
             {CategoriesData.Items.map((item) => (
               <SmallCard
+                key={item.id}
                 img={item.img}
                 title={item.title}
                 amount={item.amount}
+                category={item.category}
               />
             ))}
           </section>

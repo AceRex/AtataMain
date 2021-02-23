@@ -1,44 +1,53 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import {Data} from '../../../../dummyUserData'
+import React from "react";
+import styled from "styled-components";
+import { connect, useSelector } from "react-redux";
+import NumberFormat from "react-number-format";
 
-class ItemName extends Component {
-  render() {
-    return (
-        <div>
-        <Item>
-            <p>Men's Designer Long Sleeve Dress Shirt White</p>
-            <span>Category: <p>{Data.product.category}</p></span>
-            <p className='amount'>₦{Data.product.amount}</p>
-        </Item>     
-      </div>
-    )
-  }
+function ItemName(props) {
+  const activeCurrency = useSelector((activeCurrency) => activeCurrency);
+  const value = activeCurrency.currencyReducer.defaultValue;
+
+  return (
+    <div>
+      <Item>
+        <span>{props.products.category}</span>
+        <p>{props.products.title}</p>
+        <NumberFormat
+          className={"amount"}
+          value={props.products.amount * value.currencyRate}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={value.currencySymbol}
+        />
+      </Item>
+    </div>
+  );
 }
 
 const Item = styled.div`
-padding: 10px;
-p{
-    font-size: 19px;
-    font-weight: 500;
+  padding: 10px;
+  p {
+    font-size: 17px;
+    font-weight: 200;
     margin-bottom: 7px;
-}
-span{
-  display: flex;
-    font-size: 14px;
-    margin-bottom: 10px;
-    p{
+  }
+  span {
+    display: flex;
     font-size: 13px;
-    margin: 0px 20px;
+    margin-bottom: 10px;
+    p {
+      font-size: 13px;
+      margin: 0px 20px;
     }
+  }
+
+  .amount {
+    font-size: 25px;
+    font-weight: 800;
+  }
+`;
+
+function mapStateToProps(state) {
+  return { activeCurrency: state.activeCurrency };
 }
-
-.amount{
-  font-size: 30px;
-  font-weight: 600;
-}
-
-
-`
-
-export default ItemName;
+export default connect(mapStateToProps)(ItemName);

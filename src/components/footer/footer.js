@@ -1,178 +1,127 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import img from "../logoComponents/logo2.png";
+import "./footer.css";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { CgTwitter } from "react-icons/cg";
+import { RiFacebookFill } from "react-icons/ri";
+import { Component } from "react";
+import { connect } from "react-redux";
+import { changeCurrency } from "../../Redux/currency";
 
-function Footer() {
-  return (
-    <Main>
-      <Navigation>
-        <span className="header"> Navigation</span>
-        <ul>
-          <Link to="/topcategories">Top Seller</Link>
-          <Link to="/topcategories">Top Products</Link>
-          <Link to="/"> About Us</Link>
-          <Link to="/">Career</Link>
-          <Link to="/">Blog</Link>
-        </ul>
-      </Navigation>
-      <Services>
-        <span className="header"> Services</span>
-        <ul>
-          <a href='http://###'>Atata Auction</a>
-        </ul>
-      </Services>
-      <SocialLinks>
-        <span className="header"> Our Page</span>
-        <ul>
-          <a href="https://www.facebook.com/atata57" target="_blank">
-            <i class="fab fa-facebook-square"></i>/ atat57
-          </a>
-          <a href="https://www.twitter.com/atata57" target="_blank">
-            <i class="fab fa-twitter-square"></i>/ atat57
-          </a>
-          <a href="https://instagram.com/atata57" target='_blank'>
-            <i class="fab fa-instagram"></i>/ atat57
-          </a>
-        </ul>
-      </SocialLinks>
-      <NewsLetter>
-        <span className="header"> NewsLetter</span>
-        <div className="subscribe">
-          <input type="text" placeholder="Enter Email Here" />
-          <button className="btn btn-primary">subscribe</button>
-          <small>Enter Your email to recieve our monthly NewsLetter</small>
-          <img src={img} alt="Logo"/>
+class Footer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      selectValue: "",
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+    this.props.changeCurrency(value);
+  }
+  render() {
+    return (
+      <>
+        <footer>
+          <section>
+            <span className="header"> Navigation</span>
+            <ul>
+              <li>
+                <Link to="/topcategories">Top Seller</Link>
+              </li>
+              <li>
+                <Link to="/topcategories">Top Products</Link>
+              </li>
+              <li>
+                <Link to="/"> About Us</Link>
+              </li>
+              <li>
+                <Link to="/">Career</Link>
+              </li>
+              <li>
+                <Link to="/">Blog</Link>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <span className="header"> Services</span>
+            <ul>
+              <li>
+                <a href="http://###">Atata Auction</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <span className="header"> Our Page</span>
+            <ul>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/atata57"
+                  target="_blank"
+                >
+                  <RiFacebookFill /> / atata57
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="https://www.twitter.com/atata57"
+                  target="_blank"
+                >
+                  <CgTwitter /> / atata57
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="https://instagram.com/atata57"
+                  target="_blank"
+                >
+                  <AiOutlineInstagram /> / atata57
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <span className="header"> NewsLetter</span>
+            <div className="subscribe">
+              <div className="inputs">
+                <input type="text" placeholder="Enter Email Here" />
+                <button className="btn btn-primary">subscribe</button>
+              </div>
+              <small>Enter Your email to recieve our NewsLetter</small>
+              <img src={img} alt="Logo" />
+            </div>
+          </section>
+        </footer>
+        <div className="footer-bottom">
+        <div className='copryt'>
+          © 2021 all rights resevered | Atata57 synergy and alignment limited
+          </div>
+          <select
+            name="selectValue"
+            onChange={this.handleChange}
+            value={this.state.selectValue}
+          >
+            <option selectd value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+          </select>
+         
         </div>
-      </NewsLetter>
-    </Main>
-  );
+      </>
+    );
+  }
 }
 
-const Main = styled.div`
-  background-color: var(--colorBlack);
-  display: flex;
-  color: var(--colorYellow);
-  padding: 50px 50px;
-@media screen and (max-width: 1080px) {
-  display: none;
-}
-`;
-
-const Navigation = styled.div`
-  margin: 20px 50px;
-  .header {
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: "Muli", sans-serif;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-  a {
-    color: var(--colorAsh);
-    padding: 10px;
-    width: 150px;
-    font-size: 15px;
-    :hover {
-      color: var(--colorGreen);
-    }
-  }
-`;
-
-const Services = styled.div`
-  margin: 20px 90px;
-  .header {
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: "Muli", sans-serif;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-  a {
-    color: var(--colorAsh);
-    padding: 10px;
-    font-size: 15px;
-    width: 150px;
-    :hover {
-      color: var(--colorGreen);
-    }
-  }
-`;
-
-const SocialLinks = styled.div`
-  margin: 20px 50px;
-  .header {
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: "Muli", sans-serif;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
-  i {
-    font-size: 30px;
-    padding: 0 1px;
-  }
-  a {
-    color: var(--colorAsh);
-    padding: 10px;
-    font-size: 15px;
-    width: 150px;
-    :hover {
-      color: var(--colorGreen);
-    }
-  }
-`;
-
-const NewsLetter = styled.div`
-  margin: 20px 0px;
-  width: 90%;
-  .header {
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: "Muli", sans-serif;
-  }
-  .subscribe {
-    display: flex;
-    flex-direction: column;
-
-    input {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      margin: 10px 0;
-    }
-
-    .btn {
-      background-color: var(--colorGreen) !important;
-      width: 70%;
-      margin: auto;
-      border: none;
-      padding: 5px;
-      margin: 5px 0 10px 0;
-      :hover{
-        background-color: var(--colorRed) !important;
-      }
-    }
-    small{
-      color: var(--colorAsh);
-    }
-  }
-  img{
-    margin-top: 70px;
-    width:200px;
-  }
-`;
-
-export default Footer;
+const mapDispatchToProps = {
+  changeCurrency,
+};
+export default connect(null, mapDispatchToProps)(Footer);

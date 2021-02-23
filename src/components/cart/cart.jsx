@@ -1,52 +1,90 @@
 import React from 'react'
-import Header from '../header/header'
+import Header from '../header/mainHeader'
 import Footer from '../footer/footer'
 import './cart.css'
 import Img from './Ankarasneaker.jpg'
-import { RiDeleteBin6Fill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
+import { carts } from '../../data.json'
+import CartCard from './cartCard'
+import { TiShoppingCart } from 'react-icons/ti'
+import { Component } from 'react'
+import NumberFormat from "react-number-format";
+import axios from 'axios';
 
-export default function Cart() {
-    return (
-        <>
-            <Header />
-            <div className="cart-container">
-                <div className="cart-item">
-                    <div className="cart-img-container">
-                        <img src={Img} />
-                    </div>
-                    <div className="cart-item-details">
-                        <p>Ankara Sneaker</p>
-                        <span>Unit Price: #5000</span>
-                        <h6>Seller: My Ankara Store</h6>
+export default class Cart extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cartItem: carts,
+            img: Img,
+            rate: 0,
+            deleteItem: true,
 
-                    </div>
-                    <div className="cart-item-qty">
-                        <p>#15,000</p>
-                        <span> x3</span>
-                    </div>
-                    <button className="btn-dlt"><RiDeleteBin6Fill /></button>
+        }
 
-                </div>
-            </div>
-            <div className="total-amount">
-                <span>Total price:</span>
-                <p>#15,000</p>
-            </div>
-            <div className="btns">
-                <button className='cnt-btn'>
-                    <Link to='/'>
-                        Continue Shopping
+    }
+
+  
+    // componentDidUpdate() {
+    //         this.setState({
+    //             totalPrice: 0
+    //         })
+    //     }
+
+    render() {
+
+        return (
+            <>
+                <Header />
+                {this.state.cartItem.length === 0 ?
+                    <div className='emptyCart'>
+                        <TiShoppingCart className='icon' />
+                        <span>Cart is Empty</span>
+                    </div> :
+                    <>
+                        <div className="cart-container">
+                           <h1>{this.state.rate.USD}</h1>
+                            {/* {this.state.cartItem.map((items) => ( */}
+                            <CartCard
+                                Img={this.state.Img}
+                                unitPrice={carts.amount}
+                                unitQty={carts.qty}
+                                totalPrice={this.state.totalPrice}
+                                deleteItem={this.state.deleteItem}
+                            />
+                            {/* ))
+                            } */}
+
+                        </div>
+                        <div className='total-amount'>
+                            <span>Total price:</span>
+                            <p>
+                                <NumberFormat
+                                    className={"px-1"}
+                                    value={this.state.totalPrice}
+                                    displayType={"text"}
+                                    thousandSeparator={true}
+                                    prefix={"₦"}
+                                />
+                            </p>
+                        </div>
+                        <div className="btns">
+                            <button className='cnt-btn'>
+                                <Link to='/'>
+                                    Continue Shopping
                     </Link>
-                </button>
-                <button className="confirm-btn">
-                    <Link to='/checkout'>
-                        Confirm Payment
+                            </button>
+                            <button className="confirm-btn">
+                                <Link to='/checkout'>
+                                    Confirm Payment
                     </Link>
-                </button>
-            </div>
-            <Footer />
+                            </button>
+                        </div>
+                    </>
+                }
+                <Footer />
 
-        </>
-    )
+            </>
+        )
+    }
 }

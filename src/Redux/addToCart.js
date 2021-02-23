@@ -1,4 +1,4 @@
-import redux, {createStore} from 'redux'
+// import redux, {createStore} from 'redux'
 
 export function addCartItem(item) {
   return {
@@ -12,25 +12,33 @@ export function removeCartItem(item) {
   };
 }
 const initialState = {
-  cartItem: [true, 2],
+  cartItem: [],
 };
 
-function addToCartReducer(shoppingCart = initialState.cartItem.length, action) {
+function addToCartReducer(shoppingCart = initialState, action) {
+  console.log(shoppingCart)
   switch (action.type) {
     case "ADD_CART_ITEM":
-      return  [...shoppingCart.cartItem, action.payload]
-    case "REMOVE_CART_ITEM":
+      const newstate = [...shoppingCart.cartItem]
+      newstate.push(action.payload);
+
       return {
         ...shoppingCart,
+        cartItem: newstate,
+      }
+    case "REMOVE_CART_ITEM":
+      return {
+        ...shoppingCart, 
+        // filter by item ID
       };
     default:
       return shoppingCart;
   }
 }
 
-const process = createStore(addToCartReducer);
-process.subscribe(() => {
-  console.log(process.getState());
+// const process = createStore(addToCartReducer);
+// process.subscribe(() => {
+//   console.log(process.getState());
 
-});
-export default process
+// });
+export default addToCartReducer

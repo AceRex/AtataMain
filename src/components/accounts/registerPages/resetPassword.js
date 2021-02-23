@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../forgotpassword.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 class ForgotPassword extends Component {

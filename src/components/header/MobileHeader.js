@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import Logo from "../logoComponents/headerLogo.png";
-import { AllCatMenuItems } from "./AllCateData";
+import Data from "../../data.json";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
@@ -14,6 +14,7 @@ class Header extends Component {
     this.state = {
       clicked: false,
       loginClicked: false,
+      AllCatMenuItems: Data.allcategory
     };
   }
 
@@ -30,16 +31,16 @@ class Header extends Component {
           {this.state.clicked ? <MdClose /> : <BiMenuAltLeft />}
         </div>
         <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          {AllCatMenuItems.map((items, index) => (
-            <Link key={index} to={items.link} style={{ color: "#fff" }}>
-              <li>{items.cate}</li>
+          {this.state.AllCatMenuItems.map((items) => (
+            <Link to={items.link}  key={items._id} style={{ color: "#fff" }}>
+              <li>{items.category}</li>
             </Link>
           ))}
         </div>
         <div className="mobile-logo">
-          <div className="logo">
-            <img src={Logo} />
-          </div>
+          <Link to ='/' className="logo">
+            <img src={Logo} alt='Logo'/>
+          </Link>
         </div>
         <div className="mobile-cart">
           <li onClick={this.handleLoginClick}>
@@ -58,12 +59,12 @@ class Header extends Component {
         >
           <Link to="/signin">
             <li>
-              Login <i class="fas fa-sign-in-alt"></i>
+              Login <i className="fas fa-sign-in-alt"></i>
             </li>
           </Link>
           <Link to="/register">
             <li>
-              Register <i class="far fa-user"></i>
+              Register <i className="far fa-user"></i>
             </li>
           </Link>
         </div>
