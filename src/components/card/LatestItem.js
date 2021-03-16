@@ -1,10 +1,8 @@
 import React from "react";
 import SmallCard from "./smallCard";
 import "./categoryCard.css";
-import { Component } from "react";
 
-class CategoryCard extends Component {
-  render() {
+function CategoryCard ({productsData}) {
 
     return (
       <div
@@ -13,22 +11,12 @@ class CategoryCard extends Component {
         <p className="header">Latest Items</p>
 
         <div className="items-card-display">
-          {this.props.products.map((items) => (
-            <li key={items._id}>
-              <SmallCard
-                _id={items._id}
-                img={items.img}
-                category={items.category}
-                title={items.title}
-                amount={items.amount}
-                addToCart={this.props.addToCart}
-              />
-            </li>
+        {productsData.map((item) => (
+              <SmallCard productsData={item}/>
           ))}
         </div>
       </div>
     );
   }
-}
 
 export default CategoryCard;

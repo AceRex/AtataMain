@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
@@ -45,13 +45,25 @@ function Account() {
   );
 }
 
-function OtherServices(props) {
-  const shoppingCart = useSelector((state) => state.cart);
-  const number = shoppingCart.cartItem.length
- 
-  return (
+const OtherServices = ({ cart }) => {
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach(item => {
+      count += item.qty;
+    });
+    setCartCount(count)
+  },
+    [cart, cartCount]
+  )
+
+  // const Shop = useSelector((state) => state.shop);
+  // const number = Shop.cart.length
+
+  return ( 
     <div className="other-services">
-     
+
       <div className="rght-itm">
         <Account />
 
@@ -59,7 +71,7 @@ function OtherServices(props) {
           <Link to="/cart">
             <p className="icon">
               <FiShoppingCart />
-              <span> {number} items in cart</span>
+              <span> {cartCount} items in cart</span>
             </p>
           </Link>
         </li>
@@ -69,6 +81,8 @@ function OtherServices(props) {
 }
 
 function mapStateToProps(state) {
-  return { cart: state.cart };
-}
+  return {
+    cart: state.shop.cart
+  };
+};
 export default connect(mapStateToProps)(OtherServices);

@@ -1,34 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom"
 import SmallCard from "./smallCard";
 import "./categoryCard.css";
+import { loadCurrentItem } from "../../Redux/ShoppingCart/Shopping_Actions";
+import { connect } from "react-redux";
 
-class CategoryCard extends Component {
-  render() {
-    const chevronWidth = 10;
-
-    return (
+function CategoryCard({productsData}) {
+  return (
+    <>
       <div
         className="items-card-container"
       >
         <p className="header">Top From All Categories</p>
 
         <div className="items-card-display">
-          {this.props.products.map((items) => (
-            <li key={items._id}>
-              <SmallCard
-                _id={items._id}
-                img={items.img}
-                category={items.category}
-                title={items.title}
-                amount={items.amount}
-                addToCart={this.props.addToCart}
-              />
-            </li>
+          {productsData.map((item) => (
+              <SmallCard productsData={item}/>
           ))}
         </div>
       </div>
-    );
-  }
+
+    </>
+
+  );
+
 }
 
-export default CategoryCard;
+const mapDispatchToProps = dispatch => {
+  return{
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item))
+  }
+}
+export default connect(mapDispatchToProps)(CategoryCard);

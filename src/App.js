@@ -1,41 +1,87 @@
-import React, { Component } from "react";
-import "./App.css";
+import React from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import MainPage from "./mainpage"
 import MainHeader from "./components/header/mainHeader";
-import Simpleslider from "./components/carousel/carousel";
-import Footer from "./components/footer/footer";
-// import IndexBlog from "./components/Pages/IndexBlog";
-import Featured from "./components/card/FeaturedProducts";
-import Latest from "./components/card/LatestItem";
-import Data from "./data.json";
-import CategoryCard from "./components/card/categoryCard";
+import NotFound from "./components/Pages/pageNotFound/PageNotFound";
+import Login from "./components/accounts/Login";
+import Register from "./components/accounts/registerPages/RegisterMain";
+import Forgotpwd from "./components/accounts/forgotPassword";
+import NewPwd from "./components/accounts/registerPages/resetPassword";
+import Categories from "./components/Pages/Categories/CategoriesPage";
+import ProductPage from "./components/Pages/product-preview/Product";
+import Checkout from "./components/checkout/mainCheckout";
+import Cart from "./components/cart/cart";
+import UserPage from "./components/Pages/userPage/userPage";
+import Order from "./components/Pages/userPage/order";
+import AddressBook from "./components/Pages/userPage/addressBook";
+import Details from "./components/Pages/userPage/details";
+import Password from "./components/Pages/userPage/password";
+import Footer from "./components/footer/footer"
+import { connect } from 'react-redux'
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: Data.products,
-      cartItems: Data.Cart,
-    };
-  }
- 
+function App({ currentItem }) {
 
-  render() {
+  return (
+    <main className="index-page-container">
+      <MainHeader />
+      <Switch>
+        <Route exact path="/">
+          <MainPage />
+        </Route>
+        <Route path="/categories/:id">
+          <Categories />
+        </Route>
+        <Route path="/Signin">
+          <Login />
+        </Route>
+        <Route path="/Register">
+          <Register />
+        </Route>
+        <Route path="/forgotpassword">
+          <Forgotpwd />
+        </Route>
+        <Route path="/newpassword">
+          <NewPwd />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+        {currentItem === null ? <Redirect to='/' />
+          :
+          <Route path="/product/:title">
+            <ProductPage />
+          </Route>
+        }
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/user-page">
+          <UserPage />
+        </Route>
+        <Route path="/order">
+          <Order />
+        </Route>
+        <Route path="/address-book">
+          <AddressBook />
+        </Route>
+        <Route path="/user-details">
+          <Details />
+        </Route>
+        <Route path="/change-password">
+          <Password />
+        </Route>
+        <Route component={NotFound} />
+      </Switch>
+      <Footer />
+    </main>
+  );
+}
 
-    return (
-      <main className="index-page-container">
-        <MainHeader />
-        <Simpleslider />
-        <CategoryCard products={this.state.products} />
-        {/* <Auction /> */}
-        <Featured products={this.state.products} />
-        <Latest products={this.state.products} />
-        {/* <IndexBlog /> */}
-       
-        <div className="notification">This website is still been tested</div>
-        <Footer />
-      </main>
-    );
+const mapStateToProps = state => {
+  return {
+    currentItem: state.shop.currentItem
+
   }
 }
 
-export default App
+export default connect(mapStateToProps)(App)

@@ -1,90 +1,88 @@
-import React from 'react'
-import Header from '../header/mainHeader'
-import Footer from '../footer/footer'
+import React, { useState, useEffect } from 'react'
 import './cart.css'
-import Img from './Ankarasneaker.jpg'
 import { Link } from 'react-router-dom'
-import { carts } from '../../data.json'
 import CartCard from './cartCard'
 import { TiShoppingCart } from 'react-icons/ti'
-import { Component } from 'react'
 import NumberFormat from "react-number-format";
-import axios from 'axios';
+import { connect, useSelector } from 'react-redux'
 
-export default class Cart extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            cartItem: carts,
-            img: Img,
-            rate: 0,
-            deleteItem: true,
+function Cart(props) {
 
-        }
+    const activeCurrency = useSelector((activeCurrency) => activeCurrency);
+    const value = activeCurrency.currencyReducer.defaultValue;
 
-    }
 
-  
-    // componentDidUpdate() {
-    //         this.setState({
-    //             totalPrice: 0
-    //         })
-    //     }
+    const [cartItem, setCartItem] = useState(props.cart)
+    const [currency, setCurrency] = useState(value)
+    const [rate, setRate] = useState(0)
+    const [total, setTotal] = useState(0)
 
-    render() {
+    useEffect(() => {
+        let price = 0;
 
-        return (
-            <>
-                <Header />
-                {this.state.cartItem.length === 0 ?
-                    <div className='emptyCart'>
-                        <TiShoppingCart className='icon' />
-                        <span>Cart is Empty</span>
-                    </div> :
-                    <>
-                        <div className="cart-container">
-                           <h1>{this.state.rate.USD}</h1>
-                            {/* {this.state.cartItem.map((items) => ( */}
-                            <CartCard
-                                Img={this.state.Img}
-                                unitPrice={carts.amount}
-                                unitQty={carts.qty}
-                                totalPrice={this.state.totalPrice}
-                                deleteItem={this.state.deleteItem}
+        cartItem.forEach(item => {
+            price += item.qty * item.price;
+        })
+        setTotal(price)
+
+    }, [cartItem, total]);
+
+    return (
+        <>
+            {cartItem.length === 0 ?
+
+                // if Cart is empty return the below
+
+                <div className='emptyCart'>
+                    <TiShoppingCart className='icon' />
+                    <span>Cart is Empty</span>
+                </div>
+                :
+                // if Cart has items in it return the below
+                <>
+                    <div className="cart-container">
+                        {cartItem.map((item) => (
+                            <CartCard key={item.id} itemData={item} currency={currency} />
+                        ))
+                        }
+
+                    </div>
+                    <div className='total-amount'>
+                        <span>Total price:</span>
+                        <p>
+                            <NumberFormat
+                                className={"px-1"}
+                                value={total * value.currencyRate}
+                                displayType={"text"}
+                                thousandSeparator={true}
+                                prefix={value.currencySymbol}
                             />
-                            {/* ))
-                            } */}
-
-                        </div>
-                        <div className='total-amount'>
-                            <span>Total price:</span>
-                            <p>
-                                <NumberFormat
-                                    className={"px-1"}
-                                    value={this.state.totalPrice}
-                                    displayType={"text"}
-                                    thousandSeparator={true}
-                                    prefix={"₦"}
-                                />
-                            </p>
-                        </div>
-                        <div className="btns">
-                            <button className='cnt-btn'>
-                                <Link to='/'>
-                                    Continue Shopping
+                        </p>
+                    </div>
+                    <div className="btns">
+                        <button className='cnt-btn'>
+                            <Link to='/'>
+                                Continue Shopping
                     </Link>
-                            </button>
-                            <button className="confirm-btn">
-                                <Link to='/checkout'>
-                                    Confirm Payment
+                        </button>
+                        <button className="confirm-btn">
+                            <Link to='/checkout'>
+                                Confirm Payment
                     </Link>
-                            </button>
-                        </div>
-                    </>
-                }
-                <Footer />
+                        </button>
+                    </div>
+                </>
+            }
 
-            </>
-        )
+        </>
+    )
+}
+
+const mapStateToProps = (state) => {
+    return {
+        cart: state.shop.cart,
+        activeCurrency: state.activeCurrency
     }
 }
+
+export default connect(mapStateToProps)(Cart);

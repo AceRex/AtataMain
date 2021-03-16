@@ -10,7 +10,9 @@ export function decrement() {
         type: "DECREMENT"
     }
 }
-
+// const INITIAL_STATE = {
+//     currentCount : 0
+// }
 function countReducer(count = 0, action) {
     switch(action.type) {
         case "INCREMENT":

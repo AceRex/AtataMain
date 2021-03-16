@@ -932,14 +932,14 @@
 
 @media (min-width: 1200px) {
   .root {
-    max-width: 100%;
+    max-width: 75%;
+    margin: auto;
   }
   .root .heading {
     width: 90%;
     margin: auto;
     text-align: center;
     padding-top: 2.5rem;
-    padding-bottom: -2.5rem;
     font-size: 25px;
     font-weight: 700;
     color: var(--colorGreen);
@@ -960,15 +960,14 @@
     margin: auto;
   }
   .root .root-body .summary-container {
-    width: 90%;
+    width: 100%;
     margin: 10px auto;
   }
   .root .root-body .summary-container .item-summary {
-    overflow-y: scroll;
-    height: 16rem;
+    margin: 3rem 0px;
   }
   .root .root-body .summary-container .item-summary .item-in-cart {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     background-color: var(--colorLight);
     border-radius: 10px;
@@ -999,9 +998,10 @@
     font-size: 25px;
     font-weight: 600;
     color: #aaa;
+    text-align: right;
   }
   .root .root-body .summary-container .total-container {
-    width: 70%;
+    width: 85%;
     margin: auto;
     padding: 10px;
   }
@@ -1019,7 +1019,7 @@
     font-weight: 600;
   }
   .root .root-body .summary-container .total-amount {
-    width: 70%;
+    width: 85%;
     margin: auto;
     padding: 20px;
     border-top: solid 0.5px #aaa;

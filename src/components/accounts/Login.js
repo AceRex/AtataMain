@@ -1,26 +1,32 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./login.css";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Logo from "../logoComponents/headerLogo.png";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import {useDispatch} from 'react-redux'
+// import { login } from '../../Redux/AccountStore'
 
 
 
-class Login extends Component {
-  state = {
-    clicked: false
-}
+function Login (){
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("")
+    const [alert, setAlert] = useState(false)
+    const [wrongInput, setWrongInput] = useState(false)
 
-handleClick = (e) => {
-  this.setState({});
+    const dispatch = useDispatch()
 
-  setTimeout(() => {
-      this.setState({clicked : false});
-  }, 2000)
-}
-  render(){
-    const {clicked} = this.state;
+    // const handleSubmit = (event) => {
+    //   event.preventDefault();
+  
+    //   dispatch(
+    //     login({
+    //       email: email,
+    //       password: password,
+    //       loggedIn: true
+    //     })
+    //   )
+    // }
 
   return (
     <div className="LoginContainer">
@@ -34,21 +40,28 @@ handleClick = (e) => {
           <form>
             <div className="form-group">
               <label>Email</label>
-              <input type="email" name='email' placeholder="emailaddress@email.com" />
-              <p className="error">*Invalid email address</p>
+              <input type="email"
+              name='email'
+              placeholder="emailaddress@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input type="Password" name='password' placeholder="Enter password here..." />
-              <p className="error">*Password is incorrect</p>
+              <input type="Password"
+              name='password'
+              placeholder="Enter password here..."
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className="checkbox">
               <input type="checkbox" />
               Remember Me
             </div>
             <div className="form-group">
-              <button className="btn" onClick={this.handleClick} disabled={clicked}>{clicked && <CircularProgress style={{color:'#fff', width: '20px', height:'20px'}} />}
-              {!clicked && 'Login'}</button>
+              <button className="btn"
+              // onClick={handleSubmit}
+              >Login</button>
               <Link to="/forgotpassword">
                 <p className="forgetPwd">Forgot password?</p>
               </Link>
@@ -64,7 +77,6 @@ handleClick = (e) => {
       </div>
     </div>
   );
-}
 }
 
 export default Login;

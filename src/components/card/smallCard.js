@@ -3,57 +3,69 @@ import "./categoryCard.css";
 import NumberFormat from "react-number-format";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
-import { connect, useSelector, useDispatch } from "react-redux";
-import { addCartItem } from "../../Redux/addToCart";
+import { BiShowAlt } from "react-icons/bi";
+import { connect, useSelector } from "react-redux";
+import { addToCart, loadCurrentItem } from "../../Redux/ShoppingCart/Shopping_Actions"
 
-function ItemCards(props) {
+function ItemCards({ productsData, addToCart, loadCurrentItem }) {
+
   const activeCurrency = useSelector((activeCurrency) => activeCurrency);
   const value = activeCurrency.currencyReducer.defaultValue;
 
-  console.log(activeCurrency.initialState);
-
-  const dispatch = useDispatch();
-
   return (
-    <Link to="/product-page" key={props._id}>
-      <div className="item-card">
-        <div className="Card-top ">
-          <span className="category">
-            <Link to="/">{props.category}</Link>
-          </span>
-          <p>{props.title}</p>
+
+    <div className="item-card">
+      <div className="Card-top ">
+        <span className="category">
+          <Link to={`/category/${productsData.category}`}>{productsData.category}</Link>
+        </span>
+        <p>{productsData.title}</p>
+      </div>
+      <div className="image-container">
+        <img src={productsData.img} alt={productsData.title} />
+      </div>
+      <div className="card-bottom">
+        <div className="amount">
+          <small>Price</small>
+          <NumberFormat
+            className={"px-1"}
+            value={productsData.price * value.currencyRate}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={value.currencySymbol}
+          />
         </div>
-        <div className="image-container">
-          <img src={props.img} alt="display" />
-        </div>
-        <div className="card-bottom">
-          <div className="amount">
-            <small>Price</small>
-            <NumberFormat
-              className={"px-1"}
-              value={props.amount * value.currencyRate}
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={value.currencySymbol}
-            />
-          </div>
-          <div className="addToCartBtn">
+        <div className="addToCartBtn">
+          <Link to={`/product/${productsData._id}`}>
             <button
-              onClick={(e) => {
-                e.preventDefault();
-                dispatch(addCartItem("Hello"));
-              }}
+              className='view__item'
+              onClick={() => loadCurrentItem(productsData)}
             >
-                            <FiShoppingCart />
+              <BiShowAlt />
 
             </button>
-          </div>
+          </Link>
+          <button
+            className='addtocart'
+            onClick={() => addToCart(productsData._id)}
+          >
+            <FiShoppingCart />
+
+          </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
-function mapStateToProps(state) {
-  return { activeCurrency: state.activeCurrency };
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item))
+  }
 }
-export default connect(mapStateToProps)(ItemCards);
+function mapStateToProps(state) {
+  return {
+    activeCurrency: state.activeCurrency,
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ItemCards);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./header.css";
 import ItemsCarousel from "react-items-carousel";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 import Data from "../../data.json";
 
 class HeaderBottom extends React.Component {
@@ -11,6 +11,8 @@ class HeaderBottom extends React.Component {
       const [activeItemIndex, setActiveItemIndex] = useState(0);
       const chevronWidth = 40;
       const MenuItems = Data.allcategory
+      const { path, url } = useRouteMatch()
+
       return (
         <div
           className="all-categories"
@@ -54,9 +56,9 @@ class HeaderBottom extends React.Component {
               chevronWidth={chevronWidth}
             >
               {/* Datas are been read from ./AllCateData.js */}
-              {MenuItems.map((items) => (
-                <Link to={items.link} key={items._id} style={{ color: "#fff" }} >
-                  <li>{items.category}</li>
+              {MenuItems.map(({_id,category}) => (
+                <Link to={`/categories/${category}`} key={_id} style={{ color: "#fff" }} >
+                  <li>{category}</li>
                 </Link>
               ))}
             </ItemsCarousel>

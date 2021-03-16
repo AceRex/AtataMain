@@ -549,12 +549,12 @@
   }
   .cart-container .cart-item {
     width: 70%;
-    margin: auto;
+    margin: 1rem auto;
     background-color: var(--colorWhite);
     border-radius: 7px;
     padding: 10px;
-    -webkit-box-shadow: 5px 5px 20px #00000017;
-            box-shadow: 5px 5px 20px #00000017;
+    -webkit-box-shadow: 5px 5px 5px #00000017;
+            box-shadow: 5px 5px 5px #00000017;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -658,13 +658,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 10px 0px;
-    height: 80vh;
+    padding: 60px 0px;
+    height: 50vh;
   }
   .emptyCart .icon {
     width: 70%;
     margin: 20px auto;
-    margin-top: 7 rem;
+    margin-top: 4rem;
     border-radius: 100%;
     font-size: 90px;
     color: #aaa;

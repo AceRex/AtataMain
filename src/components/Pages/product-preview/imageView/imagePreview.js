@@ -4,34 +4,17 @@ import '../productMain.css'
 
 
 
-class ImagePreview extends Component {
-    
-  constructor(props){
-    super(props)
-    
-    this.state = {
-      mainUrl: Img3,
-    }
-    this.Swap = this.Swap.bind(this)
-
-  }
-  Swap(url){
-    this.setState({mainUrl: url})
-  };
-  
-  render() {
+function ImagePreview ({image}) {
     
     return (
       <div className='image-section'>
         <div className="Preview">
-          <img src={this.props.img} alt='img' id="main" />
+          <img src={image} alt='img' id="main" />
         </div>
        
       </div>
     );
   }
-}
-
 
 
 export default ImagePreview;
