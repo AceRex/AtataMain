@@ -8,7 +8,10 @@ const INITIAL_STATE = {
 }
 
 const shopReducer = (state = INITIAL_STATE, action) => {
+
+
     switch (action.type) {
+        
         case actionsTypes.ADD_TO_CART:
             // passing Items Data from products key
             const item = state.products.find((prod) => prod._id === action.payload.id);
@@ -22,7 +25,8 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         case actionsTypes.REMOVE_FROM_CART:
             return {
                 ...state,
-                cart: state.cart.filter((item) => item.id !== action.payload.id),
+                cart: state.cart.filter((item) => item._id === action.payload.id),
+
             }
         case actionsTypes.ADJUST_QTY:
             return {
@@ -38,5 +42,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
             return state;
     }
 };
+
 
 export default shopReducer;

@@ -3,10 +3,10 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import MainPage from "./mainpage"
 import MainHeader from "./components/header/mainHeader";
 import NotFound from "./components/Pages/pageNotFound/PageNotFound";
-import Login from "./components/accounts/Login";
+import Login from "./components/accounts/login/Login";
 import Register from "./components/accounts/registerPages/RegisterMain";
-import Forgotpwd from "./components/accounts/forgotPassword";
-import NewPwd from "./components/accounts/registerPages/resetPassword";
+import Forgotpwd from "./components/accounts/forgotPassword/forgotPassword";
+import NewPwd from "./components/accounts/resetPassword/resetPassword";
 import Categories from "./components/Pages/Categories/CategoriesPage";
 import ProductPage from "./components/Pages/product-preview/Product";
 import Checkout from "./components/checkout/mainCheckout";

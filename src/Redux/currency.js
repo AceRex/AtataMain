@@ -25,7 +25,7 @@ export function changeCurrency(value) {
 
 const initialState = {
   defaultValue: {
-    currencyName: "EUR",
+    currencyName: "USD",
     currencyRate: 1,
     currencySymbol: "€",
   },
@@ -38,7 +38,7 @@ function currencyReducer(activeCurrency = initialState, action) {
         ...activeCurrency,
         defaultValue: {
           currencyName: "USD",
-          currencyRate: 3.4156,
+          currencyRate: 1,
           currencySymbol: "$",
         },
       };
@@ -47,7 +47,7 @@ function currencyReducer(activeCurrency = initialState, action) {
         ...activeCurrency,
         defaultValue: {
           currencyName: "EUR",
-          currencyRate: 1,
+          currencyRate: 10,
           currencySymbol: "€",
         },
       };
@@ -56,7 +56,7 @@ function currencyReducer(activeCurrency = initialState, action) {
         ...activeCurrency,
         defaultValue: {
           currencyName: "GBP",
-          currencyRate: 0.12,
+          currencyRate: 5,
           currencySymbol: "£",
         },
       };

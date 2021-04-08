@@ -30,18 +30,23 @@ class Header extends Component {
         <div className="mobile-menu" onClick={this.handleClick}>
           {this.state.clicked ? <MdClose /> : <BiMenuAltLeft />}
         </div>
+        {/* Category Menu Here */}
         <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {this.state.AllCatMenuItems.map((items) => (
             <Link to={items.link}  key={items._id} style={{ color: "#fff" }}>
-              <li>{items.category}</li>
+              <li onClick={this.handleClick}>{items.category}</li>
             </Link>
           ))}
         </div>
+        {/* Category Menu Ends */}
+        {/* Logo Starts Here */}
         <div className="mobile-logo">
           <Link to ='/' className="logo">
             <img src={Logo} alt='Logo'/>
           </Link>
         </div>
+        {/* Logo Ends Here */}
+        {/* Login and Cart Here */}
         <div className="mobile-cart">
           <li onClick={this.handleLoginClick}>
             <VscAccount />
@@ -52,23 +57,27 @@ class Header extends Component {
             </Link>
           </li>
         </div>
+        {/* Login and Cart Ends */}
+        {/* Login Dropdown */}        
         <div
           className={
             this.state.loginClicked ? "login-menu active" : "login-menu"
           }
         >
           <Link to="/signin">
-            <li>
+            <li onClick={this.handleLoginClick}>
               Login <i className="fas fa-sign-in-alt"></i>
             </li>
           </Link>
           <Link to="/register">
-            <li>
+            <li onClick={this.handleLoginClick}>
               Register <i className="far fa-user"></i>
             </li>
           </Link>
         </div>
+        {/* Login Dropdown Ends */}
       </div>
+
     );
   }
 }

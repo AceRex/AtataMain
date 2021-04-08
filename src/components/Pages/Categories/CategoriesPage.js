@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SmallCard from "../../card/smallCard";
 import "./categoriespage.css";
 import CategoriesData from "./CategoriesData";
-// import Breadcrumbs from "@material-ui/core/Breadcrumbs";
+import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import { Link } from "react-router-dom";
 import ItemsCarousel from "react-items-carousel";
 //Carousel
@@ -26,7 +26,7 @@ function Categories({products}) {
         </Breadcrumbs> */}
         {/* Mobile Category Header */}
         <div
-          style={{ padding: `0 ${chevronWidth}px` }}
+          // style={{ padding: `0 ${chevronWidth}px` }}
           className="mobile-category-menu"
         >
           <ItemsCarousel
@@ -50,9 +50,10 @@ function Categories({products}) {
 
         <div className="category-shop">
           <section className="side-nav">
+            <p>Categories</p>
             {CategoriesData.SideNav.map((menu) => (
               <li key={menu.id}>
-                <Link to="/">{menu.category}</Link>
+                {menu.category}
               </li>
             ))}
           </section>

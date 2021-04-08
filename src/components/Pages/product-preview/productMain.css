@@ -1,18 +1,16 @@
 @media (max-width: 575.98px) {
   .prd-contaniner {
     width: 100%;
-    margin: 1rem auto;
+    padding-top: 5rem;
   }
   .prd-contaniner .prd-display {
     width: 100%;
   }
   .prd-contaniner .prd-display .imagePreview {
     max-width: 100%;
-    margin: auto;
   }
   .prd-contaniner .prd-display .imagePreview .image-section {
     width: 100%;
-    margin: auto;
   }
   .prd-contaniner .prd-display .imagePreview .image-section .Preview {
     border: solid 1px var(--colorAsh);

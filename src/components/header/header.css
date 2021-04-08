@@ -1114,43 +1114,10 @@
   .all-categories {
     display: none;
   }
-  .MainHeader {
-    width: 100%;
-    background-color: var(--colorWhite);
-    border-bottom: solid 0.5px #e2e2e2;
-  }
   .MainHeader .PagesHeader {
-    width: 100%;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+    display: none;
   }
-  .MainHeader .PagesHeader .logo-container {
-    width: 20%;
-    margin: auto;
-    overflow: hidden;
-  }
-  .MainHeader .PagesHeader .logo-container .logo {
-    width: 90%;
-    margin: auto;
-  }
-  .MainHeader .PagesHeader .logo-container .logo img {
-    width: 100px;
-  }
-  .MainHeader .PagesHeader .mobile-contain {
+  .MainHeader .mobile-contain {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1160,12 +1127,12 @@
     background-color: var(--colorWhite);
     border-top: solid 0.5px #e2e2e2;
   }
-  .MainHeader .PagesHeader .mobile-contain .search-mobile-container {
+  .MainHeader .mobile-contain .search-mobile-container {
     width: 70%;
     margin: auto;
     padding: 0px 3px;
   }
-  .MainHeader .PagesHeader .mobile-contain .search-mobile-container .search {
+  .MainHeader .mobile-contain .search-mobile-container .search {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1176,7 +1143,7 @@
     width: 100%;
     overflow: hidden;
   }
-  .MainHeader .PagesHeader .mobile-contain .search-mobile-container .search button {
+  .MainHeader .mobile-contain .search-mobile-container .search button {
     font-size: 14px;
     border: none;
     background-color: var(--colorGreen);
@@ -1186,7 +1153,7 @@
     width: 40%;
     height: 40px;
   }
-  .MainHeader .PagesHeader .mobile-contain .search-mobile-container .search input {
+  .MainHeader .mobile-contain .search-mobile-container .search input {
     width: 75%;
     height: 40px;
     border: none;
@@ -1194,7 +1161,7 @@
     border-radius: 5px;
     outline: none;
   }
-  .MainHeader .PagesHeader .mobile-contain .login {
+  .MainHeader .mobile-contain .login {
     width: 25%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1214,7 +1181,7 @@
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .MainHeader .PagesHeader .mobile-contain .login li {
+  .MainHeader .mobile-contain .login li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1228,13 +1195,13 @@
         align-content: center;
     padding: 10px;
   }
-  .MainHeader .PagesHeader .mobile-contain .login li :nth-child(2) {
+  .MainHeader .mobile-contain .login li :nth-child(2) {
     width: 100%;
   }
-  .MainHeader .PagesHeader .mobile-contain .login li .icon {
+  .MainHeader .mobile-contain .login li .icon {
     font-size: 20px;
   }
-  .MainHeader .PagesHeader .mobile-contain .login a {
+  .MainHeader .mobile-contain .login a {
     margin: 0px 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1249,30 +1216,33 @@
         align-content: center;
     color: var(--colorGreen);
   }
-  .MainHeader .PagesHeader .mobile-contain .login a .icon {
+  .MainHeader .mobile-contain .login a .icon {
     font-size: 25px;
   }
-  .MainHeader .PagesHeader .search-container {
+  .MainHeader .search-container {
     display: none;
   }
-  .MainHeader .PagesHeader .login {
+  .MainHeader .login {
     display: none;
   }
-  .MainHeader .mobile-header {
-    max-width: 85%;
+  .mobile-header {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--colorWhite);
   }
-  .MainHeader .mobile-header .mobile-menu {
+  .mobile-header .mobile-menu {
     cursor: pointer;
-    width: 15%;
+    width: 10%;
     font-size: 30px;
     padding: 10px;
     color: var(--colorWhite);
     background-color: var(--colorGreen);
   }
-  .MainHeader .mobile-header .nav-menu {
+  .mobile-header .nav-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1291,19 +1261,19 @@
     transition: all 0.5s ease;
     background-color: var(--colorWhite);
   }
-  .MainHeader .mobile-header .nav-menu li {
+  .mobile-header .nav-menu li {
     color: var(--colorGreen);
     padding: 10px;
     border-bottom: solid 0.3px #dbdada;
   }
-  .MainHeader .mobile-header .nav-menu.active {
+  .mobile-header .nav-menu.active {
     left: 0;
     opacity: 1;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     z-index: 1;
   }
-  .MainHeader .mobile-header .login-menu {
+  .mobile-header .login-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1322,65 +1292,76 @@
     transition: all 0.5s ease;
     background-color: var(--colorWhite);
   }
-  .MainHeader .mobile-header .login-menu li {
+  .mobile-header .login-menu li {
     text-align: center;
     color: var(--colorGreen);
     padding: 30px;
     border-bottom: solid 0.3px #dbdada;
   }
-  .MainHeader .mobile-header .login-menu.active {
+  .mobile-header .login-menu.active {
     left: 0;
     opacity: 1;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     z-index: 1;
   }
-  .MainHeader .mobile-header .mobile-logo {
-    width: 10%;
+  .mobile-header .mobile-logo {
+    width: 55%;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
   }
-  .MainHeader .mobile-header .mobile-logo .logo {
+  .mobile-header .mobile-logo .logo {
     width: 20%;
     margin: auto;
   }
-  .MainHeader .mobile-header .mobile-logo .logo img {
+  .mobile-header .mobile-logo .logo img {
     width: 70px;
+    margin: auto;
   }
-  .MainHeader .mobile-header .mobile-cart {
-    width: 20%;
+  .mobile-header .mobile-cart {
+    width: 35%;
     font-size: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     list-style-type: none;
   }
-  .MainHeader .mobile-header .mobile-cart li {
-    margin: 15px;
+  .mobile-header .mobile-cart li {
+    margin: auto;
     cursor: pointer;
   }
-  .MainHeader .mobile-header .mobile-cart li a {
+  .mobile-header .mobile-cart li a {
     color: black;
   }
-  .login-dropdown {
-    width: 30%;
-    height: 150px;
-    position: absolute;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    font-size: 16px;
-    right: 0px;
-    padding: 5px;
-    bottom: 67px;
-    background-color: var(--colorWhite);
-    list-style-type: none;
-    border: solid 0.5px #e2e2e2;
-  }
-  .login-dropdown a {
-    color: var(--colorGreen);
-  }
-  .login-dropdown a li {
-    margin: 30px 15px;
-    text-align: center;
-  }
+}
+
+.login-dropdown {
+  width: 30%;
+  height: 150px;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 16px;
+  right: 0px;
+  padding: 5px;
+  bottom: 67px;
+  background-color: var(--colorWhite);
+  list-style-type: none;
+  border: solid 0.5px #e2e2e2;
+}
+
+.login-dropdown a {
+  color: var(--colorGreen);
+}
+
+.login-dropdown a li {
+  margin: 30px 15px;
+  text-align: center;
 }
 /*# sourceMappingURL=header.css.map */

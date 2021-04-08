@@ -1,0 +1,520 @@
+@media (max-width: 575.98px) {
+    .LoginContainer {
+        box-sizing: border-box;
+        max-width: 100%;
+        color: black;
+        background-image: url('../../bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 100%;
+        padding: 1rem 0;
+        padding-top: 5rem;
+        .login{
+            width: 40%;
+            margin: auto;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 1rem;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        hr {
+            width: 90%;
+            border: solid 4px var(--colorGreen);
+            margin-left: 0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+
+        }
+
+        .formContaniner {
+            height: 65%;
+            width: 95%;
+            margin: auto;
+            padding: 10px 0px;
+            background-color: #eeeded;
+            border-radius: 10px;
+
+            .form {
+                width: 80%;
+                margin: auto;
+                margin-top: 1.5rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 2rem auto;
+
+                    input {
+                        border: solid 2px #e9e7e7;
+                        padding: 10px;
+                        width: 95%;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input::placeholder {
+                        color: #c5c3c3;
+                    }
+
+                    label {
+                        font-weight: 800;
+                        font-size: 16px;
+                        color: #5a5a5a;
+                        margin: 7px 0;
+                    }
+
+                    .btn {
+                        background-color: var(--colorGreen);
+                        color: var(--colorWhite);
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 5px;
+                        border: none;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+
+        .forgetPwd {
+            text-align: center;
+            color: #5a5a5a;
+        }
+
+        .reg {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .LoginContainer {
+        box-sizing: border-box;
+        max-width: 100%;
+        color: black;
+        background-image: url('../../bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 100%;
+        padding: 1rem 0;
+        padding-top: 5rem;
+
+        .login{
+            width: 40%;
+            margin: auto;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 1rem;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        hr {
+            width: 90%;
+            border: solid 4px var(--colorGreen);
+            margin-left: 0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+
+        }
+
+        .formContaniner {
+            height: 65%;
+            width: 95%;
+            margin: auto;
+            padding: 10px 0px;
+            background-color: #eeeded;
+            border-radius: 10px;
+
+            .form {
+                width: 80%;
+                margin: auto;
+                margin-top: 1.5rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 2rem auto;
+
+                    input {
+                        border: solid 2px #e9e7e7;
+                        padding: 10px;
+                        width: 95%;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input::placeholder {
+                        color: #c5c3c3;
+                    }
+
+                    label {
+                        font-weight: 800;
+                        font-size: 16px;
+                        color: #5a5a5a;
+                        margin: 7px 0;
+                    }
+
+                    .btn {
+                        background-color: var(--colorGreen);
+                        color: var(--colorWhite);
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 5px;
+                        border: none;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+
+        .forgetPwd {
+            text-align: center;
+            color: #5a5a5a;
+        }
+
+        .reg {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .LoginContainer {
+        box-sizing: border-box;
+        max-width: 100%;
+        color: black;
+        background-image: url('../../bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 100%;
+        padding: 1rem 0;
+        padding-top: 5rem;
+
+        .login{
+            width: 40%;
+            margin: auto;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 1rem;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        hr {
+            width: 90%;
+            border: solid 4px var(--colorGreen);
+            margin-left: 0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+
+        }
+
+        .formContaniner {
+            height: 65%;
+            width: 95%;
+            margin: auto;
+            padding: 10px 0px;
+            background-color: #eeeded;
+            border-radius: 10px;
+
+            .form {
+                width: 80%;
+                margin: auto;
+                margin-top: 1.5rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 2rem auto;
+
+                    input {
+                        border: solid 2px #e9e7e7;
+                        padding: 10px;
+                        width: 95%;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input::placeholder {
+                        color: #c5c3c3;
+                    }
+
+                    label {
+                        font-weight: 800;
+                        font-size: 16px;
+                        color: #5a5a5a;
+                        margin: 7px 0;
+                    }
+
+                    .btn {
+                        background-color: var(--colorGreen);
+                        color: var(--colorWhite);
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 5px;
+                        border: none;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+
+        .forgetPwd {
+            text-align: center;
+            color: #5a5a5a;
+        }
+
+        .reg {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .LoginContainer {
+        box-sizing: border-box;
+        max-width: 100%;
+        color: black;
+        background-image: url('../../bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 100%;
+        padding: 2px 0;
+
+
+        .formContaniner {
+            height: 75%;
+            width: 50%;
+            margin: 2rem auto;
+            background-color: #eeeded;
+            border-radius: 10px;
+
+            .login {
+                width: 20%;
+                margin: auto;
+
+                h3 {
+                    text-align: center;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    padding: 30px 0px;
+                }
+
+                hr {
+                    width: 100%;
+                    margin: auto;
+                    border: solid 4px var(--colorGreen);
+                    margin-left: 0;
+                    border-radius: 10px;
+                    margin-bottom: 30px;
+
+                }
+            }
+
+            .form {
+                width: 70%;
+                margin: auto;
+                margin-top: 1.5rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1rem auto;
+
+                    input {
+                        border: solid 2px #e9e7e7;
+                        padding: 10px;
+                        width: 95%;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input::placeholder {
+                        color: #c5c3c3;
+                    }
+
+                    label {
+                        font-weight: 800;
+                        font-size: 16px;
+                        color: #5a5a5a;
+                        margin: 7px 0;
+                    }
+
+                    .btn {
+                        background-color: var(--colorGreen);
+                        color: var(--colorWhite);
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 5px;
+                        border: none;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+
+        .forgetPwd {
+            text-align: center;
+            color: #5a5a5a;
+        }
+
+        .reg {
+            font-size: 13px;
+            width: 90%;
+            margin: auto;
+            padding: 2rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .LoginContainer {
+        box-sizing: border-box;
+        max-width: 100%;
+        color: black;
+        background-image: url('../../bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 100%;
+        padding: 2px 0;
+
+
+        .formContaniner {
+            background-color: #eeeded;
+            height: 70%;
+            width: 50%;
+            margin: 3rem auto;
+            border-radius: 10px;
+
+            .login {
+                width: 20%;
+                margin: auto;
+
+                h3 {
+                    text-align: center;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    padding: 30px 0px;
+                }
+
+                hr {
+                    width: 100%;
+                    margin: auto;
+                    border: solid 4px var(--colorGreen);
+                    margin-left: 0;
+                    border-radius: 10px;
+                    margin-bottom: 30px;
+
+                }
+            }
+
+            .form {
+                width: 70%;
+                margin: auto;
+                margin-top: 1.5rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1rem auto;
+
+                    input {
+                        border: solid 2px #e9e7e7;
+                        padding: 10px;
+                        width: 95%;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    input::placeholder {
+                        color: #c5c3c3;
+                    }
+
+                    label {
+                        font-weight: 800;
+                        font-size: 16px;
+                        color: #5a5a5a;
+                        margin: 7px 0;
+                    }
+
+                    .btn {
+                        background-color: var(--colorGreen);
+                        color: var(--colorWhite);
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 5px;
+                        border: none;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+
+        .forgetPwd {
+            text-align: center;
+            color: #5a5a5a;
+        }
+
+        .reg {
+            font-size: 13px;
+            width: 70%;
+            margin:auto;
+            padding-bottom: 2rem;
+        }
+    }
+
+
+}

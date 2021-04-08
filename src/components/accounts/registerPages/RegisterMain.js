@@ -3,7 +3,9 @@ import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import "./register.css";
 import { Link } from "react-router-dom";
 import Logo from "../../logoComponents/logo2.png";
-import {GoHome} from 'react-icons/go'
+import { GoHome } from 'react-icons/go'
+import axios from 'axios'
+
 
 export default class UserReg extends Component {
   constructor(props) {
@@ -23,24 +25,26 @@ export default class UserReg extends Component {
   }
 
   onChange(e) {
-    this.setState({[e.target.name] : e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
   }
   onSubmit(e) {
     e.preventDefault();
 
-    const post = {
+    axios.post('http://api.atata57.com/auth/register', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-    };
-    fetch("https://jsonplaceholder.typicode.com/users", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(post),
+      phone: this.state.phoneNumber,
+      email: this.state.email,
+      password: this.state.password,
+      confirm_password: this.state.password,
+      country: this.state.country,
     })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   selectCountry(val) {
@@ -55,11 +59,6 @@ export default class UserReg extends Component {
 
     return (
       <div className="ind-reg">
-        <div className="LogoContaniner">
-          <div className="logo">
-            <img src={Logo} alt="Logo" />
-          </div>
-        </div>
         <div className="ind-reg-form">
           <div className="form">
             <h3>Registration</h3>
@@ -90,21 +89,39 @@ export default class UserReg extends Component {
               <div className="group">
                 <div className="form-group">
                   <label>Phone Number</label>
-                  <input type="tel" placeholder="Enter phone number..." />
+                  <input
+                    name='phoneNumber'
+                    onChange={this.onChange}
+                    value={this.state.phoneNumber}
+                    type="tel"
+                    placeholder="Enter phone number..." />
                 </div>
                 <div className="form-group">
                   <label>Email</label>
-                  <input type="email" placeholder="Enter Email name..." />
+                  <input
+                  type="email"
+                  name='email'
+                  onChange={this.onChange}
+                  value={this.state.email}
+                  placeholder="Enter Email name..." />
                 </div>
               </div>
               <div className="group">
                 <div className="form-group">
                   <label>Password</label>
-                  <input type="password" />
+                  <input
+                  name='password'
+                  value={this.state.password}
+                  onChange={this.onChange}
+                  type="password" />
                 </div>
                 <div className="form-group">
                   <label>Retype Password</label>
-                  <input type="password" />
+                  <input
+                  name='retypePassword'
+                  value={this.state.retypePassword}
+                  onChange={this.onChange}
+                  type="password" />
                 </div>
               </div>
               <div className="group">
@@ -120,6 +137,7 @@ export default class UserReg extends Component {
                   <RegionDropdown
                     country={country}
                     value={region}
+                    name='region'
                     onChange={(val) => this.selectRegion(val)}
                   />
                 </div>
@@ -131,10 +149,10 @@ export default class UserReg extends Component {
                 </div>
               </div>
               <div className="btn-group">
-                  <Link to="/" className="btn-back">
-                    <GoHome/>
-                  </Link>
-                  <button className="btn-reg">Register</button>
+                <Link to="/" className="btn-back">
+                  <GoHome />
+                </Link>
+                <button className="btn-reg" onClick={this.onSubmit}>Register</button>
               </div>
             </form>
           </div>

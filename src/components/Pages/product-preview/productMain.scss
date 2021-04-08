@@ -1,17 +1,17 @@
 @media (max-width: 575.98px) {
     .prd-contaniner {
         width: 100%;
-        margin: 1rem auto;
+        padding-top: 5rem;
 
         .prd-display {
             width: 100%;
 
             .imagePreview {
                 max-width: 100%;
-                margin: auto;  
-                .image-section{
+
+                .image-section {
                     width: 100%;
-                    margin: auto; 
+
                     .Preview {
                         border: solid 1px var(--colorAsh);
                         width: 90%;
@@ -19,12 +19,13 @@
                         margin: auto;
                         padding: auto;
                         overflow: hidden;
+
                         img {
-                          width: 100%;
-                          height: 100%;
+                            width: 100%;
+                            height: 100%;
                         }
-                      }
-                }             
+                    }
+                }
             }
 
             .order {
@@ -131,6 +132,7 @@
                 .description {
                     font-size: 14px;
                     text-align: justify;
+
                     li {
                         display: flex;
                         font-size: 13px;
@@ -145,6 +147,7 @@
                 }
             }
         }
+
         .prd-items {
             max-width: 90%;
             margin: auto 2px;
@@ -259,7 +262,7 @@
         }
     }
 
-  
+
 }
 
 
@@ -274,9 +277,11 @@
             .imagePreview {
                 max-width: 100%;
                 margin: auto;
-                .image-section{
+
+                .image-section {
                     width: 100%;
-                    margin: auto; 
+                    margin: auto;
+
                     .Preview {
                         border: solid 1px var(--colorAsh);
                         width: 90%;
@@ -284,11 +289,12 @@
                         margin: auto;
                         padding: auto;
                         overflow: hidden;
+
                         img {
-                          width: 100%;
-                          height: 100%;
+                            width: 100%;
+                            height: 100%;
                         }
-                      }
+                    }
                 }
             }
 
@@ -395,6 +401,7 @@
                 .description {
                     font-size: 14px;
                     text-align: justify;
+
                     li {
                         display: flex;
                         font-size: 13px;
@@ -409,6 +416,7 @@
                 }
             }
         }
+
         .prd-items {
             max-width: 90%;
             margin: auto 2px;
@@ -536,9 +544,11 @@
             .imagePreview {
                 max-width: 100%;
                 margin: auto;
-                .image-section{
+
+                .image-section {
                     width: 100%;
-                    margin: auto; 
+                    margin: auto;
+
                     .Preview {
                         border: solid 1px var(--colorAsh);
                         width: 90%;
@@ -546,11 +556,12 @@
                         margin: auto;
                         padding: auto;
                         overflow: hidden;
+
                         img {
-                          width: 100%;
-                          height: 100%;
+                            width: 100%;
+                            height: 100%;
                         }
-                      }
+                    }
                 }
             }
 
@@ -657,6 +668,7 @@
                 .description {
                     font-size: 14px;
                     text-align: justify;
+
                     li {
                         display: flex;
                         font-size: 13px;
@@ -671,6 +683,7 @@
                 }
             }
         }
+
         .prd-items {
             max-width: 90%;
             margin: auto 2px;
@@ -797,27 +810,29 @@
             width: 90%;
             margin: auto;
             display: flex;
+
             .imagePreview {
                 max-width: 50%;
                 margin: auto;
+
                 .image-section {
-     width: 100%;
-     margin: auto;
+                    width: 100%;
+                    margin: auto;
 
-     .Preview {
-         border: solid 1px var(--colorAsh);
-         width: 90%;
-         height: 350px;
-         margin: auto;
-         padding: auto;
-         overflow: hidden;
+                    .Preview {
+                        border: solid 1px var(--colorAsh);
+                        width: 90%;
+                        height: 350px;
+                        margin: auto;
+                        padding: auto;
+                        overflow: hidden;
 
-         img {
-             width: 100%;
-             height: 100%;
-         }
-     }
- }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
             }
 
             .order {
@@ -924,6 +939,7 @@
                 .description {
                     font-size: 14px;
                     text-align: justify;
+
                     li {
                         display: flex;
                         font-size: 13px;
@@ -938,6 +954,7 @@
                 }
             }
         }
+
         .prd-items {
             width: 100%;
             margin: auto;
@@ -946,6 +963,7 @@
             box-sizing: border-box;
             display: flex;
             flex-flow: row wrap;
+
             .item-card {
                 margin: 5px;
                 padding: 10px;
@@ -1064,12 +1082,15 @@
             width: 80%;
             margin: auto;
             display: flex;
+
             .imagePreview {
                 width: 50%;
                 margin: auto;
-                .image-section{
+
+                .image-section {
                     width: 100%;
-                    margin: auto; 
+                    margin: auto;
+
                     .Preview {
                         border: solid 1px var(--colorAsh);
                         width: 90%;
@@ -1077,11 +1098,12 @@
                         margin: auto;
                         padding: auto;
                         overflow: hidden;
+
                         img {
-                          width: 100%;
-                          height: 100%;
+                            width: 100%;
+                            height: 100%;
                         }
-                      }
+                    }
                 }
             }
 
@@ -1190,6 +1212,7 @@
                 .description {
                     font-size: 14px;
                     text-align: justify;
+
                     li {
                         display: flex;
                         font-size: 13px;
@@ -1204,6 +1227,7 @@
                 }
             }
         }
+
         .prd-items {
             width: 100%;
             margin: auto;
@@ -1212,6 +1236,7 @@
             box-sizing: border-box;
             display: flex;
             flex-flow: row wrap;
+
             .item-card {
                 margin: 10px;
                 padding: 10px;
