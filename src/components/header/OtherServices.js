@@ -3,10 +3,24 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
+import axios from 'axios'
+import { AUTH_USER } from "../../Authentication/User";
+import { BASEURL } from "../../Authentication/Main";
 
 function Account() {
   const [hover, setHover] = useState("hidden active");
+  
+  const Logout = () =>{
+    localStorage.clear()
+    // axios.get(`${BASEURL}auth/logout`)
+    // .then(res =>
+    //   console.log(res)
+    //   )
+    //   .catch(err => 
+    //     console.log(err)
+    //     )
+  }
 
   const handleHover = (hover) => {
     setTimeout(() => {
@@ -17,14 +31,17 @@ function Account() {
   const handleHoverOut = (hover) => {
     setHover("hidden");
   };
-
+ 
   return (
+    <>
+    {/* {AUTH_USER === "" ? */}
     <>
       <li className="sign-in" onMouseEnter={handleHover}>
         <VscAccount />
       </li>
 
       {/* dropdowns */}
+      
 
       <div
         className={`account-dropdown ${hover}`}
@@ -41,6 +58,27 @@ function Account() {
           </li>
         </Link>
       </div>
+    </>
+    {/* : */}
+    {/* <>
+    <li className="sign-in" onMouseEnter={handleHover}>
+        <VscAccount />
+      </li>
+      <div
+        className={`account-dropdown ${hover}`}
+        onMouseLeave={handleHoverOut}
+      >
+        <Link to="/dashboard">
+          <li>
+            My Account
+          </li>
+        </Link>
+          <li onClick={Logout()}>
+            Logout
+          </li>
+      </div>
+      </> */}
+    {/* } */}
     </>
   );
 }
@@ -61,9 +99,8 @@ const OtherServices = ({ cart }) => {
   // const Shop = useSelector((state) => state.shop);
   // const number = Shop.cart.length
 
-  return ( 
+  return (
     <div className="other-services">
-
       <div className="rght-itm">
         <Account />
 
@@ -71,7 +108,7 @@ const OtherServices = ({ cart }) => {
           <Link to="/cart">
             <p className="icon">
               <FiShoppingCart />
-              <span> {cartCount} items in cart</span>
+              <span> {cartCount}</span>
             </p>
           </Link>
         </li>

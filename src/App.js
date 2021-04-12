@@ -17,6 +17,7 @@ import AddressBook from "./components/Pages/userPage/addressBook";
 import Details from "./components/Pages/userPage/details";
 import Password from "./components/Pages/userPage/password";
 import Footer from "./components/footer/footer"
+import Dashboard from "./components/accounts/UserDashboard/Dashboard"
 import { connect } from 'react-redux'
 
 function App({ currentItem }) {
@@ -46,12 +47,6 @@ function App({ currentItem }) {
         <Route path="/checkout">
           <Checkout />
         </Route>
-        {currentItem === null ? <Redirect to='/' />
-          :
-          <Route path="/product/:title">
-            <ProductPage />
-          </Route>
-        }
         <Route path="/cart">
           <Cart />
         </Route>
@@ -70,7 +65,16 @@ function App({ currentItem }) {
         <Route path="/change-password">
           <Password />
         </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
         <Route component={NotFound} />
+        {currentItem === null ? <Redirect to='/' />
+          :
+          <Route path="/product/:title">
+            <ProductPage />
+          </Route>
+        }
       </Switch>
       <Footer />
     </main>

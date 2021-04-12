@@ -5,13 +5,12 @@ import CartCard from './cartCard'
 import { TiShoppingCart } from 'react-icons/ti'
 import NumberFormat from "react-number-format";
 import { connect, useSelector } from 'react-redux'
+import axios from 'axios'
 
 function Cart(props) {
 
     const activeCurrency = useSelector((activeCurrency) => activeCurrency);
     const value = activeCurrency.currencyReducer.defaultValue;
-
-
     const [cartItem, setCartItem] = useState(props.cart)
     const [currency, setCurrency] = useState(value)
     const [rate, setRate] = useState(0)

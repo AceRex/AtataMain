@@ -1,27 +1,47 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { useDispatch } from 'react-redux'
-// import { login } from '../../Redux/AccountStore'
-
-
+// import CircularProgress from '@material-ui/core/CircularProgress';
+import axios from 'axios'
+import ErrorAlert from '../../../errors/errors'
+import {BASEURL} from '../../../Authentication/Main'
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
-  const [alert, setAlert] = useState(false)
-  const [wrongInput, setWrongInput] = useState(false)
+  const [status, setStatus] = useState('')
+  const [alert, SetAlert] = useState('')
 
-  const dispatch = useDispatch()
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+   axios.post(`${BASEURL}/auth/login`, {
+      email: email,
+      password: password
+    })
+      .then(res => {
+        localStorage.setItem('token', res.data.token)
+        setStatus('Login Successful');
+        SetAlert('success')
+      })
+      .catch(err => {
+        if (err.response) {
+          setStatus((err.response.data.message));
+          SetAlert('error')
+
+        } else {
+          SetAlert('success')
+
+        }
+      });
+  }
   return (
     <div className="LoginContainer">
       <div className="formContaniner">
         <div className="login">
           <h3>Login</h3>
-          <hr/>
-          </div>
+          <hr />
+        </div>
 
         <div className="form">
           <form>
@@ -43,7 +63,7 @@ function Login() {
             </div>
             <div className="form-group">
               <button className="btn"
-              // onClick={handleSubmit}
+                onClick={onSubmit}
               >Login</button>
               <Link to="/forgotpassword">
                 <p className="forgetPwd">Forgot password?</p>
@@ -60,6 +80,7 @@ function Login() {
           </form>
         </div>
       </div>
+      <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} />
     </div>
   );
 }

@@ -118,7 +118,17 @@
     color: var(--colorGreen);
   }
   .other-services .cart a span {
-    font-size: 13px;
+    font-size: 14px;
+    background-color: var(--colorRed);
+    color: var(--colorLight);
+    padding: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: 20%;
+    top: 10%;
   }
   .other-services .account-dropdown {
     position: absolute;
@@ -389,7 +399,17 @@
     color: var(--colorGreen);
   }
   .other-services .cart span {
-    font-size: 13px;
+    font-size: 12px;
+    background-color: var(--colorRed);
+    color: var(--colorLight);
+    padding: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: 17%;
+    top: 15%;
   }
   .other-services .account-dropdown {
     position: absolute;
@@ -1081,6 +1101,18 @@
   .MainHeader .mobile-header .mobile-cart li a {
     color: black;
   }
+  .MainHeader .mobile-header .mobile-cart li span {
+    background-color: var(--colorRed);
+    width: 10px;
+    height: 10px;
+    padding: 4px;
+    color: var(--colorLight);
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    right: 3%;
+  }
   .login-dropdown {
     width: 30%;
     height: 150px;
@@ -1338,6 +1370,18 @@
   }
   .mobile-header .mobile-cart li a {
     color: black;
+  }
+  .mobile-header .mobile-cart li span {
+    background-color: var(--colorRed);
+    width: 10px;
+    height: 10px;
+    padding: 4px;
+    color: var(--colorLight);
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    right: 2%;
   }
 }
 

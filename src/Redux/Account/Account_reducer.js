@@ -1,10 +1,10 @@
-import * as actionsTypes from './Shopping_types'
+import * as actionsTypes from './Account_types'
 
-const INITIAL_STATE = {
+const LOGIN_STATE = {
     user: null
 }
 
-const accountReducer = (state = INITIAL_STATE, action) => {
+const accountReducer = (state = LOGIN_STATE, action) => {
     switch (action.type) {
         case actionsTypes.LOGIN:
             return {

@@ -8,6 +8,7 @@ import Data from '../../data.json'
 
 
 function Account() {
+
   const [hover, setHover] = useState("hidden");
   // const [clicked, setClicked] = useState(false);
 
@@ -39,11 +40,11 @@ function Account() {
         <Link to='/cart'>
           <p className="icon">
             <FiShoppingCart />
+            <span> {CartLenght.length}</span>
           </p>
-          <span> {CartLenght.length} items in cart</span>
         </Link>
       </div>
-      
+
 
       {/* dropdowns */}
 
@@ -67,36 +68,36 @@ export default class Header extends Component {
   render() {
     return (
 
-        <div className="MainHeader">
-          <div className="PagesHeader">
-            <div className="logo-container">
-              <Link to="/" className="logo">
-                <img src={HeaderLogo} alt='Logo'/>
-               
-              </Link>
-            </div>
-            <div className="mobile-contain">
+      <div className="MainHeader">
+        <div className="PagesHeader">
+          <div className="logo-container">
+            <Link to="/" className="logo">
+              <img src={HeaderLogo} alt='Logo' />
+
+            </Link>
+          </div>
+          <div className="mobile-contain">
             <div className="search-mobile-container">
               <div className="search">
-              <input placeholder="search for products here..." />
-              <button>Click to Search</button>
+                <input placeholder="search for products here..." />
+                <button>Click to Search</button>
               </div>
 
             </div>
             <Account />
-            </div>
-            
-            <div className="search-container">
-              <div className="search">
-              <input placeholder="search for products here..." />
-              <button>Click to Search</button>
-              </div>
-
-            </div>
-            <Account />
-            
           </div>
+
+          <div className="search-container">
+            <div className="search">
+              <input placeholder="search for products here..." />
+              <button>Click to Search</button>
+            </div>
+
+          </div>
+          <Account />
+
         </div>
+      </div>
     );
   }
 }

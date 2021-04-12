@@ -7,6 +7,9 @@ import CategoryCard from "./components/card/categoryCard";
 import { connect } from 'react-redux'
 
 function App({ products }) {
+   
+
+ 
   return (
     <main className="index-page-container">
       <Simpleslider />

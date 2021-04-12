@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,useState, useEffect } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import Logo from "../logoComponents/headerLogo.png";
@@ -7,34 +7,41 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { MdClose } from "react-icons/md";
+import { connect } from "react-redux";
 
-class Header extends Component {
-  constructor() {
-    super();
-    this.state = {
-      clicked: false,
-      loginClicked: false,
-      AllCatMenuItems: Data.allcategory
-    };
-  }
+function Header({cart}) {
+  const [clicked, setClicked] = useState(false)
+  const [loginClicked, setLoginClicked] = useState(false)
+  const [cartCount, setCartCount] = useState(0)
+  const [AllCatMenuItems, setAllCatMenuItems] = useState(Data.allcategory)
+  
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
+  const handleClick = () => {
+    setClicked( !clicked);
   };
-  handleLoginClick = () => {
-    this.setState({ loginClicked: !this.state.loginClicked });
+  const handleLoginClick = () => {
+    setLoginClicked( !loginClicked );
   };
-  render() {
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach(item => {
+      count += item.qty;
+    });
+    setCartCount(count)
+  },
+    [cart, cartCount]
+  )
     return (
       <div className="mobile-header">
-        <div className="mobile-menu" onClick={this.handleClick}>
-          {this.state.clicked ? <MdClose /> : <BiMenuAltLeft />}
+        <div className="mobile-menu" onClick={handleClick}>
+          {clicked ? <MdClose /> : <BiMenuAltLeft />}
         </div>
         {/* Category Menu Here */}
-        <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          {this.state.AllCatMenuItems.map((items) => (
+        <div className={clicked ? "nav-menu active" : "nav-menu"}>
+          {AllCatMenuItems.map((items) => (
             <Link to={items.link}  key={items._id} style={{ color: "#fff" }}>
-              <li onClick={this.handleClick}>{items.category}</li>
+              <li onClick={handleClick}>{items.category}</li>
             </Link>
           ))}
         </div>
@@ -48,12 +55,13 @@ class Header extends Component {
         {/* Logo Ends Here */}
         {/* Login and Cart Here */}
         <div className="mobile-cart">
-          <li onClick={this.handleLoginClick}>
+          <li onClick={handleLoginClick}>
             <VscAccount />
           </li>
           <li>
             <Link to="/cart">
               <FiShoppingCart />
+              <span>{cartCount}</span>
             </Link>
           </li>
         </div>
@@ -61,16 +69,16 @@ class Header extends Component {
         {/* Login Dropdown */}        
         <div
           className={
-            this.state.loginClicked ? "login-menu active" : "login-menu"
+            loginClicked ? "login-menu active" : "login-menu"
           }
         >
           <Link to="/signin">
-            <li onClick={this.handleLoginClick}>
+            <li onClick={handleLoginClick}>
               Login <i className="fas fa-sign-in-alt"></i>
             </li>
           </Link>
           <Link to="/register">
-            <li onClick={this.handleLoginClick}>
+            <li onClick={handleLoginClick}>
               Register <i className="far fa-user"></i>
             </li>
           </Link>
@@ -80,6 +88,12 @@ class Header extends Component {
 
     );
   }
-}
 
-export default Header;
+function mapStateToProps(state) {
+
+  return {
+    cart: state.shop.cart
+  };
+};
+export default connect(mapStateToProps)(Header);
+
