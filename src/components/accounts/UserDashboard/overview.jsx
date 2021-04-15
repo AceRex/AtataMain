@@ -1,60 +1,31 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import Switch from '@material-ui/core/Switch';
+import React, { useState, useContext } from 'react'
 import axios from 'axios'
-import { AUTH_USER } from '../../../Authentication/User'
-import { BASEURL } from '../../../Authentication/Main'
-import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import ErrorAlert from '../../../errors/errors'
 import ScrollToToponMount from '../../scrollToTopOnMount'
+import {getStorageData, StorageKeys} from '../../../Authentication/AUTH_actions'
+
 
 
 function Overview() {
-
-  axios.get(`${BASEURL}/buyers/34`)
-    .then(res => {
-      // setUser(res.data.data.first_name)
-      console.log(res.data.data.first_name)
-    })
-    .catch(err => console.log((err)))
-
-
-  const [first_name, setFirstName] = useState()
-  const [last_name, setLastName] = useState()
-  const [email, setEmail] = useState()
-  const [phone, setPhone] = useState()
+  const [USER, setUSER] = useState(getStorageData(StorageKeys.User))
+  const [first_name, setFirstName] = useState(USER.first_name)
+  const [last_name, setLastName] = useState(USER.last_name)
+  const [email, setEmail] = useState(USER.email)
+  const [phone, setPhone] = useState(USER.phone)
   const [gender, setGender] = useState()
   const [DOB, setDOB] = useState()
-  const [street, setStreet] = useState()
-  const [delivery_address, setDelivery] = useState()
-  const [region, setRegion] = useState()
-  const [country, setCountry] = useState()
   const [status, setStatus] = useState("")
   const [alert, setAlert] = useState("")
-
-  // Toggle state
-  const [toggle, setToggle] = useState({
-    checkedA: true,
-    checkedB: true,
-  });
-  const handleToggle = (event) => {
-    setToggle({ ...toggle, [event.target.name]: event.target.checked });
-  };
-
-  // toggle state Ends
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.patch(`${BASEURL}/buyers/34`, {
+    axios.patch(`http://api.atata57.com/buyers/${USER.id}`, {
       first_name,
       last_name,
       email,
       phone,
       gender,
-      DOB,
-      street,
-      delivery_address,
-      region,
-      country,
+      DOB
     })
       .then(res => {
         setStatus('Login Successful');
@@ -81,10 +52,18 @@ function Overview() {
           <h3>Account settings</h3>
 
           <div className="form-group">
-            <label>Fullname</label>
+            <label>First Name</label>
             <input className='db-input'
-              value={`${first_name} ${last_name}`}
+              value={first_name}
               onChange={(e) => setFirstName(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Last Name</label>
+            <input className='db-input'
+              value={last_name}
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
           <div className="form-group">
@@ -119,59 +98,13 @@ function Overview() {
               onChange={(e) => setDOB(e.target.value)}
             />
           </div>
-
-
-        </form>
-      </div>
-      <div className="profile">
-        <form>
-          <div className='form-group'>
-            <label>Street</label>
-            <input className='db-input'
-              value={street}
-              onChange={(e) => setStreet(e.target.value)}
-            />
-          </div>
-          <div className='form-group'>
-            <label>Delivery Address</label>
-            <input className='db-input'
-              value={delivery_address}
-              onChange={(e) => setDelivery(e.target.value)}
-            />
-          </div>
-          <div className='form-group'>
-            <label>Country</label>
-            <CountryDropdown
-              value={country}
-              onChange={(val) => setCountry(val)}
-            />
-          </div>
-          <div className="form-group">
-            <label>Region</label>
-            <RegionDropdown
-              country={country}
-              value={region}
-              name='region'
-              onChange={(val) => setRegion(val)}
-            />
-          </div>
-
-          <div className="form-toggle-group">
-            <label>Send me Newsletter</label>
-            <Switch
-              checked={toggle.checkedB}
-              onChange={handleToggle}
-              color="primary"
-              name="checkedB"
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            />
-          </div>
           <div className='account_save_btn'>
             <button className='db-btn'
               onClick={(e) => handleSubmit(e)}
             >
               Save</button>
           </div>
+
         </form>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { AUTH_USER } from '../../../Authentication/User'
 import { BASEURL } from '../../../Authentication/Main'
 import ErrorAlert from '../../../errors/errors'
+import {getStorageData} from '../../../Authentication/AUTH_actions'
 
 function ScrollToToponMount() {
   useEffect(() => {
@@ -20,26 +20,16 @@ function Password() {
   const [status, setStatus] = useState("")
   const [alert, setAlert] = useState("")
 
-  // Toggle state
-  const [toggle, setToggle] = useState({
-    checkedA: true,
-    checkedB: true,
-  });
-  const handleToggle = (event) => {
-    setToggle({ ...toggle, [event.target.name]: event.target.checked });
-  };
-
-  // toggle state Ends
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${BASEURL}auth/password/update`, {
+    axios.post(`${BASEURL}/auth/password/update`,
+    {
       old_password,
       new_password,
       confirm_password
     })
       .then(res => {
-        setStatus('Login Successful');
+        setStatus('Password Changed Successfully!');
         setAlert('success');
       })
       .catch(err => {
@@ -62,7 +52,7 @@ function Password() {
         <form>
           <h3>Password Setting</h3>
           <div className="form-group">
-            <label>New Password</label>
+            <label>Old Password</label>
             <input className='db-input'
               type='password'
               value={old_password}

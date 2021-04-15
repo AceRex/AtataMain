@@ -14,7 +14,6 @@ function Header({cart}) {
   const [loginClicked, setLoginClicked] = useState(false)
   const [cartCount, setCartCount] = useState(0)
   const [AllCatMenuItems, setAllCatMenuItems] = useState(Data.allcategory)
-  
 
   const handleClick = () => {
     setClicked( !clicked);

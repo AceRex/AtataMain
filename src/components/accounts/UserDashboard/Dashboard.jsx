@@ -1,38 +1,12 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
-import { Route, NavLink} from "react-router-dom";
+import { Route} from "react-router-dom";
 import Overview from "./overview";
 import Password from "./password";
 import { FaBars } from 'react-icons/fa'
+import AddressBook from './AddressBook'
+import Links from './Links'
 
-
-
-function Links() {
-  return (
-    <>
-      <NavLink exact to='/dashboard/'
-        activeClassName='active'
-      >
-        Account
-            </NavLink>
-      <NavLink to='/dashboard/password'
-        activeClassName='active'
-      >
-        Password
-      </NavLink>
-      {/* <NavLink to='/dashboard/created_events'
-        activeClassName='active'
-      >
-        Events
-      </NavLink> */}
-      {/* <Link to='/'
-      onClick={(e) => handleLogout(e)}
-      >
-        Logout
-      </Link> */}
-    </>
-  )
-}
 
 function Dashboard() {
 
@@ -65,13 +39,13 @@ function Dashboard() {
         </nav>
         <div className='content'>
           <Route exact path="/dashboard/">
-            <Overview />
+            <Overview/>
           </Route>
           <Route exact path="/dashboard/password">
             <Password />
           </Route>
           <Route exact path="/dashboard/created_events">
-            {/* <Events /> */}
+           <AddressBook />
           </Route>
         </div>
       </div>

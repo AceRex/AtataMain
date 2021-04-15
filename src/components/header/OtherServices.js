@@ -1,26 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { connect } from "react-redux";
-import axios from 'axios'
-import { AUTH_USER } from "../../Authentication/User";
-import { BASEURL } from "../../Authentication/Main";
 
-function Account() {
+function Account({AUTH_USER}) {
   const [hover, setHover] = useState("hidden active");
-  
-  const Logout = () =>{
-    localStorage.clear()
-    // axios.get(`${BASEURL}auth/logout`)
-    // .then(res =>
-    //   console.log(res)
-    //   )
-    //   .catch(err => 
-    //     console.log(err)
-    //     )
-  }
 
   const handleHover = (hover) => {
     setTimeout(() => {
@@ -34,7 +20,7 @@ function Account() {
  
   return (
     <>
-    {/* {AUTH_USER === "" ? */}
+    {AUTH_USER === null ?
     <>
       <li className="sign-in" onMouseEnter={handleHover}>
         <VscAccount />
@@ -59,8 +45,8 @@ function Account() {
         </Link>
       </div>
     </>
-    {/* : */}
-    {/* <>
+     : 
+     <>
     <li className="sign-in" onMouseEnter={handleHover}>
         <VscAccount />
       </li>
@@ -73,15 +59,18 @@ function Account() {
             My Account
           </li>
         </Link>
-          <li onClick={Logout()}>
+          <li 
+          // onClick={Logout()}
+          >
             Logout
           </li>
       </div>
-      </> */}
-    {/* } */}
+      </> 
+     }
     </>
   );
 }
+
 
 const OtherServices = ({ cart }) => {
   const [cartCount, setCartCount] = useState(0);

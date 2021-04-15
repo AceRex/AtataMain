@@ -1,10 +1,10 @@
 import * as actionsTypes from './Account_types'
 
-const LOGIN_STATE = {
+const initialState = {
     user: null
 }
 
-const accountReducer = (state = LOGIN_STATE, action) => {
+const accountReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionsTypes.LOGIN:
             return {
