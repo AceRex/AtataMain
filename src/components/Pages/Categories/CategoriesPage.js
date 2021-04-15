@@ -18,15 +18,8 @@ function Categories({products}) {
   return (
     <>
       <div className="cart-container">
-        {/* <Breadcrumbs aria-label="breadcrumb">
-          <Link to="/" className="bd-text">
-            Home
-          </Link>
-          <Link to="/">Category</Link>
-        </Breadcrumbs> */}
-        {/* Mobile Category Header */}
+        
         <div
-          // style={{ padding: `0 ${chevronWidth}px` }}
           className="mobile-category-menu"
         >
           <ItemsCarousel

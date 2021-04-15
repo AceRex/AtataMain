@@ -12,7 +12,7 @@
   .db-container .db__container .nav {
     position: absolute;
     left: 0%;
-    top: 10%;
+    top: 12%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21,7 +21,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: var(--colorGreen);
-    width: 90%;
+    width: 50%;
     padding-bottom: 3rem;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -80,8 +80,8 @@
     text-align: right;
     border-radius: 10px;
     width: 30%;
-    left: 0;
-    top: 10%;
+    top: 12%;
+    left: 30%;
     color: var(--colorWhite);
     -webkit-transition: all 0.6s ease;
     transition: all 0.6s ease;
@@ -100,11 +100,13 @@
     text-align: right;
     border-radius: 10px;
     width: 30%;
+    top: 12%;
     left: -20%;
-    color: var(--ColorWhite);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background-color: var(--ColorPurple);
+    background-color: var(--colorWhite);
+    -webkit-box-shadow: 5px 5px 10px #aaa;
+            box-shadow: 5px 5px 10px #aaa;
   }
   .db-container .db__container .content {
     width: 100%;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import MainPage from "./mainpage"
 import MainHeader from "./components/header/mainHeader";
@@ -19,72 +19,72 @@ import Password from "./components/Pages/userPage/password";
 import Footer from "./components/footer/footer"
 import Dashboard from "./components/accounts/UserDashboard/Dashboard"
 import { connect } from 'react-redux'
-import { useAUTH_PROVIDER, useAuth, AUTH_CONTEXT } from './Authentication/Main'
+import { useAuth } from './Authentication/Main'
 
 
-function App({ currentItem}) {
-  let auth = useAuth()
-  const value = useContext(AUTH_CONTEXT)
-  console.log(value)
-  
+function App({ currentItem }) {
+  const auth = useAuth()
+
   return (
-    <useAUTH_PROVIDER>
-      <main className="index-page-container">
-        <MainHeader />
-        <Switch>
-          <Route exact path="/">
-            <MainPage />
-          </Route>          
-          <Route path="/Signin">
-            <Login />
-          </Route>
-         <Route path="/Register">
-            <Register />
-          </Route>
-          <Route path="/forgotpassword">
-            <Forgotpwd />
-          </Route>
-          <Route path="/newpassword">
-            <NewPwd />
-          </Route>          
-          <Route path="/change-password">
-            <Password />
-          </Route>
-            <Route path="/categories/:id">
-              <Categories />
-            </Route>
-          <Route path="/checkout">
-            <Checkout />
-          </Route>
-          <Route path="/cart">
-            <Cart />
-          </Route>
-          <Route path="/user-page">
-            <UserPage />
-          </Route>
-          <Route path="/order">
-            <Order />
-          </Route>
-          <Route path="/address-book">
-            <AddressBook />
-          </Route>
-          <Route path="/user-details">
-            <Details />
-          </Route>
+    <main className="index-page-container">
+      <MainHeader />
+      <Switch>
+        <Route exact path="/">
+          <MainPage />
+        </Route>
+        <Route path="/Signin">
+          <Login />
+        </Route>
+        <Route path="/Register">
+          <Register />
+        </Route>
+        <Route path="/forgotpassword">
+          <Forgotpwd />
+        </Route>
+        <Route path="/newpassword">
+          <NewPwd />
+        </Route>
+        <Route path="/change-password">
+          <Password />
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        { !auth.user ?
+          <Redirect to='/Signin' />
+          :
           <Route path="/dashboard">
             <Dashboard />
           </Route>
-          <Route component={NotFound} />
-          {currentItem === null ? <Redirect to='/' />
-            :
-            <Route path="/product/:title">
-              <ProductPage />
-            </Route>
-          }
-        </Switch>
-        <Footer />
-      </main>
-    </useAUTH_PROVIDER>
+        }
+        <Route path="/categories/:id">
+          <Categories />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+        <Route path="/user-page">
+          <UserPage />
+        </Route>
+        <Route path="/order">
+          <Order />
+        </Route>
+        <Route path="/address-book">
+          <AddressBook />
+        </Route>
+        <Route path="/user-details">
+          <Details />
+        </Route>
+        <Route component={NotFound} />
+        {currentItem === null ? <Redirect to='/' />
+          :
+          <Route path="/product/:title">
+            <ProductPage />
+          </Route>
+        }
+      </Switch>
+      <Footer />
+    </main>
   );
 }
 

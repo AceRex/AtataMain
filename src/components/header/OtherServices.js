@@ -1,14 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import { Link, useHistory } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { VscAccount } from "react-icons/vsc";
 import { connect } from "react-redux";
-import { AUTH_CONTEXT, BASEURL } from '../../Authentication/Main'
-import axios from "axios";
-import ErrorAlert from '../../errors/errors'
 import {useAuth} from '../../Authentication/Main'
-
+import {IoCaretDownCircleOutline} from 'react-icons/io5'
 
 function Account() {
   const [hover, setHover] = useState("hidden active");
@@ -16,9 +13,6 @@ function Account() {
   const [status, setStatus] = useState('')
   let auth = useAuth();
   let history = useHistory()
-  // const USER = useContext(AUTH_CONTEXT)
-  // console.log(USER)
-
   const handleHover = (hover) => {
     setTimeout(() => {
       setHover(" ");
@@ -29,24 +23,13 @@ function Account() {
     setHover("hidden");
   };
 
-  // const refreshPage = () => {
-  //   window.location.reload()
-  // }
-
   const Logout = () => {
-    axios.get(`${BASEURL}/auth/logout`)
-      .then(res => {
-        if (res.status === 200) {
-          localStorage.clear()
-           auth.signout(() => history.push('/') ) 
-        }
-      }
-      )
-      .catch(err => console.log(err))
+    auth.logout()  
   }
+
     return (
       <>
-        {/* { auth.user ? */}
+        { auth.user === null ?
           <>
             <li className="sign-in" onMouseEnter={handleHover}>
               <VscAccount />
@@ -60,21 +43,21 @@ function Account() {
               onMouseLeave={handleHoverOut}
             >
               <Link to="/signin">
-                <li>
-                  Login <i className="fas fa-sign-in-alt"></i>
+                <li className='login'>
+                  Login
                 </li>
               </Link>
               <Link to="/register">
-                <li>
-                  Register <i className="far fa-user"></i>
+                <li className='register'>
+                  Register
                 </li>
               </Link>
             </div>
           </>
-          {/* : */}
+           : 
           <>
             <li className="sign-in" onMouseEnter={handleHover}>
-              <VscAccount />
+             <div className='user-name'><p>Hi, </p> {auth.user.first_name}<span><IoCaretDownCircleOutline /></span></div> 
             </li>
             <div
               className={`account-dropdown ${hover}`}
@@ -92,7 +75,7 @@ function Account() {
           </li>
             </div>
           </>
-        {/* } */}
+         }
       </>
     )
   // return (
@@ -115,10 +98,6 @@ const OtherServices = ({ cart }) => {
   },
     [cart, cartCount]
   )
-
-  // const Shop = useSelector((state) => state.shop);
-  // const number = Shop.cart.length
-
   return (
     <>
 

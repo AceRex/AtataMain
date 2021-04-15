@@ -19,11 +19,6 @@ export default function Links() {
         >
           Address Book
         </NavLink>
-        {/* <Link to='/'
-        onClick={(e) => handleLogout(e)}
-        >
-          Logout
-        </Link> */}
       </>
     )
   }

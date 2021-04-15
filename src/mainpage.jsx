@@ -1,14 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import "./App.css";
 import Simpleslider from "./components/carousel/carousel";
 import Featured from "./components/card/FeaturedProducts";
 import Latest from "./components/card/LatestItem";
 import CategoryCard from "./components/card/categoryCard";
 import { connect } from 'react-redux'
-import { AUTH_CONTEXT } from './Authentication/Main'
+import {useAuth} from './Authentication/Main'
 
 
 function App({ products }) {
+   const value = useAuth()
+   console.log(value)
   return (
     <main className="index-page-container">
       <Simpleslider />

@@ -3,7 +3,7 @@ import axios from 'axios'
 import ErrorAlert from '../../../errors/errors'
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import Switch from '@material-ui/core/Switch';
-import { getStorageData, StorageKeys } from '../../../Authentication/AUTH_actions'
+import { useAuth } from '../../../Authentication/Main';
 
 function ScrollToToponMount() {
     useEffect(() => {
@@ -14,12 +14,12 @@ function ScrollToToponMount() {
 
 
 function Password() {
-    const [USER, setUSER] = useState(getStorageData(StorageKeys.User))
+    let auth = useAuth()
 
-    const [street, setStreet] = useState(USER.address)
-    const [delivery_address, setDelivery] = useState(USER.delivery_address)
-    const [region, setRegion] = useState(USER.region)
-    const [country, setCountry] = useState(USER.country)
+    const [street, setStreet] = useState(auth.user.address)
+    const [delivery_address, setDelivery] = useState(auth.user.delivery_address)
+    const [region, setRegion] = useState(auth.user.region)
+    const [country, setCountry] = useState(auth.user.country)
     const [status, setStatus] = useState("")
     const [alert, setAlert] = useState("")
 

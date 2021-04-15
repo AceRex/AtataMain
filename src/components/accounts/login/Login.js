@@ -1,11 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./login.css";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import axios from 'axios'
 import ErrorAlert from '../../../errors/errors'
-import { BASEURL, useAuth } from '../../../Authentication/Main'
+import { useAuth } from '../../../Authentication/Main'
 import {StorageKeys} from '../../../Authentication/AUTH_actions'
 import {AUTH_CONTEXT} from '../../../Authentication/Main'
+
 
 function Login() {
   // const siginin = useContext(AUTH_CONTEXT)
@@ -15,41 +16,11 @@ function Login() {
   const [alert, SetAlert] = useState('')
 
   let auth = useAuth();
-  let history = useHistory();
-  let location = useLocation();
-  let { from } = location.state || {from : { pathname: "/" } };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // auth.siginin(email, password)
-    axios.post(`${BASEURL}/auth/login`, {
-      email: email,
-      password: password
-    })
-      .then(res => {
-        if (res.status === 200) {
-          localStorage.setItem(StorageKeys.User, JSON.stringify(res.data.user))
-          document.cookie = `${res.data.token}; secure`
-          auth.siginin(()=> {
-            history.replace(from);
-          })
-          setStatus('Login Successful')
-          SetAlert('success')
-        }
-
-      })
-      .catch(err => {
-        if (err.response) {
-          setStatus((err.response.data.message));
-          SetAlert('error')
-
-        } else {
-          SetAlert('success')
-        }
-      });
-
-
-  }
+    auth.signin(email, password)
+    }
   return (
     <div className="LoginContainer">
       <div className="formContaniner">
@@ -94,7 +65,7 @@ function Login() {
           </form>
         </div>
       </div>
-      <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} />
+      {/* <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} /> */}
     </div>
   );
 }

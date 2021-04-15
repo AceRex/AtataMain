@@ -2,16 +2,16 @@ import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import ErrorAlert from '../../../errors/errors'
 import ScrollToToponMount from '../../scrollToTopOnMount'
-import {getStorageData, StorageKeys} from '../../../Authentication/AUTH_actions'
+import { useAuth } from '../../../Authentication/Main'
 
 
 
 function Overview() {
-  const [USER, setUSER] = useState(getStorageData(StorageKeys.User))
-  const [first_name, setFirstName] = useState(USER.first_name)
-  const [last_name, setLastName] = useState(USER.last_name)
-  const [email, setEmail] = useState(USER.email)
-  const [phone, setPhone] = useState(USER.phone)
+  let auth = useAuth()
+  const [first_name, setFirstName] = useState(auth.user.first_name)
+  const [last_name, setLastName] = useState(auth.user.last_name)
+  const [email, setEmail] = useState(auth.user.email)
+  const [phone, setPhone] = useState(auth.user.phone)
   const [gender, setGender] = useState()
   const [DOB, setDOB] = useState()
   const [status, setStatus] = useState("")
@@ -19,7 +19,7 @@ function Overview() {
  
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.patch(`http://api.atata57.com/buyers/${USER.id}`, {
+    axios.patch(`http://api.atata57.com/buyers/${auth.user.id}`, {
       first_name,
       last_name,
       email,

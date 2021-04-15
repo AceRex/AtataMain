@@ -26,6 +26,8 @@ function Dashboard() {
             <FaBars />
           </p>
         <nav className={clicked ? 'nav' : 'nav nav-active'}
+          onClick={handleClicked}
+
         >
          
           <div className='user_Image'>
