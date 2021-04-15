@@ -19,13 +19,16 @@ import Password from "./components/Pages/userPage/password";
 import Footer from "./components/footer/footer"
 import Dashboard from "./components/accounts/UserDashboard/Dashboard"
 import { connect } from 'react-redux'
-import { AUTH_PROVIDER } from './Authentication/Main'
-import { AUTH_CONTEXT } from './Authentication/Main'
+import { useAUTH_PROVIDER, useAuth, AUTH_CONTEXT } from './Authentication/Main'
 
 
-function App({ currentItem }) {
+function App({ currentItem}) {
+  let auth = useAuth()
+  const value = useContext(AUTH_CONTEXT)
+  console.log(value)
+  
   return (
-    <AUTH_PROVIDER>
+    <useAUTH_PROVIDER>
       <main className="index-page-container">
         <MainHeader />
         <Switch>
@@ -81,7 +84,7 @@ function App({ currentItem }) {
         </Switch>
         <Footer />
       </main>
-    </AUTH_PROVIDER>
+    </useAUTH_PROVIDER>
   );
 }
 

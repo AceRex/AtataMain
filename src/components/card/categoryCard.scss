@@ -13,17 +13,17 @@
         }
 
         .items-card-display {
-            max-width: 90%;
+            max-width: 100%;
             margin: auto 2px;
             list-style-type: none;
             box-sizing: border-box;
-            display: grid;
-            grid-template-areas: 'a a';
+            display: flex;
+            flex-wrap: wrap;
 
             .item-card {
                 margin: 5px;
                 padding: 10px;
-                width: 155px;
+                width: 41%;
                 color: var(--colorBlack);
                 height: 290px;
                 overflow: hidden;
@@ -166,17 +166,17 @@
         }
 
         .items-card-display {
-            max-width: 90%;
+            max-width: 100%;
             margin: auto 2px;
             list-style-type: none;
             box-sizing: border-box;
-            display: grid;
-            grid-template-areas: 'a a';
+            display: flex;
+            flex-wrap: wrap;
 
             .item-card {
                 margin: 5px;
                 padding: 10px;
-                width: 155px;
+                width: 28%;
                 color: var(--colorBlack);
                 height: 290px;
                 overflow: hidden;
@@ -324,12 +324,12 @@
             list-style-type: none;
             box-sizing: border-box;
             display: flex;
-            flex-flow: row wrap;
+            flex-wrap: wrap;
 
             .item-card {
                 margin: 10px;
                 padding: 10px;
-                width: 195px;
+                width: 27%;
                 color: var(--colorBlack);
                 height: 280px;
                 overflow: hidden;
@@ -482,7 +482,7 @@
             .item-card {
                 margin: 10px;
                 padding: 10px;
-                width: 170px;
+                width: 20%;
                 color: var(--colorBlack);
                 height: 290px;
                 overflow: hidden;
@@ -618,24 +618,24 @@
             font-weight: 900;
             padding: 20px 10px;
             color: #b9b9b9;
-            width: 87%;
+            width: 78%;
             margin: auto;
 
         }
 
         .items-card-display {
-            width: 90%;
+            width: 80%;
             margin: auto;
             padding: 5px;
             list-style-type: none;
             box-sizing: border-box;
             display: flex;
-            flex-flow: row wrap;
+            flex-wrap: wrap;
 
             .item-card {
                 margin: 10px;
                 padding: 10px;
-                width: 170px;
+                width: 15%;
                 color: var(--colorBlack);
                 height: 280px;
                 overflow: hidden;

@@ -1,23 +1,27 @@
 import React, { useContext, useState } from "react";
 import "./login.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import axios from 'axios'
 import ErrorAlert from '../../../errors/errors'
-import { BASEURL } from '../../../Authentication/Main'
-import {saveStorageData, StorageKeys} from '../../../Authentication/AUTH_actions'
+import { BASEURL, useAuth } from '../../../Authentication/Main'
+import {StorageKeys} from '../../../Authentication/AUTH_actions'
 import {AUTH_CONTEXT} from '../../../Authentication/Main'
 
 function Login() {
-  const setUSER = useContext(AUTH_CONTEXT)
+  // const siginin = useContext(AUTH_CONTEXT)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
   const [status, setStatus] = useState('')
   const [alert, SetAlert] = useState('')
-  
+
+  let auth = useAuth();
   let history = useHistory();
+  let location = useLocation();
+  let { from } = location.state || {from : { pathname: "/" } };
 
   const onSubmit = (e) => {
     e.preventDefault();
+    // auth.siginin(email, password)
     axios.post(`${BASEURL}/auth/login`, {
       email: email,
       password: password
@@ -26,11 +30,11 @@ function Login() {
         if (res.status === 200) {
           localStorage.setItem(StorageKeys.User, JSON.stringify(res.data.user))
           document.cookie = `${res.data.token}; secure`
-          setUSER(res.data.user)
+          auth.siginin(()=> {
+            history.replace(from);
+          })
           setStatus('Login Successful')
           SetAlert('success')
-          setTimeout(() =>
-            history.push('/'), 3000)
         }
 
       })

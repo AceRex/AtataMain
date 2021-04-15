@@ -12,6 +12,7 @@
   .db-container .db__container .nav {
     position: absolute;
     left: 0%;
+    top: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -19,14 +20,15 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: var(--ColorPurple);
-    width: 50%;
+    background-color: var(--colorGreen);
+    width: 90%;
     padding-bottom: 3rem;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     z-index: 2;
   }
   .db-container .db__container .nav .user_Image {
+    display: none;
     padding: 20px;
     width: 100%;
   }
@@ -36,13 +38,13 @@
     height: 100px;
     overflow: hidden;
     margin: 1rem auto;
-    border: solid 1px var(--ColorWhite);
+    border: solid 1px var(--colorWhite);
     padding: 5px;
   }
   .db-container .db__container .nav .user_Image .img__ .img__container {
     width: 85px;
     height: 85px;
-    border: solid 5px var(--ColorWhite);
+    border: solid 5px var(--colorWhite);
     border-radius: 50%;
     margin: auto;
     overflow: hidden;
@@ -60,16 +62,16 @@
   }
   .db-container .db__container .nav a {
     font-size: 15px;
-    color: var(--ColorWhite);
+    color: var(--colorWhite);
     text-decoration: none;
     padding: 5px;
-    margin: 1.2rem 0px;
+    margin: 3rem 0px;
     text-align: center;
   }
   .db-container .db__container .nav .active {
-    color: var(--ColorPink);
+    color: var(--colorYellow);
     font-weight: 700;
-    border-right: solid 5px var(--ColorPink);
+    border-right: solid 5px var(--colorYellow);
   }
   .db-container .db__container .mobile-menu {
     position: absolute;
@@ -78,7 +80,8 @@
     text-align: right;
     border-radius: 10px;
     width: 30%;
-    left: 30%;
+    left: 0;
+    top: 10%;
     color: var(--colorWhite);
     -webkit-transition: all 0.6s ease;
     transition: all 0.6s ease;
@@ -280,7 +283,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: var(--ColorPurple);
+    background-color: var(--colorGreen);
     width: 50%;
     padding-bottom: 3rem;
     -webkit-transition: all 0.5s ease;
@@ -321,16 +324,16 @@
   }
   .db-container .db__container .nav a {
     font-size: 15px;
-    color: var(--ColorWhite);
+    color: var(--colorWhite);
     text-decoration: none;
     padding: 5px;
     margin: 1.2rem 0px;
     text-align: center;
   }
   .db-container .db__container .nav .active {
-    color: var(--ColorPink);
+    color: var(--colorYellow);
     font-weight: 700;
-    border-right: solid 5px var(--ColorPink);
+    border-right: solid 5px var(--colorYellow);
   }
   .db-container .db__container .mobile-menu {
     position: absolute;
@@ -359,10 +362,11 @@
     border-radius: 10px;
     width: 30%;
     left: -20%;
-    color: var(--ColorWhite);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background-color: var(--ColorPurple);
+    background-color: var(--colorWhite);
+    -webkit-box-shadow: 5px 5px 10px #aaa;
+            box-shadow: 5px 5px 10px #aaa;
   }
   .db-container .db__container .content {
     width: 100%;
@@ -377,6 +381,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 80%;
+    margin: auto;
   }
   .db-container .db__container .content .account__ .profile {
     width: 100%;
@@ -541,8 +546,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: var(--ColorPurple);
-    width: 50%;
+    background-color: var(--colorGreen);
+    width: 30%;
     padding-bottom: 3rem;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -582,16 +587,16 @@
   }
   .db-container .db__container .nav a {
     font-size: 15px;
-    color: var(--ColorWhite);
+    color: var(--colorWhite);
     text-decoration: none;
     padding: 5px;
     margin: 1.2rem 0px;
     text-align: center;
   }
   .db-container .db__container .nav .active {
-    color: var(--ColorPink);
+    color: var(--colorYellow);
     font-weight: 700;
-    border-right: solid 5px var(--ColorPink);
+    border-right: solid 5px var(--colorYellow);
   }
   .db-container .db__container .mobile-menu {
     position: absolute;
@@ -600,7 +605,7 @@
     text-align: right;
     border-radius: 10px;
     width: 30%;
-    left: 30%;
+    left: 5%;
     color: var(--colorWhite);
     -webkit-transition: all 0.6s ease;
     transition: all 0.6s ease;
@@ -619,11 +624,12 @@
     text-align: right;
     border-radius: 10px;
     width: 30%;
-    left: -20%;
-    color: var(--ColorWhite);
+    left: -26%;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background-color: var(--ColorPurple);
+    background-color: var(--colorWhite);
+    -webkit-box-shadow: 5px 5px 20px #aaa;
+            box-shadow: 5px 5px 20px #aaa;
   }
   .db-container .db__container .content {
     width: 100%;
@@ -637,7 +643,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
+    width: 60%;
+    margin: auto;
   }
   .db-container .db__container .content .account__ .profile {
     width: 100%;
@@ -807,7 +814,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: var(--colorGreen);
-    width: 25%;
+    width: 20%;
     padding-bottom: 3rem;
   }
   .db-container .db__container nav .user_Image {
@@ -1028,7 +1035,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: var(--colorGreen);
-    width: 25%;
+    width: 20%;
     padding-bottom: 3rem;
   }
   .db-container .db__container nav .user_Image {

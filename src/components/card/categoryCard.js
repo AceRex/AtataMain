@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom"
 import SmallCard from "./smallCard";
 import "./categoryCard.css";
 import { loadCurrentItem } from "../../Redux/ShoppingCart/Shopping_Actions";

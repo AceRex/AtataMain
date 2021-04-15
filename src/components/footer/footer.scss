@@ -61,7 +61,7 @@
         max-width: 100%;
         padding: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         select{
             padding: 10px ;
             width: 100%;
@@ -140,7 +140,7 @@
         max-width: 100%;
         padding: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         select{
             padding: 10px ;
             width: 100%;
@@ -214,6 +214,25 @@
         }
 
       
+    }
+    .footer-bottom{
+        background-color: #4a4f53;
+        max-width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        select{
+            padding: 10px ;
+            width: 100%;
+            background-color: #4a4f53;
+            color: var(--colorWhite);
+            outline: none;
+        }
+        .copryt{
+            width: 100%;
+            color: var(--colorWhite);
+            padding: 20px 0;
+        }
     }
 
 }

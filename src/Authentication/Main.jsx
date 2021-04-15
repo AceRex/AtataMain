@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react'
+import React, { useState, useEffect, createContext, useContext } from 'react'
 import { getStorageData, setStorageData, StorageKeys } from './AUTH_actions'
 import Loading from '../loading/loading'
 import axios from 'axios'
@@ -6,42 +6,52 @@ import axios from 'axios'
 export const BASEURL = "http://api.atata57.com"
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + document.cookie
 
-// const DefaultContextValue = {
-//     user_data : null,
-//     onUserChange: (user) => {
-//         throw new Error(`Default function should not be used: ${user.displayName}`);
-//     },
-// }
+export const AUTH_USER = {
+    isAuthenticated: false,
+    signin(cb){
+        AUTH_USER.isAuthenticated = true;
+        setTimeout(cb, 100)
+    },
+    signout(cb) {
+        AUTH_USER.isAuthenticated = false;
+        setTimeout(cb, 100)
+    }
+}
+export const AUTH_CONTEXT = createContext();
 
-export const AUTH_CONTEXT = createContext(null);
-
-
-export const AUTH_PROVIDER = props => {
-    const [USER, setUSER] = useState(getStorageData(StorageKeys.User));
-    // const [loading, setLoading] = useState(true);
-
-    // useEffect(() => {
-    //   initApp()
-    // }, [])
-
-    // function initApp(){
-    //     const userStored = getStorageData(StorageKeys.User)
-    //     if (userStored) {
-    //         setUSER(userStored)
-    //     }
-    //     setLoading(false)
-    // }
-    // function onUserChange(val){
-    //     setUSER(val)
-    // }
-    // if (loading){
-    //     return <Loading/>
-    // }
+export const ProvideAuth = ({children}) => {
+    const auth = useAUTH_PROVIDER();   
     return (
         <AUTH_CONTEXT.Provider
-            value={{USER}}>
-            {props.children}
+            value={auth}>
+            {children}
         </AUTH_CONTEXT.Provider>
+    )
+}
+
+export const useAuth =() => {
+    useContext(AUTH_CONTEXT)
+}
+
+export const useAUTH_PROVIDER = () => {
+    const [USER, setUSER] = useState(null);
+   
+    const signin = cb => {
+        return AUTH_USER.signin(() => {
+            setUSER(getStorageData(StorageKeys.User))
+            cb();
+        })
+    }
+    const signout = cb => {
+        return AUTH_USER.signout(() => {
+            setUSER(null)
+            cb();
+        })
+    }
+    return (
+        USER,
+        signin,
+        signout
     )
 }
 

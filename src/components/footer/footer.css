@@ -59,9 +59,9 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .footer-bottom select {
     padding: 10px;
@@ -138,9 +138,9 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .footer-bottom select {
     padding: 10px;
@@ -208,6 +208,30 @@
   }
   footer section .subscribe img {
     width: 50%;
+  }
+  .footer-bottom {
+    background-color: #4a4f53;
+    max-width: 100%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .footer-bottom select {
+    padding: 10px;
+    width: 100%;
+    background-color: #4a4f53;
+    color: var(--colorWhite);
+    outline: none;
+  }
+  .footer-bottom .copryt {
+    width: 100%;
+    color: var(--colorWhite);
+    padding: 20px 0;
   }
 }
 
