@@ -115,7 +115,7 @@ function Header({ cart }) {
                 My Account
           </li>
             </Link>
-              <li onClick={Logout}>
+              <li onClick={() => Logout()}>
                 Logout
           </li>
           </>

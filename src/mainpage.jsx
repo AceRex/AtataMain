@@ -5,13 +5,10 @@ import Featured from "./components/card/FeaturedProducts";
 import Latest from "./components/card/LatestItem";
 import CategoryCard from "./components/card/categoryCard";
 import { connect } from 'react-redux'
-import {useAuth} from './Authentication/Main'
 
 
 function App({ products }) {
-   const value = useAuth()
-   console.log(value)
-  return (
+ return (
     <main className="index-page-container">
       <Simpleslider />
       <CategoryCard key={products._id} productsData={products} />

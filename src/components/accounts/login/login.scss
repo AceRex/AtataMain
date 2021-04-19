@@ -284,6 +284,7 @@
                         width: 100%;
                         outline: none;
                         border-radius: 5px;
+                        cursor: pointer;
                         border: none;
                     }
 
@@ -388,6 +389,7 @@
                         width: 100%;
                         outline: none;
                         border-radius: 5px;
+                        cursor: pointer;
                         border: none;
                     }
 
@@ -488,11 +490,12 @@
                         color: var(--colorWhite);
                         margin-top: 30px;
                         margin-bottom: 10px;
-                        padding: 10px;
+                        padding: 15px;
                         width: 100%;
                         outline: none;
                         border-radius: 5px;
                         border: none;
+                        cursor: pointer;
                     }
 
                     p {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { BASEURL } from '../../../Authentication/Main'
+import { BASEURL, useAuth } from '../../../Authentication/Main'
 import ErrorAlert from '../../../errors/errors'
 import {getStorageData} from '../../../Authentication/AUTH_actions'
 
@@ -20,34 +20,19 @@ function Password() {
   const [status, setStatus] = useState("")
   const [alert, setAlert] = useState("")
 
+  let auth = useAuth()
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${BASEURL}/auth/password/update`,
-    {
-      old_password,
-      new_password,
-      confirm_password
-    })
-      .then(res => {
-        setStatus('Password Changed Successfully!');
-        setAlert('success');
-      })
-      .catch(err => {
-        if (err.response) {
-          setStatus((err.response.data.message));
-          setAlert('info')
-
-        } else {
-          setAlert('success')
-
-        }
-      });
+    auth.changePassword(old_password, new_password, confirm_password)
+    setOldPassword("")
+    setNewPassword("")
+    setRetypePassword("")
   }
 
   return (
     <div className='account__'>
       <ScrollToToponMount />
-      <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} />
       <div className="profile">
         <form>
           <h3>Password Setting</h3>
@@ -55,6 +40,7 @@ function Password() {
             <label>Old Password</label>
             <input className='db-input'
               type='password'
+              name="old_password"
               value={old_password}
               onChange={(e) => setOldPassword(e.target.value)}
             />
@@ -62,6 +48,7 @@ function Password() {
           <div className="form-group">
             <label>New Password</label>
             <input className='db-input'
+              name="new_password"
               type='password'
               value={new_password}
               onChange={(e) => setNewPassword(e.target.value)}
@@ -70,6 +57,7 @@ function Password() {
           <div className="form-group">
             <label>Retype Password</label>
             <input className='db-input'
+              name="confirm_password"
               type='password'
               value={confirm_password}
               onChange={(e) => setRetypePassword(e.target.value)}

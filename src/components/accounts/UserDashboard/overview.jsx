@@ -8,45 +8,30 @@ import { useAuth } from '../../../Authentication/Main'
 
 function Overview() {
   let auth = useAuth()
+
+  const [id, setId] = useState(auth.user.id)
   const [first_name, setFirstName] = useState(auth.user.first_name)
   const [last_name, setLastName] = useState(auth.user.last_name)
   const [email, setEmail] = useState(auth.user.email)
   const [phone, setPhone] = useState(auth.user.phone)
   const [gender, setGender] = useState()
   const [DOB, setDOB] = useState()
+  const [address, setAdress] = useState(auth.user.address)
+  const [country, setRegion] = useState(auth.user.country)
+  const [region, setRegiono] = useState(auth.user.region)
   const [status, setStatus] = useState("")
   const [alert, setAlert] = useState("")
  
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.patch(`http://api.atata57.com/buyers/${auth.user.id}`, {
-      first_name,
-      last_name,
-      email,
-      phone,
-      gender,
-      DOB
-    })
-      .then(res => {
-        setStatus('Login Successful');
-        setAlert('success')
-      })
-      .catch(err => {
-        if (err.response) {
-          setStatus((err.response.data.message));
-          setAlert('info')
-
-        } else {
-          setAlert('success')
-
-        }
-      });
+    auth.userUpdate(id, first_name, last_name, phone, address, country, region)
+    
   }
 
   return (
     <div className='account__'>
       <ScrollToToponMount />
-      <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} />
+      {/* <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} /> */}
       <div className="profile">
         <form>
           <h3>Account settings</h3>

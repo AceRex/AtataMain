@@ -16,7 +16,11 @@ function ScrollToToponMount() {
 function Password() {
     let auth = useAuth()
 
-    const [street, setStreet] = useState(auth.user.address)
+    const [id, setId] = useState(auth.user.id)
+    const [first_name, setFirstName] = useState(auth.user.first_name)
+    const [last_name, setLastName] = useState(auth.user.last_name)
+    const [phone, setPhone] = useState(auth.user.phone)
+    const [address, setAddress] = useState(auth.user.address)
     const [delivery_address, setDelivery] = useState(auth.user.delivery_address)
     const [region, setRegion] = useState(auth.user.region)
     const [country, setCountry] = useState(auth.user.country)
@@ -36,41 +40,23 @@ function Password() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(`http://api.atata57.com/auth/password/update`, {
-            street,
-            delivery_address,
-            region,
-            country,
-        })
-            .then(res => {
-                setStatus('Login Successful');
-                setAlert('success');
-            })
-            .catch(err => {
-                if (err.response) {
-                    setStatus((err.response.data.message));
-                    setAlert('info')
+        auth.userUpdate(id, first_name, last_name, phone, address, country, region)
 
-                } else {
-                    setAlert('success')
-
-                }
-            });
-    }
+      }
 
     return (
         <div className='account__'>
             <ScrollToToponMount />
-            <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} />
+            {/* <ErrorAlert ERR_TYPE={alert} ERR_MSG={status} /> */}
             <div className="profile">
                 <form>
                     <h3>Address Book</h3>
                     <div className='form-group'>
                         <label>Street</label>
                         <input className='db-input'
-                            name='street'
-                            value={street}
-                            onChange={(e) => setStreet(e.target.value)}
+                            name='address'
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
                         />
                     </div>
                     <div className='form-group'>

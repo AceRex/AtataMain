@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "./login.css";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { Link, useHistory, useLocation } from "react-router-dom";
 import axios from 'axios'
 import ErrorAlert from '../../../errors/errors'
 import { useAuth } from '../../../Authentication/Main'
-import {StorageKeys} from '../../../Authentication/AUTH_actions'
-import {AUTH_CONTEXT} from '../../../Authentication/Main'
+import { StorageKeys } from '../../../Authentication/AUTH_actions'
+import { AUTH_CONTEXT } from '../../../Authentication/Main'
 
 
 function Login() {
   // const siginin = useContext(AUTH_CONTEXT)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
+  const [clicked, setClicked] = useState(false)
   const [status, setStatus] = useState('')
   const [alert, SetAlert] = useState('')
 
@@ -19,8 +21,9 @@ function Login() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setClicked(!clicked)
     auth.signin(email, password)
-    }
+  }
   return (
     <div className="LoginContainer">
       <div className="formContaniner">
@@ -49,7 +52,14 @@ function Login() {
             <div className="form-group">
               <button className="btn"
                 onClick={onSubmit}
-              >Login</button>
+              >
+                {
+                  clicked ?
+                    <CircularProgress style={{ color: "#fff", width: "15px", height: "15px" }} />
+                    :
+                    "Login"
+                }
+              </button>
               <Link to="/forgotpassword">
                 <p className="forgetPwd">Forgot password?</p>
               </Link>

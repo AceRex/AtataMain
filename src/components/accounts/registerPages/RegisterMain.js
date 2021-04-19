@@ -7,6 +7,7 @@ import { GoHome } from 'react-icons/go'
 import InlineERR from '../../../errors/InlineError'
 import ErrorAlert from '../../../errors/errors'
 import { useAuth } from "../../../Authentication/Main";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export default function UserReg() {
   let history = useHistory();
@@ -27,9 +28,11 @@ export default function UserReg() {
   const [confirm_passwordERR, setConfirmPasswordERR] = useState()
   const [status, setStatus] = useState()
   const [Alert, setAlert] = useState()
+  const[clicked, setClicked] = useState(false)
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setClicked(!clicked)
     auth.register(first_name, last_name, phone, email, password, confirm_Password, country, region, address)
   }
 
@@ -137,7 +140,7 @@ export default function UserReg() {
               <Link to="/" className="btn-back">
                 <GoHome />
               </Link>
-              <button className="btn-reg" onClick={onSubmit}>Register</button>
+              <button className="btn-reg" onClick={onSubmit}>{clicked ? <CircularProgress style={{color: "#fff" , width: "15px", height: "15px"}}/> :  "Register"  }</button>
             </div>
           </form>
         </div>

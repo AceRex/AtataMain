@@ -20,6 +20,7 @@ import Footer from "./components/footer/footer"
 import Dashboard from "./components/accounts/UserDashboard/Dashboard"
 import { connect } from 'react-redux'
 import { useAuth } from './Authentication/Main'
+import ErrorAlert from './errors/errors'
 
 
 function App({ currentItem }) {
@@ -44,7 +45,7 @@ function App({ currentItem }) {
         <Route path="/newpassword">
           <NewPwd />
         </Route>
-        <Route path="/change-password">
+        <Route path="/enter-token">
           <Password />
         </Route>
         <Route path="/cart">

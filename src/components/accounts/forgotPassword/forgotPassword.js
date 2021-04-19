@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import'./forgotpassword.css'
+import './forgotpassword.css'
 import { Link } from "react-router-dom";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { useAuth } from "../../../Authentication/Main";
 
-function ForgotPassword (){
- 
-   const [clicked, setClicked] = useState(false);
+function ForgotPassword() {
 
-    return (
-      <div className='mainContainer'>
-        
+  let auth = useAuth()
+
+  const [email, setEmail] = useState()
+  const [clicked, setClicked] = useState(false);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    auth.forgotPassword(email)
+    setClicked(true)
+  }
+
+  return (
+    <div className='mainContainer'>
+
       <div className="fp-container">
         <p>Don't Worry, you will get back in a minute</p>
         <small>
@@ -17,10 +27,17 @@ function ForgotPassword (){
         </small>
         <form>
           <div className="form-group">
-            <input type="email" placeholder="Enter you registered email address here" />
-            <button className="btn" onClick={() => setClicked(true)}>
-              {clicked ? <CircularProgress style={{color:'#fff', width: '20px', height:'20px'}} /> : "Reset Password"}
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter you registered email address here"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} />
+
+            <button className="btn" onClick={onSubmit}>
+              {clicked ? <CircularProgress style={{ color: '#fff', width: '20px', height: '20px' }} /> : "Reset Password"}
             </button>
+
           </div>
 
           <Link to="/signin">
@@ -28,8 +45,8 @@ function ForgotPassword (){
           </Link>
         </form>
       </div>
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
 export default ForgotPassword;

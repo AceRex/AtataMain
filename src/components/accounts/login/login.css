@@ -295,6 +295,7 @@
     width: 100%;
     outline: none;
     border-radius: 5px;
+    cursor: pointer;
     border: none;
   }
   .LoginContainer .formContaniner .form .form-group p {
@@ -399,6 +400,7 @@
     width: 100%;
     outline: none;
     border-radius: 5px;
+    cursor: pointer;
     border: none;
   }
   .LoginContainer .formContaniner .form .form-group p {
@@ -499,11 +501,12 @@
     color: var(--colorWhite);
     margin-top: 30px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     outline: none;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
   }
   .LoginContainer .formContaniner .form .form-group p {
     font-size: 12px;
