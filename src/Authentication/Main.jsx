@@ -75,6 +75,20 @@ function useProvideAuth() {
                 }))
         )
     };
+    const emailVerification = (email) => {
+        return (
+            axios.post(`${BASEURL}/verification/email/verify`, {
+                email: email
+            })
+                .then((response => {
+                    setUser(response.data.user)
+                    saveStorageData('user', response.data.user)
+                    document.cookie = `${response.data.token}; secure`
+                    setTimeout(() =>
+                        history.push('/'), 3000)
+                }))
+        )
+    };
     const userUpdate = (id,first_name, last_name, phone, country, region, address, delivery_address) => {
         return (
             axios.put(`http://api.atata57.com/buyers/${id}/update`, {
@@ -157,6 +171,7 @@ function useProvideAuth() {
         error,
         signin,
         register,
+        emailVerification,
         logout,
         userUpdate,
         changePassword,

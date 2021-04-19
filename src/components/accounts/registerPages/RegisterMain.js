@@ -34,6 +34,7 @@ export default function UserReg() {
     e.preventDefault();
     setClicked(!clicked)
     auth.register(first_name, last_name, phone, email, password, confirm_Password, country, region, address)
+    auth.emailVerification(email)
   }
 
   return (
